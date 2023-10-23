@@ -3,7 +3,7 @@
 > react-scripts test --coverage
 
 FAIL src/App.test.tsx
-  ✕ renders the course name somewhere (34 ms)
+  ✕ renders the course name somewhere (40 ms)
 
   ● renders the course name somewhere
 
@@ -57,11 +57,12 @@ All files       |     100 |      100 |     100 |     100 |
   App.tsx       |     100 |      100 |     100 |     100 |                   
  src/interfaces |       0 |        0 |       0 |       0 |                   
   course.ts     |       0 |        0 |       0 |       0 |                   
+  semester.ts   |       0 |        0 |       0 |       0 |                   
 ----------------|---------|----------|---------|---------|-------------------
 Test Suites: 1 failed, 1 total
 Tests:       1 failed, 1 total
 Snapshots:   0 total
-Time:        1.616 s
+Time:        2.353 s
 Ran all test suites.
 Jest did not exit one second after the test run has completed.
 
