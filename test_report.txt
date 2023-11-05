@@ -11,7 +11,7 @@
         at div
         at Year (/home/runner/work/CISC275-Project-Main/CISC275-Project-Main/src/viewCourseComponents.tsx:45:5)
         at div
-        at App (/home/runner/work/CISC275-Project-Main/CISC275-Project-Main/src/App.tsx:50:46)
+        at App (/home/runner/work/CISC275-Project-Main/CISC275-Project-Main/src/App.tsx:78:46)
 
       4 |
       5 | test("renders the course name somewhere", () => {
@@ -61,7 +61,7 @@
         at div
         at Year (/home/runner/work/CISC275-Project-Main/CISC275-Project-Main/src/viewCourseComponents.tsx:45:5)
         at div
-        at App (/home/runner/work/CISC275-Project-Main/CISC275-Project-Main/src/App.tsx:50:46)
+        at App (/home/runner/work/CISC275-Project-Main/CISC275-Project-Main/src/App.tsx:78:46)
 
       4 |
       5 | test("renders the course name somewhere", () => {
@@ -105,7 +105,7 @@
         at div
         at Year (/home/runner/work/CISC275-Project-Main/CISC275-Project-Main/src/viewCourseComponents.tsx:45:5)
         at div
-        at App (/home/runner/work/CISC275-Project-Main/CISC275-Project-Main/src/App.tsx:50:46)
+        at App (/home/runner/work/CISC275-Project-Main/CISC275-Project-Main/src/App.tsx:78:46)
 
       4 |
       5 | test("renders the course name somewhere", () => {
@@ -150,7 +150,7 @@
         at div
         at Year (/home/runner/work/CISC275-Project-Main/CISC275-Project-Main/src/viewCourseComponents.tsx:45:5)
         at div
-        at App (/home/runner/work/CISC275-Project-Main/CISC275-Project-Main/src/App.tsx:50:46)
+        at App (/home/runner/work/CISC275-Project-Main/CISC275-Project-Main/src/App.tsx:78:46)
 
       4 |
       5 | test("renders the course name somewhere", () => {
@@ -191,7 +191,7 @@
       at runCLI (node_modules/@jest/core/build/cli/index.js:173:3)
 
 FAIL src/App.test.tsx
-  ✕ renders the course name somewhere (159 ms)
+  ✕ renders the course name somewhere (226 ms)
 
   ● renders the course name somewhere
 
@@ -233,10 +233,10 @@ FAIL src/App.test.tsx
             [36m>[39m
               [36m<thead>[39m
                 [36m<th>[39m
-                  [0mwinter[0m
+                  [0mFall[0m
                 [36m</th>[39m
                 [36m<th>[39m
-                  [0mspring[0m
+                  [0mSpring[0m
                 [36m</th>[39m
               [36m</thead>[39m
               [36m<tr>[39m
@@ -261,10 +261,10 @@ FAIL src/App.test.tsx
                     [36m<tbody>[39m
                       [36m<tr>[39m
                         [36m<td>[39m
-                          [0mMath220[0m
+                          [0mCISC108[0m
                         [36m</td>[39m
                         [36m<td>[39m
-                          [0mDiscrete Math[0m
+                          [0mIntroduction to Computer Science I[0m
                         [36m</td>[39m
                         [36m<td>[39m
                           [0m3[0m
@@ -272,13 +272,35 @@ FAIL src/App.test.tsx
                       [36m</tr>[39m
                       [36m<tr>[39m
                         [36m<td>[39m
-                          [0mCis275[0m
+                          [0mEGGG101[0m
                         [36m</td>[39m
                         [36m<td>[39m
-                          [0mIntro to Software Eng.[0m
+                          [0mIntroduction to Engineering (FYE)[0m
+                        [36m</td>[39m
+                        [36m<td>[39m
+                          [0m2[0m
+                        [36m</td>[39m
+                      [36m</tr>[39m
+                      [36m<tr>[39m
+                        [36m<td>[39m
+                          [0mENGL110[0m
+                        [36m</td>[39m
+                        [36m<td>[39m
+                          [0mSeminar in Composition[0m
                         [36m</td>[39m
                         [36m<td>[39m
                           [0m3[0m
+                        [36m</td>[39m
+                      [36m</tr>[39m
+                      [36m<tr>[39m
+                        [36m<td>[39m
+                          [0mMATH241[0m
+                        [36m</td>[39m
+                        [36m<td>[39m
+                          [0mAnalytic Geometry & Calculus A[0m
+                        [36m</td>[39m
+                        [36m<td>[39m
+                          [0m4[0m
                         [36m</td>[39m
                       [36m</tr>[39m
                     [36m</tbody>[39m
@@ -305,10 +327,10 @@ FAIL src/App.test.tsx
                     [36m<tbody>[39m
                       [36m<tr>[39m
                         [36m<td>[39m
-                          [0mCis304[0m
+                          [0mCISC181[0m
                         [36m</td>[39m
                         [36m<td>[39m
-                          [0mComputer Logic[0m
+                          [0mIntroduction to Computer Science II[0m
                         [36m</td>[39m
                         [36m<td>[39m
                           [0m3[0m
@@ -316,13 +338,35 @@ FAIL src/App.test.tsx
                       [36m</tr>[39m
                       [36m<tr>[39m
                         [36m<td>[39m
-                          [0mCis220[0m
+                          [0mCISC210[0m
                         [36m</td>[39m
                         [36m<td>[39m
-                          [0mData Structures[0m
+                          [0mIntroduction to Systems Programming[0m
                         [36m</td>[39m
                         [36m<td>[39m
                           [0m3[0m
+                        [36m</td>[39m
+                      [36m</tr>[39m
+                      [36m<tr>[39m
+                        [36m<td>[39m
+                          [0mCISC355[0m
+                        [36m</td>[39m
+                        [36m<td>[39m
+                          [0mComputers, Ethics & Society[0m
+                        [36m</td>[39m
+                        [36m<td>[39m
+                          [0m3[0m
+                        [36m</td>[39m
+                      [36m</tr>[39m
+                      [36m<tr>[39m
+                        [36m<td>[39m
+                          [0mMATH242[0m
+                        [36m</td>[39m
+                        [36m<td>[39m
+                          [0mAnalytic Geometry & Calculus B[0m
+                        [36m</td>[39m
+                        [36m<td>[39m
+                          [0m4[0m
                         [36m</td>[39m
                       [36m</tr>[39m
                     [36m</tbody>[39m
@@ -357,11 +401,11 @@ FAIL src/App.test.tsx
 ---------------------------|---------|----------|---------|---------|-------------------
 File                       | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s 
 ---------------------------|---------|----------|---------|---------|-------------------
-All files                  |   61.53 |        0 |   31.57 |   63.15 |                   
- src                       |   61.53 |        0 |   31.57 |   63.15 |                   
-  App.tsx                  |   68.75 |      100 |      20 |   73.33 | 61-62,69,73       
+All files                  |   63.41 |        0 |   31.57 |      65 |                   
+ src                       |   63.41 |        0 |   31.57 |      65 |                   
+  App.tsx                  |   68.75 |      100 |      20 |   73.33 | 90-91,98,102      
   DBmanage.tsx             |       0 |        0 |       0 |       0 | 14-27             
-  EditModal.tsx            |    62.5 |      100 |   28.57 |    62.5 | 28-33,49-71       
+  EditModal.tsx            |   66.66 |      100 |   28.57 |   66.66 | 30-35,51-73       
   viewCourseComponents.tsx |      75 |      100 |      75 |      75 | 30                
  src/interfaces            |       0 |        0 |       0 |       0 |                   
   course.ts                |       0 |        0 |       0 |       0 |                   
@@ -371,7 +415,7 @@ All files                  |   61.53 |        0 |   31.57 |   63.15 |
 Test Suites: 1 failed, 1 total
 Tests:       1 failed, 1 total
 Snapshots:   0 total
-Time:        2.97 s
+Time:        3.395 s
 Ran all test suites.
 [0;33mOne of your dependencies, babel-preset-react-app, is importing the
 "@babel/plugin-proposal-private-property-in-object" package without
