@@ -191,14 +191,14 @@
       at runCLI (node_modules/@jest/core/build/cli/index.js:173:3)
 
 FAIL src/App.test.tsx
-  ✓ renders the program title (174 ms)
-  ✓ renders Import CSV button (23 ms)
-  ✓ renders export CSV button (34 ms)
-  ✓ renders add course (74 ms)
-  ✓ renders names (19 ms)
-  ✓ Add Course Button works (122 ms)
-  ✕ Users can delete courses (48 ms)
-  ✕ Users can add courses (60 ms)
+  ✓ renders the program title (155 ms)
+  ✓ renders Import CSV button (18 ms)
+  ✓ renders export CSV button (22 ms)
+  ✓ renders add course (22 ms)
+  ✓ renders names (15 ms)
+  ✓ Add Course Button works (105 ms)
+  ✕ Users can delete courses (39 ms)
+  ✕ Users can add courses (50 ms)
 
   ● Users can delete courses
 
@@ -270,6 +270,11 @@ FAIL src/App.test.tsx
             [36m</button>[39m
             [36m<button>[39m
               [0mAdd Course[0m
+            [36m</button>[39m
+            [36m<button[39m
+              [33mclass[39m=[32m"buttonSpacing"[39m
+            [36m>[39m
+              [0mClear All Courses[0m
             [36m</button>[39m
           [36m</div>[39m
           [36m<div[39m
@@ -586,26 +591,6 @@ FAIL src/App.test.tsx
       at _run10000 (node_modules/@jest/core/build/cli/index.js:320:7)
       at runCLI (node_modules/@jest/core/build/cli/index.js:173:3)
 
----------------------------|---------|----------|---------|---------|-------------------
-File                       | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s 
----------------------------|---------|----------|---------|---------|-------------------
-All files                  |   56.41 |        0 |   34.37 |      56 |                   
- src                       |   56.41 |        0 |   34.37 |      56 |                   
-  AddCourseModal.tsx       |    42.1 |        0 |   14.28 |    42.1 | 27-34,49-81       
-  App.tsx                  |   65.51 |        0 |      50 |   65.38 | 97-110,121,125    
-  DBmanage.tsx             |       0 |        0 |       0 |       0 | 9-43              
-  EditModal.tsx            |      65 |      100 |   28.57 |      65 | 30-35,38-39,54-68 
-  viewCourseComponents.tsx |     100 |      100 |     100 |     100 |                   
- src/interfaces            |       0 |        0 |       0 |       0 |                   
-  course.ts                |       0 |        0 |       0 |       0 |                   
-  degree.ts                |       0 |        0 |       0 |       0 |                   
-  semester.ts              |       0 |        0 |       0 |       0 |                   
----------------------------|---------|----------|---------|---------|-------------------
-Test Suites: 1 failed, 1 total
-Tests:       2 failed, 6 passed, 8 total
-Snapshots:   0 total
-Time:        2.71 s
-Ran all test suites.
 [0;33mOne of your dependencies, babel-preset-react-app, is importing the
 "@babel/plugin-proposal-private-property-in-object" package without
 declaring it in its dependencies. This is currently working because
@@ -618,3 +603,23 @@ ever be fixed. Add "@babel/plugin-proposal-private-property-in-object" to
 your devDependencies to work around this error. This will make this message
 go away.[0m
   
+---------------------------|---------|----------|---------|---------|------------------------
+File                       | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s      
+---------------------------|---------|----------|---------|---------|------------------------
+All files                  |   55.55 |        0 |   33.33 |   55.12 |                        
+ src                       |   55.55 |        0 |   33.33 |   55.12 |                        
+  AddCourseModal.tsx       |    42.1 |        0 |   14.28 |    42.1 | 27-34,49-81            
+  App.tsx                  |    62.5 |        0 |   44.44 |   62.06 | 97-110,121,125,129-135 
+  DBmanage.tsx             |       0 |        0 |       0 |       0 | 9-43                   
+  EditModal.tsx            |      65 |      100 |   28.57 |      65 | 30-35,38-39,54-68      
+  viewCourseComponents.tsx |     100 |      100 |     100 |     100 |                        
+ src/interfaces            |       0 |        0 |       0 |       0 |                        
+  course.ts                |       0 |        0 |       0 |       0 |                        
+  degree.ts                |       0 |        0 |       0 |       0 |                        
+  semester.ts              |       0 |        0 |       0 |       0 |                        
+---------------------------|---------|----------|---------|---------|------------------------
+Test Suites: 1 failed, 1 total
+Tests:       2 failed, 6 passed, 8 total
+Snapshots:   0 total
+Time:        3.488 s
+Ran all test suites.
