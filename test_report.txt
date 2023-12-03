@@ -2,237 +2,27 @@
 > react-typescript-starter@0.1.0 test
 > react-scripts test --coverage
 
-  console.error
-    Warning: validateDOMNesting(...): <th> cannot appear as a child of <thead>.
-        at th
-        at thead
-        at table
-        at /home/runner/work/CISC275-Project-Main/CISC275-Project-Main/node_modules/react-bootstrap/cjs/Table.js:14:3
-        at div
-        at Year (/home/runner/work/CISC275-Project-Main/CISC275-Project-Main/src/viewCourseComponents.tsx:45:5)
-        at div
-        at App (/home/runner/work/CISC275-Project-Main/CISC275-Project-Main/src/App.tsx:80:46)
+  console.log
+    initialize
 
-      4 |
-      5 | test("renders the program title", () => {
-    > 6 |     render(<App />);
-        |           ^
-      7 |     const linkElement = screen.getByText(/CIS Scheduler/i);
-      8 |     expect(linkElement).toBeInTheDocument();
-      9 | });
+      at createUUID (src/App.tsx:44:13)
 
-      at printWarning (node_modules/react-dom/cjs/react-dom.development.js:67:30)
-      at error (node_modules/react-dom/cjs/react-dom.development.js:43:5)
-      at validateDOMNesting (node_modules/react-dom/cjs/react-dom.development.js:10081:7)
-      at createInstance (node_modules/react-dom/cjs/react-dom.development.js:10181:5)
-      at completeWork (node_modules/react-dom/cjs/react-dom.development.js:19464:28)
-      at completeUnitOfWork (node_modules/react-dom/cjs/react-dom.development.js:22812:16)
-      at performUnitOfWork (node_modules/react-dom/cjs/react-dom.development.js:22787:5)
-      at workLoopSync (node_modules/react-dom/cjs/react-dom.development.js:22707:5)
-      at renderRootSync (node_modules/react-dom/cjs/react-dom.development.js:22670:7)
-      at performSyncWorkOnRoot (node_modules/react-dom/cjs/react-dom.development.js:22293:18)
-      at scheduleUpdateOnFiber (node_modules/react-dom/cjs/react-dom.development.js:21881:7)
-      at updateContainer (node_modules/react-dom/cjs/react-dom.development.js:25482:3)
-      at node_modules/react-dom/cjs/react-dom.development.js:26021:7
-      at unbatchedUpdates (node_modules/react-dom/cjs/react-dom.development.js:22431:12)
-      at legacyRenderSubtreeIntoContainer (node_modules/react-dom/cjs/react-dom.development.js:26020:5)
-      at Object.render (node_modules/react-dom/cjs/react-dom.development.js:26103:10)
-      at node_modules/@testing-library/react/dist/pure.js:101:25
-      at batchedUpdates$1 (node_modules/react-dom/cjs/react-dom.development.js:22380:12)
-      at act (node_modules/react-dom/cjs/react-dom-test-utils.development.js:1042:14)
-      at render (node_modules/@testing-library/react/dist/pure.js:97:26)
-      at Object.<anonymous> (src/App.test.tsx:6:11)
-      at TestScheduler.scheduleTests (node_modules/@jest/core/build/TestScheduler.js:333:13)
-      at runJest (node_modules/@jest/core/build/runJest.js:404:19)
-      at _run10000 (node_modules/@jest/core/build/cli/index.js:320:7)
-      at runCLI (node_modules/@jest/core/build/cli/index.js:173:3)
+FAIL src/App.test.tsx (33.794 s)
+  ✓ renders the program title (3698 ms)
+  ✓ renders Import CSV button (3746 ms)
+  ✕ renders export CSV button (4215 ms)
+  ✕ renders add course (4151 ms)
+  ✓ renders names (3378 ms)
+  ✕ Add Course Button works (4482 ms)
+  ✕ Users can delete courses (4106 ms)
+  ✕ Users can add courses (4071 ms)
 
-  console.error
-    Warning: validateDOMNesting(...): Whitespace text nodes cannot appear as a child of <tr>. Make sure you don't have any extra whitespace between tags on each line of your source code.
-        at tr
-        at thead
-        at table
-        at /home/runner/work/CISC275-Project-Main/CISC275-Project-Main/node_modules/react-bootstrap/cjs/Table.js:14:3
-        at Semester (/home/runner/work/CISC275-Project-Main/CISC275-Project-Main/src/viewCourseComponents.tsx:11:5)
-        at td
-        at tr
-        at table
-        at /home/runner/work/CISC275-Project-Main/CISC275-Project-Main/node_modules/react-bootstrap/cjs/Table.js:14:3
-        at div
-        at Year (/home/runner/work/CISC275-Project-Main/CISC275-Project-Main/src/viewCourseComponents.tsx:45:5)
-        at div
-        at App (/home/runner/work/CISC275-Project-Main/CISC275-Project-Main/src/App.tsx:80:46)
+  ● renders export CSV button
 
-      4 |
-      5 | test("renders the program title", () => {
-    > 6 |     render(<App />);
-        |           ^
-      7 |     const linkElement = screen.getByText(/CIS Scheduler/i);
-      8 |     expect(linkElement).toBeInTheDocument();
-      9 | });
-
-      at printWarning (node_modules/react-dom/cjs/react-dom.development.js:67:30)
-      at error (node_modules/react-dom/cjs/react-dom.development.js:43:5)
-      at validateDOMNesting (node_modules/react-dom/cjs/react-dom.development.js:10081:7)
-      at createTextInstance (node_modules/react-dom/cjs/react-dom.development.js:10223:5)
-      at completeWork (node_modules/react-dom/cjs/react-dom.development.js:19514:40)
-      at completeUnitOfWork (node_modules/react-dom/cjs/react-dom.development.js:22812:16)
-      at performUnitOfWork (node_modules/react-dom/cjs/react-dom.development.js:22787:5)
-      at workLoopSync (node_modules/react-dom/cjs/react-dom.development.js:22707:5)
-      at renderRootSync (node_modules/react-dom/cjs/react-dom.development.js:22670:7)
-      at performSyncWorkOnRoot (node_modules/react-dom/cjs/react-dom.development.js:22293:18)
-      at scheduleUpdateOnFiber (node_modules/react-dom/cjs/react-dom.development.js:21881:7)
-      at updateContainer (node_modules/react-dom/cjs/react-dom.development.js:25482:3)
-      at node_modules/react-dom/cjs/react-dom.development.js:26021:7
-      at unbatchedUpdates (node_modules/react-dom/cjs/react-dom.development.js:22431:12)
-      at legacyRenderSubtreeIntoContainer (node_modules/react-dom/cjs/react-dom.development.js:26020:5)
-      at Object.render (node_modules/react-dom/cjs/react-dom.development.js:26103:10)
-      at node_modules/@testing-library/react/dist/pure.js:101:25
-      at batchedUpdates$1 (node_modules/react-dom/cjs/react-dom.development.js:22380:12)
-      at act (node_modules/react-dom/cjs/react-dom-test-utils.development.js:1042:14)
-      at render (node_modules/@testing-library/react/dist/pure.js:97:26)
-      at Object.<anonymous> (src/App.test.tsx:6:11)
-      at TestScheduler.scheduleTests (node_modules/@jest/core/build/TestScheduler.js:333:13)
-      at runJest (node_modules/@jest/core/build/runJest.js:404:19)
-      at _run10000 (node_modules/@jest/core/build/cli/index.js:320:7)
-      at runCLI (node_modules/@jest/core/build/cli/index.js:173:3)
-
-  console.error
-    Warning: validateDOMNesting(...): <tr> cannot appear as a child of <table>. Add a <tbody>, <thead> or <tfoot> to your code to match the DOM tree generated by the browser.
-        at tr
-        at table
-        at /home/runner/work/CISC275-Project-Main/CISC275-Project-Main/node_modules/react-bootstrap/cjs/Table.js:14:3
-        at div
-        at Year (/home/runner/work/CISC275-Project-Main/CISC275-Project-Main/src/viewCourseComponents.tsx:45:5)
-        at div
-        at App (/home/runner/work/CISC275-Project-Main/CISC275-Project-Main/src/App.tsx:80:46)
-
-      4 |
-      5 | test("renders the program title", () => {
-    > 6 |     render(<App />);
-        |           ^
-      7 |     const linkElement = screen.getByText(/CIS Scheduler/i);
-      8 |     expect(linkElement).toBeInTheDocument();
-      9 | });
-
-      at printWarning (node_modules/react-dom/cjs/react-dom.development.js:67:30)
-      at error (node_modules/react-dom/cjs/react-dom.development.js:43:5)
-      at validateDOMNesting (node_modules/react-dom/cjs/react-dom.development.js:10081:7)
-      at createInstance (node_modules/react-dom/cjs/react-dom.development.js:10181:5)
-      at completeWork (node_modules/react-dom/cjs/react-dom.development.js:19464:28)
-      at completeUnitOfWork (node_modules/react-dom/cjs/react-dom.development.js:22812:16)
-      at performUnitOfWork (node_modules/react-dom/cjs/react-dom.development.js:22787:5)
-      at workLoopSync (node_modules/react-dom/cjs/react-dom.development.js:22707:5)
-      at renderRootSync (node_modules/react-dom/cjs/react-dom.development.js:22670:7)
-      at performSyncWorkOnRoot (node_modules/react-dom/cjs/react-dom.development.js:22293:18)
-      at scheduleUpdateOnFiber (node_modules/react-dom/cjs/react-dom.development.js:21881:7)
-      at updateContainer (node_modules/react-dom/cjs/react-dom.development.js:25482:3)
-      at node_modules/react-dom/cjs/react-dom.development.js:26021:7
-      at unbatchedUpdates (node_modules/react-dom/cjs/react-dom.development.js:22431:12)
-      at legacyRenderSubtreeIntoContainer (node_modules/react-dom/cjs/react-dom.development.js:26020:5)
-      at Object.render (node_modules/react-dom/cjs/react-dom.development.js:26103:10)
-      at node_modules/@testing-library/react/dist/pure.js:101:25
-      at batchedUpdates$1 (node_modules/react-dom/cjs/react-dom.development.js:22380:12)
-      at act (node_modules/react-dom/cjs/react-dom-test-utils.development.js:1042:14)
-      at render (node_modules/@testing-library/react/dist/pure.js:97:26)
-      at Object.<anonymous> (src/App.test.tsx:6:11)
-      at TestScheduler.scheduleTests (node_modules/@jest/core/build/TestScheduler.js:333:13)
-      at runJest (node_modules/@jest/core/build/runJest.js:404:19)
-      at _run10000 (node_modules/@jest/core/build/cli/index.js:320:7)
-      at runCLI (node_modules/@jest/core/build/cli/index.js:173:3)
-
-  console.error
-    Warning: Received `true` for a non-boolean attribute `table-bordered`.
-    
-    If you want to write it to the DOM, pass a string instead: table-bordered="true" or table-bordered={value.toString()}.
-        at table
-        at /home/runner/work/CISC275-Project-Main/CISC275-Project-Main/node_modules/react-bootstrap/cjs/Table.js:14:3
-        at div
-        at Year (/home/runner/work/CISC275-Project-Main/CISC275-Project-Main/src/viewCourseComponents.tsx:45:5)
-        at div
-        at App (/home/runner/work/CISC275-Project-Main/CISC275-Project-Main/src/App.tsx:80:46)
-
-      4 |
-      5 | test("renders the program title", () => {
-    > 6 |     render(<App />);
-        |           ^
-      7 |     const linkElement = screen.getByText(/CIS Scheduler/i);
-      8 |     expect(linkElement).toBeInTheDocument();
-      9 | });
-
-      at printWarning (node_modules/react-dom/cjs/react-dom.development.js:67:30)
-      at error (node_modules/react-dom/cjs/react-dom.development.js:43:5)
-      at validateProperty$1 (node_modules/react-dom/cjs/react-dom.development.js:3521:9)
-      at warnUnknownProperties (node_modules/react-dom/cjs/react-dom.development.js:3559:21)
-      at validateProperties$2 (node_modules/react-dom/cjs/react-dom.development.js:3583:3)
-      at validatePropertiesInDevelopment (node_modules/react-dom/cjs/react-dom.development.js:8765:5)
-      at setInitialProperties (node_modules/react-dom/cjs/react-dom.development.js:9041:5)
-      at finalizeInitialChildren (node_modules/react-dom/cjs/react-dom.development.js:10201:3)
-      at completeWork (node_modules/react-dom/cjs/react-dom.development.js:19470:17)
-      at completeUnitOfWork (node_modules/react-dom/cjs/react-dom.development.js:22812:16)
-      at performUnitOfWork (node_modules/react-dom/cjs/react-dom.development.js:22787:5)
-      at workLoopSync (node_modules/react-dom/cjs/react-dom.development.js:22707:5)
-      at renderRootSync (node_modules/react-dom/cjs/react-dom.development.js:22670:7)
-      at performSyncWorkOnRoot (node_modules/react-dom/cjs/react-dom.development.js:22293:18)
-      at scheduleUpdateOnFiber (node_modules/react-dom/cjs/react-dom.development.js:21881:7)
-      at updateContainer (node_modules/react-dom/cjs/react-dom.development.js:25482:3)
-      at node_modules/react-dom/cjs/react-dom.development.js:26021:7
-      at unbatchedUpdates (node_modules/react-dom/cjs/react-dom.development.js:22431:12)
-      at legacyRenderSubtreeIntoContainer (node_modules/react-dom/cjs/react-dom.development.js:26020:5)
-      at Object.render (node_modules/react-dom/cjs/react-dom.development.js:26103:10)
-      at node_modules/@testing-library/react/dist/pure.js:101:25
-      at batchedUpdates$1 (node_modules/react-dom/cjs/react-dom.development.js:22380:12)
-      at act (node_modules/react-dom/cjs/react-dom-test-utils.development.js:1042:14)
-      at render (node_modules/@testing-library/react/dist/pure.js:97:26)
-      at Object.<anonymous> (src/App.test.tsx:6:11)
-      at TestScheduler.scheduleTests (node_modules/@jest/core/build/TestScheduler.js:333:13)
-      at runJest (node_modules/@jest/core/build/runJest.js:404:19)
-      at _run10000 (node_modules/@jest/core/build/cli/index.js:320:7)
-      at runCLI (node_modules/@jest/core/build/cli/index.js:173:3)
-
-FAIL src/App.test.tsx
-  ✓ renders the program title (159 ms)
-  ✓ renders Import CSV button (21 ms)
-  ✓ renders export CSV button (23 ms)
-  ✓ renders add course (24 ms)
-  ✓ renders names (16 ms)
-  ✓ Add Course Button works (103 ms)
-  ✕ Users can delete courses (38 ms)
-  ✕ Users can add courses (50 ms)
-
-  ● Users can delete courses
-
-    expect(received).toBeInTheDocument()
-
-    received value must be an HTMLElement or an SVGElement.
-    Received has value: null
-
-      57 |     button.click();
-      58 |     expect(screen.queryByLabelText("Name:")).toBeInTheDocument();
-    > 59 |     expect(screen.queryByLabelText("Ticker:")).toBeInTheDocument();
-         |                                                ^
-      60 |     expect(screen.queryByLabelText("Credits:")).toBeInTheDocument();
-      61 |     const DeleteButton = screen.getByText(/Delete Course/i);
-      62 |     DeleteButton.click();
-
-      at __EXTERNAL_MATCHER_TRAP__ (node_modules/expect/build/index.js:386:30)
-      at Object.toBeInTheDocument (node_modules/expect/build/index.js:387:15)
-      at Object.<anonymous> (src/App.test.tsx:59:48)
-      at TestScheduler.scheduleTests (node_modules/@jest/core/build/TestScheduler.js:333:13)
-      at runJest (node_modules/@jest/core/build/runJest.js:404:19)
-      at _run10000 (node_modules/@jest/core/build/cli/index.js:320:7)
-      at runCLI (node_modules/@jest/core/build/cli/index.js:173:3)
-
-  ● Users can add courses
-
-    TestingLibraryElementError: Unable to find an element with the text: /Add The Course/i. This could be because the text is broken up by multiple elements. In this case, you can provide a function for your text matcher to make your matcher more flexible.
+    TestingLibraryElementError: Unable to find an element with the text: /Create New Plan/i. This could be because the text is broken up by multiple elements. In this case, you can provide a function for your text matcher to make your matcher more flexible.
 
     Ignored nodes: comments, script, style
-    [36m<body[39m
-      [33mclass[39m=[32m"modal-open"[39m
-      [33mdata-rr-ui-modal-open[39m=[32m""[39m
-      [33mstyle[39m=[32m"padding-right: 2048px;"[39m
-    [36m>[39m
+    [36m<body>[39m
       [36m<div>[39m
         [36m<div[39m
           [33mclass[39m=[32m"App"[39m
@@ -243,6 +33,11 @@ FAIL src/App.test.tsx
             [36m<h1[39m
               [33mclass[39m=[32m"App-title"[39m
             [36m>[39m
+              [36m<div[39m
+                [33mclass[39m=[32m"container"[39m
+              [36m>[39m
+                [0mTest[0m
+              [36m</div>[39m
               [36m<img[39m
                 [33mheight[39m=[32m"150"[39m
                 [33msrc[39m=[32m"ud_logo.jpg"[39m
@@ -263,327 +58,940 @@ FAIL src/App.test.tsx
             [36m<button[39m
               [33mclass[39m=[32m"buttonSpacing"[39m
             [36m>[39m
-              [0mCreate New Plan[0m
+              [0mView Course Plans[0m
             [36m</button>[39m
             [36m<button>[39m
               [0mImport CSV[0m
             [36m</button>[39m
-            [36m<button>[39m
-              [0mAdd Course[0m
-            [36m</button>[39m
-            [36m<button>[39m
-              [0mClear Courses[0m
-            [36m</button>[39m
           [36m</div>[39m
           [36m<div[39m
-            [33mclass[39m=[32m"d-inline-flex"[39m
+            [33mclass[39m=[32m"container-fluid"[39m
           [36m>[39m
-            [36m<table[39m
-              [33mclass[39m=[32m"tight table table-striped table-bordered table-hover"[39m
-            [36m>[39m
-              [36m<thead>[39m
-                [36m<th>[39m
-                  [0mFall[0m
-                [36m</th>[39m
-                [36m<th>[39m
-                  [0mSpring[0m
-                [36m</th>[39m
-              [36m</thead>[39m
-              [36m<tr>[39m
-                [36m<td>[39m
-                  [36m<table[39m
-                    [33mclass[39m=[32m"tight table table-striped table-bordered table-hover"[39m
-                  [36m>[39m
-                    [36m<thead>[39m
-                      [36m<tr>[39m
-                        [36m<th>[39m
-                          [0mCourse ID[0m
-                        [36m</th>[39m
-                        [0m [0m
-                        [36m<th>[39m
-                          [0mName[0m
-                        [36m</th>[39m
-                        [36m<th>[39m
-                          [0mCredits[0m
-                        [36m</th>[39m
-                      [36m</tr>[39m
-                    [36m</thead>[39m
-                    [36m<tbody>[39m
-                      [36m<tr>[39m
-                        [36m<td>[39m
-                          [0mCISC108[0m
-                        [36m</td>[39m
-                        [36m<td>[39m
-                          [0mIntroduction to Computer Science I[0m
-                        [36m</td>[39m
-                        [36m<td>[39m
-                          [0m3[0m
-                        [36m</td>[39m
-                      [36m</tr>[39m
-                      [36m<tr>[39m
-                        [36m<td>[39m
-                          [0mEGGG101[0m
-                        [36m</td>[39m
-                        [36m<td>[39m
-                          [0mIntroduction to Engineering (FYE)[0m
-                        [36m</td>[39m
-                        [36m<td>[39m
-                          [0m2[0m
-                        [36m</td>[39m
-                      [36m</tr>[39m
-                      [36m<tr>[39m
-                        [36m<td>[39m
-                          [0mENGL110[0m
-                        [36m</td>[39m
-                        [36m<td>[39m
-                          [0mSeminar in Composition[0m
-                        [36m</td>[39m
-                        [36m<td>[39m
-                          [0m3[0m
-                        [36m</td>[39m
-                      [36m</tr>[39m
-                      [36m<tr>[39m
-                        [36m<td>[39m
-                          [0mMATH241[0m
-                        [36m</td>[39m
-                        [36m<td>[39m
-                          [0mAnalytic Geometry & Calculus A[0m
-                        [36m</td>[39m
-                        [36m<td>[39m
-                          [0m4[0m
-                        [36m</td>[39m
-                      [36m</tr>[39m
-                    [36m</tbody>[39m
-                  [36m</table>[39m
-                [36m</td>[39m
-                [36m<td>[39m
-                  [36m<table[39m
-                    [33mclass[39m=[32m"tight table table-striped table-bordered table-hover"[39m
-                  [36m>[39m
-                    [36m<thead>[39m
-                      [36m<tr>[39m
-                        [36m<th>[39m
-                          [0mCourse ID[0m
-                        [36m</th>[39m
-                        [0m [0m
-                        [36m<th>[39m
-                          [0mName[0m
-                        [36m</th>[39m
-                        [36m<th>[39m
-                          [0mCredits[0m
-                        [36m</th>[39m
-                      [36m</tr>[39m
-                    [36m</thead>[39m
-                    [36m<tbody>[39m
-                      [36m<tr>[39m
-                        [36m<td>[39m
-                          [0mCISC181[0m
-                        [36m</td>[39m
-                        [36m<td>[39m
-                          [0mIntroduction to Computer Science II[0m
-                        [36m</td>[39m
-                        [36m<td>[39m
-                          [0m3[0m
-                        [36m</td>[39m
-                      [36m</tr>[39m
-                      [36m<tr>[39m
-                        [36m<td>[39m
-                          [0mCISC210[0m
-                        [36m</td>[39m
-                        [36m<td>[39m
-                          [0mIntroduction to Systems Programming[0m
-                        [36m</td>[39m
-                        [36m<td>[39m
-                          [0m3[0m
-                        [36m</td>[39m
-                      [36m</tr>[39m
-                      [36m<tr>[39m
-                        [36m<td>[39m
-                          [0mCISC355[0m
-                        [36m</td>[39m
-                        [36m<td>[39m
-                          [0mComputers, Ethics & Society[0m
-                        [36m</td>[39m
-                        [36m<td>[39m
-                          [0m3[0m
-                        [36m</td>[39m
-                      [36m</tr>[39m
-                      [36m<tr>[39m
-                        [36m<td>[39m
-                          [0mMATH242[0m
-                        [36m</td>[39m
-                        [36m<td>[39m
-                          [0mAnalytic Geometry & Calculus B[0m
-                        [36m</td>[39m
-                        [36m<td>[39m
-                          [0m4[0m
-                        [36m</td>[39m
-                      [36m</tr>[39m
-                    [36m</tbody>[39m
-                  [36m</table>[39m
-                [36m</td>[39m
-              [36m</tr>[39m
-            [36m</table>[39m
-          [36m</div>[39m
-          [36m<div />[39m
-        [36m</div>[39m
-      [36m</div>[39m
-      [36m<div[39m
-        [33mclass[39m=[32m"fade modal-backdrop show"[39m
-      [36m/>[39m
-      [36m<div[39m
-        [33maria-modal[39m=[32m"true"[39m
-        [33mclass[39m=[32m"fade modal show"[39m
-        [33mrole[39m=[32m"dialog"[39m
-        [33mstyle[39m=[32m"display: block; padding-right: 0px;"[39m
-        [33mtabindex[39m=[32m"-1"[39m
-      [36m>[39m
-        [36m<div[39m
-          [33mclass[39m=[32m"modal-dialog"[39m
-        [36m>[39m
-          [36m<div[39m
-            [33mclass[39m=[32m"modal-content"[39m
-          [36m>[39m
-            [36m<div[39m
-              [33mclass[39m=[32m"modal-header"[39m
-            [36m>[39m
-              [36m<div[39m
-                [33mclass[39m=[32m"modal-title h4"[39m
-              [36m>[39m
-                [0mAdd Course[0m
-              [36m</div>[39m
-              [36m<button[39m
-                [33maria-label[39m=[32m"Close"[39m
-                [33mclass[39m=[32m"btn-close"[39m
-                [33mtype[39m=[32m"button"[39m
-              [36m/>[39m
-            [36m</div>[39m
-            [36m<div[39m
-              [33mclass[39m=[32m"modal-body"[39m
-            [36m>[39m
-              [36m<form[39m
-                [33mclass[39m=[32m""[39m
-              [36m>[39m
-                [36m<div>[39m
-                  [36m<label[39m
-                    [33mclass[39m=[32m"form-label"[39m
-                    [33mfor[39m=[32m"formCourseName"[39m
-                  [36m>[39m
-                    [0mCourse Name:[0m
-                  [36m</label>[39m
-                  [36m<input[39m
-                    [33mclass[39m=[32m"form-control"[39m
-                    [33mid[39m=[32m"formCourseName"[39m
-                    [33mtype[39m=[32m"text"[39m
-                    [33mvalue[39m=[32m""[39m
-                  [36m/>[39m
-                [36m</div>[39m
-                [36m<div>[39m
-                  [36m<label[39m
-                    [33mclass[39m=[32m"form-label"[39m
-                    [33mfor[39m=[32m"formCourseTicker"[39m
-                  [36m>[39m
-                    [0mCourse Ticker:[0m
-                  [36m</label>[39m
-                  [36m<input[39m
-                    [33mclass[39m=[32m"form-control"[39m
-                    [33mid[39m=[32m"formCourseTicker"[39m
-                    [33mtype[39m=[32m"text"[39m
-                    [33mvalue[39m=[32m""[39m
-                  [36m/>[39m
-                [36m</div>[39m
-                [36m<div>[39m
-                  [36m<label[39m
-                    [33mclass[39m=[32m"form-label"[39m
-                    [33mfor[39m=[32m"formCourseCredits"[39m
-                  [36m>[39m
-                    [0mCredits:[0m
-                  [36m</label>[39m
-                  [36m<input[39m
-                    [33mclass[39m=[32m"form-control"[39m
-                    [33mid[39m=[32m"formCourseCredits"[39m
-                    [33mtype[39m=[32m"number"[39m
-                    [33mvalue[39m=[32m"0"[39m
-                  [36m/>[39m
-                [36m</div>[39m
-                [36m<div>[39m
-                  [36m<label[39m
-                    [33mclass[39m=[32m"form-label"[39m
-                    [33mfor[39m=[32m"formCoursePrereqs"[39m
-                  [36m>[39m
-                    [0mPrerequisites:[0m
-                  [36m</label>[39m
-                  [36m<input[39m
-                    [33mclass[39m=[32m"form-control"[39m
-                    [33mid[39m=[32m"formCoursePrereqs"[39m
-                    [33mtype[39m=[32m"text"[39m
-                    [33mvalue[39m=[32m""[39m
-                  [36m/>[39m
-                [36m</div>[39m
-                [36m<div>[39m
-                  [36m<label[39m
-                    [33mclass[39m=[32m"form-label"[39m
-                    [33mfor[39m=[32m"formSemesterSelect"[39m
-                  [36m>[39m
-                    [0mSemester:[0m
-                  [36m</label>[39m
-                  [36m<select[39m
-                    [33mclass[39m=[32m"form-control"[39m
-                    [33mid[39m=[32m"formSemesterSelect"[39m
-                  [36m>[39m
-                    [36m<option[39m
-                      [33mvalue[39m=[32m""[39m
-                    [36m>[39m
-                      [0mSelect Semester[0m
-                    [36m</option>[39m
-                    [36m<option[39m
-                      [33mvalue[39m=[32m"firstsemester"[39m
-                    [36m>[39m
-                      [0mFirst Semester[0m
-                    [36m</option>[39m
-                    [36m<option[39m
-                      [33mvalue[39m=[32m"secondsemester"[39m
-                    [36m>[39m
-                      [0mSecond Semester[0m
-                    [36m</option>[39m
-                  [36m</select>[39m
-                [36m</div>[39m
-              [36m</form>[39m
-            [36m</div>[39m
-            [36m<div[39m
-              [33mclass[39m=[32m"modal-footer"[39m
-            [36m>[39m
-              [36m<button[39m
-                [33mclass[39m=[32m"btn btn-secondary"[39m
-                [33mtype[39m=[32m"button"[39m
-              [36m>[39m
-                [0mClose[0m
-              [36m</button>[39m
+            [36m<div>[39m
               [36m<button[39m
                 [33mclass[39m=[32m"btn btn-primary"[39m
                 [33mtype[39m=[32m"button"[39m
               [36m>[39m
-                [0mAdd Course[0m
+                [0mSave[0m
               [36m</button>[39m
-            [36m</div>[39m
-          [36m</div>[39m
-        [36m</div>[39m
-      [36m</div>[39m
-    [36m</body>[39m
+              [36m<div[39m
+                [33mclass[39m=[32m"row"[39m
+              [36m>[39m
+                [36m<div[39m
+                  [33mclass[39m=[32m"col-sm-8"[39m
+                [36m>[39m
+                  [36m<div>[39m
+                    [36m<div[39m
+                      [33mclass[39m=[32m"row"[39m
+                    [36m>[39m
+                      [36m<div[39m
+                        [33mclass[39m=[32m"col-sm-3"[39m
+                      [36m>[39m
+                        [36m<input[39m
+                          [33mclass[39m=[32m"float-end form-control"[39m
+                          [33mid[39m=[32m"search"[39m
+                          [33mplaceholder[39m=[32m"Search"[39m
+                          [33mtype[39m=[32m"text"[39m
+                        [36m/>[39m
+                      [36m</div>[39m
+                    [36m</div>[39m
+                  [36m</div>[39m
+                  [36m<div[39m
+                    [33mstyle[39m=[32m"max-height: 300px; overflow-y: auto;"[39m
+                  [36m>[39m
+                    [36m<table[39m
+                      [33mclass[39m=[32m"table table-striped table-bordered table-hover"[39m
+                    [36m>[39m
+                      [36m<thead[39m
+                        [33mclass[39m=[32m"table-light"[39m
+                        [33mstyle[39m=[32m"position: sticky; top: 0px; z-index: 99;"[39m
+                      [36m>[39m
+                        [36m<tr>[39m
+                          [36m<th[39m
+                            [33mcolspan[39m=[32m"4"[39m
+                          [36m>[39m
+                            [0mCourse Catalog[0m
+                          [36m</th>[39m
+                        [36m</tr>[39m
+                        [36m<tr>[39m
+                          [36m<th>[39m
+                            [0mCourse Code[0m
+                          [36m</th>[39m
+                          [36m<th>[39m
+                            [0mName[0m
+                          [36m</th>[39m
+                          [36m<th>[39m
+                            [0mDescription[0m
+                          [36m</th>[39m
+                          [36m<th>[39m
+                            [0mCredits[0m
+                          [36m</th>[39m
+                          [36m<th>[39m
+                            [0mAction[0m
+                          [36m</th>[39m
+                        [36m</tr>[39m
+                      [36m</thead>[39m
+                      [36m<tbody>[39m
+                        [36m<tr>[39m
+                          [36m<td>[39m
+                            [0mACCT 166[0m
+                          [36m</td>[39m
+                          [36m<td>[39m
+                            [0mSPECIAL PROBLEM[0m
+                          [36m</td>[39m
+                          [36m<td />[39m
+                          [36m<td>[39m
+                            [0m 1-3[0m
+                          [36m</td>[39m
+                          [36m<td>[39m
+                            [36m<button[39m
+                              [33mclass[39m=[32m"btn btn-primary"[39m
+                              [33mtype[39m=[32m"button"[39m
+                            [36m>[39m
+                              [0mADD[0m
+                            [36m</button>[39m
+                          [36m</td>[39m
+                        [36m</tr>[39m
+                        [36m<tr>[39m
+                          [36m<td>[39m
+                            [0mACCT 200[0m
+                          [36m</td>[39m
+                          [36m<td>[39m
+                            [0mSurvey of Accounting[0m
+                          [36m</td>[39m
+                          [36m<td>[39m
+                            [0mSurvey of financial and managerial accounting concepts for the non-business major. Students learn about financial statements for merchandising, manufacturing, and service companies. Topics include: accounting cycle, budgeting, standard costing, contribution margins, cost-volume-profit analysis, and decision making.[0m
+                          [36m</td>[39m
+                          [36m<td>[39m
+                            [0m 4[0m
+                          [36m</td>[39m
+                          [36m<td>[39m
+                            [36m<button[39m
+                              [33mclass[39m=[32m"btn btn-primary"[39m
+                              [33mtype[39m=[32m"button"[39m
+                            [36m>[39m
+                              [0mADD[0m
+                            [36m</button>[39m
+                          [36m</td>[39m
+                        [36m</tr>[39m
+                        [36m<tr>[39m
+                          [36m<td>[39m
+                            [0mACCT 207[0m
+                          [36m</td>[39m
+                          [36m<td>[39m
+                            [0mAccounting I[0m
+                          [36m</td>[39m
+                          [36m<td>[39m
+                            [0mAn introduction to financial accounting. Topics: the accounting cycle, merchandise accounting, accounting procedures for cash, receivables, payables, inventories, plant and equipment, stocks and bonds.[0m
+                          [36m</td>[39m
+                          [36m<td>[39m
+                            [0m 3[0m
+                          [36m</td>[39m
+                          [36m<td>[39m
+                            [36m<button[39m
+                              [33mclass[39m=[32m"btn btn-primary"[39m
+                              [33mtype[39m=[32m"button"[39m
+                            [36m>[39m
+                              [0mADD[0m
+                            [36m</...
 
-      78 |     secondSem.click();
-      79 |     //need to change the button title for test to work or need to fix test later
-    > 80 |     const button2 = screen.getByText(/Add The Course/i);
-         |                            ^
-      81 |     button2.click();
-      82 |     expect(screen.getByText(/0/i)).toBeInTheDocument();
-      83 | });
+      17 | test("renders export CSV button", () => {
+      18 |     render(<App />);
+    > 19 |     const linkElement = screen.getByText(/Create New Plan/i);
+         |                                ^
+      20 |     expect(linkElement).toBeInTheDocument();
+      21 | });
+      22 |
 
       at Object.getElementError (node_modules/@testing-library/react/node_modules/@testing-library/dom/dist/config.js:37:19)
       at node_modules/@testing-library/react/node_modules/@testing-library/dom/dist/query-helpers.js:76:38
       at node_modules/@testing-library/react/node_modules/@testing-library/dom/dist/query-helpers.js:52:17
       at getByText (node_modules/@testing-library/react/node_modules/@testing-library/dom/dist/query-helpers.js:95:19)
-      at Object.<anonymous> (src/App.test.tsx:80:28)
+      at Object.<anonymous> (src/App.test.tsx:19:32)
+      at TestScheduler.scheduleTests (node_modules/@jest/core/build/TestScheduler.js:333:13)
+      at runJest (node_modules/@jest/core/build/runJest.js:404:19)
+      at _run10000 (node_modules/@jest/core/build/cli/index.js:320:7)
+      at runCLI (node_modules/@jest/core/build/cli/index.js:173:3)
+
+  ● renders add course
+
+    TestingLibraryElementError: Unable to find an element with the text: /Add Course/i. This could be because the text is broken up by multiple elements. In this case, you can provide a function for your text matcher to make your matcher more flexible.
+
+    Ignored nodes: comments, script, style
+    [36m<body>[39m
+      [36m<div>[39m
+        [36m<div[39m
+          [33mclass[39m=[32m"App"[39m
+        [36m>[39m
+          [36m<div[39m
+            [33mclass[39m=[32m"logo"[39m
+          [36m>[39m
+            [36m<h1[39m
+              [33mclass[39m=[32m"App-title"[39m
+            [36m>[39m
+              [36m<div[39m
+                [33mclass[39m=[32m"container"[39m
+              [36m>[39m
+                [0mTest[0m
+              [36m</div>[39m
+              [36m<img[39m
+                [33mheight[39m=[32m"150"[39m
+                [33msrc[39m=[32m"ud_logo.jpg"[39m
+                [33mwidth[39m=[32m"150"[39m
+              [36m/>[39m
+              [0mCIS Scheduler[0m
+              [0m [0m
+            [36m</h1>[39m
+          [36m</div>[39m
+          [36m<header[39m
+            [33mclass[39m=[32m"App-header"[39m
+          [36m>[39m
+            [0mAdam Beck, Zach Reggio, Sam Ferguson, Brandon Marafino, Adam Liu[0m
+          [36m</header>[39m
+          [36m<div[39m
+            [33mclass[39m=[32m"button"[39m
+          [36m>[39m
+            [36m<button[39m
+              [33mclass[39m=[32m"buttonSpacing"[39m
+            [36m>[39m
+              [0mView Course Plans[0m
+            [36m</button>[39m
+            [36m<button>[39m
+              [0mImport CSV[0m
+            [36m</button>[39m
+          [36m</div>[39m
+          [36m<div[39m
+            [33mclass[39m=[32m"container-fluid"[39m
+          [36m>[39m
+            [36m<div>[39m
+              [36m<button[39m
+                [33mclass[39m=[32m"btn btn-primary"[39m
+                [33mtype[39m=[32m"button"[39m
+              [36m>[39m
+                [0mSave[0m
+              [36m</button>[39m
+              [36m<div[39m
+                [33mclass[39m=[32m"row"[39m
+              [36m>[39m
+                [36m<div[39m
+                  [33mclass[39m=[32m"col-sm-8"[39m
+                [36m>[39m
+                  [36m<div>[39m
+                    [36m<div[39m
+                      [33mclass[39m=[32m"row"[39m
+                    [36m>[39m
+                      [36m<div[39m
+                        [33mclass[39m=[32m"col-sm-3"[39m
+                      [36m>[39m
+                        [36m<input[39m
+                          [33mclass[39m=[32m"float-end form-control"[39m
+                          [33mid[39m=[32m"search"[39m
+                          [33mplaceholder[39m=[32m"Search"[39m
+                          [33mtype[39m=[32m"text"[39m
+                        [36m/>[39m
+                      [36m</div>[39m
+                    [36m</div>[39m
+                  [36m</div>[39m
+                  [36m<div[39m
+                    [33mstyle[39m=[32m"max-height: 300px; overflow-y: auto;"[39m
+                  [36m>[39m
+                    [36m<table[39m
+                      [33mclass[39m=[32m"table table-striped table-bordered table-hover"[39m
+                    [36m>[39m
+                      [36m<thead[39m
+                        [33mclass[39m=[32m"table-light"[39m
+                        [33mstyle[39m=[32m"position: sticky; top: 0px; z-index: 99;"[39m
+                      [36m>[39m
+                        [36m<tr>[39m
+                          [36m<th[39m
+                            [33mcolspan[39m=[32m"4"[39m
+                          [36m>[39m
+                            [0mCourse Catalog[0m
+                          [36m</th>[39m
+                        [36m</tr>[39m
+                        [36m<tr>[39m
+                          [36m<th>[39m
+                            [0mCourse Code[0m
+                          [36m</th>[39m
+                          [36m<th>[39m
+                            [0mName[0m
+                          [36m</th>[39m
+                          [36m<th>[39m
+                            [0mDescription[0m
+                          [36m</th>[39m
+                          [36m<th>[39m
+                            [0mCredits[0m
+                          [36m</th>[39m
+                          [36m<th>[39m
+                            [0mAction[0m
+                          [36m</th>[39m
+                        [36m</tr>[39m
+                      [36m</thead>[39m
+                      [36m<tbody>[39m
+                        [36m<tr>[39m
+                          [36m<td>[39m
+                            [0mACCT 166[0m
+                          [36m</td>[39m
+                          [36m<td>[39m
+                            [0mSPECIAL PROBLEM[0m
+                          [36m</td>[39m
+                          [36m<td />[39m
+                          [36m<td>[39m
+                            [0m 1-3[0m
+                          [36m</td>[39m
+                          [36m<td>[39m
+                            [36m<button[39m
+                              [33mclass[39m=[32m"btn btn-primary"[39m
+                              [33mtype[39m=[32m"button"[39m
+                            [36m>[39m
+                              [0mADD[0m
+                            [36m</button>[39m
+                          [36m</td>[39m
+                        [36m</tr>[39m
+                        [36m<tr>[39m
+                          [36m<td>[39m
+                            [0mACCT 200[0m
+                          [36m</td>[39m
+                          [36m<td>[39m
+                            [0mSurvey of Accounting[0m
+                          [36m</td>[39m
+                          [36m<td>[39m
+                            [0mSurvey of financial and managerial accounting concepts for the non-business major. Students learn about financial statements for merchandising, manufacturing, and service companies. Topics include: accounting cycle, budgeting, standard costing, contribution margins, cost-volume-profit analysis, and decision making.[0m
+                          [36m</td>[39m
+                          [36m<td>[39m
+                            [0m 4[0m
+                          [36m</td>[39m
+                          [36m<td>[39m
+                            [36m<button[39m
+                              [33mclass[39m=[32m"btn btn-primary"[39m
+                              [33mtype[39m=[32m"button"[39m
+                            [36m>[39m
+                              [0mADD[0m
+                            [36m</button>[39m
+                          [36m</td>[39m
+                        [36m</tr>[39m
+                        [36m<tr>[39m
+                          [36m<td>[39m
+                            [0mACCT 207[0m
+                          [36m</td>[39m
+                          [36m<td>[39m
+                            [0mAccounting I[0m
+                          [36m</td>[39m
+                          [36m<td>[39m
+                            [0mAn introduction to financial accounting. Topics: the accounting cycle, merchandise accounting, accounting procedures for cash, receivables, payables, inventories, plant and equipment, stocks and bonds.[0m
+                          [36m</td>[39m
+                          [36m<td>[39m
+                            [0m 3[0m
+                          [36m</td>[39m
+                          [36m<td>[39m
+                            [36m<button[39m
+                              [33mclass[39m=[32m"btn btn-primary"[39m
+                              [33mtype[39m=[32m"button"[39m
+                            [36m>[39m
+                              [0mADD[0m
+                            [36m</...
+
+      23 | test("renders add course", () => {
+      24 |     render(<App />);
+    > 25 |     const linkElement = screen.getByText(/Add Course/i);
+         |                                ^
+      26 |     expect(linkElement).toBeInTheDocument();
+      27 | });
+      28 |
+
+      at Object.getElementError (node_modules/@testing-library/react/node_modules/@testing-library/dom/dist/config.js:37:19)
+      at node_modules/@testing-library/react/node_modules/@testing-library/dom/dist/query-helpers.js:76:38
+      at node_modules/@testing-library/react/node_modules/@testing-library/dom/dist/query-helpers.js:52:17
+      at getByText (node_modules/@testing-library/react/node_modules/@testing-library/dom/dist/query-helpers.js:95:19)
+      at Object.<anonymous> (src/App.test.tsx:25:32)
+      at TestScheduler.scheduleTests (node_modules/@jest/core/build/TestScheduler.js:333:13)
+      at runJest (node_modules/@jest/core/build/runJest.js:404:19)
+      at _run10000 (node_modules/@jest/core/build/cli/index.js:320:7)
+      at runCLI (node_modules/@jest/core/build/cli/index.js:173:3)
+
+  ● Add Course Button works
+
+    TestingLibraryElementError: Unable to find an element with the text: /Add Course/i. This could be because the text is broken up by multiple elements. In this case, you can provide a function for your text matcher to make your matcher more flexible.
+
+    Ignored nodes: comments, script, style
+    [36m<body>[39m
+      [36m<div>[39m
+        [36m<div[39m
+          [33mclass[39m=[32m"App"[39m
+        [36m>[39m
+          [36m<div[39m
+            [33mclass[39m=[32m"logo"[39m
+          [36m>[39m
+            [36m<h1[39m
+              [33mclass[39m=[32m"App-title"[39m
+            [36m>[39m
+              [36m<div[39m
+                [33mclass[39m=[32m"container"[39m
+              [36m>[39m
+                [0mTest[0m
+              [36m</div>[39m
+              [36m<img[39m
+                [33mheight[39m=[32m"150"[39m
+                [33msrc[39m=[32m"ud_logo.jpg"[39m
+                [33mwidth[39m=[32m"150"[39m
+              [36m/>[39m
+              [0mCIS Scheduler[0m
+              [0m [0m
+            [36m</h1>[39m
+          [36m</div>[39m
+          [36m<header[39m
+            [33mclass[39m=[32m"App-header"[39m
+          [36m>[39m
+            [0mAdam Beck, Zach Reggio, Sam Ferguson, Brandon Marafino, Adam Liu[0m
+          [36m</header>[39m
+          [36m<div[39m
+            [33mclass[39m=[32m"button"[39m
+          [36m>[39m
+            [36m<button[39m
+              [33mclass[39m=[32m"buttonSpacing"[39m
+            [36m>[39m
+              [0mView Course Plans[0m
+            [36m</button>[39m
+            [36m<button>[39m
+              [0mImport CSV[0m
+            [36m</button>[39m
+          [36m</div>[39m
+          [36m<div[39m
+            [33mclass[39m=[32m"container-fluid"[39m
+          [36m>[39m
+            [36m<div>[39m
+              [36m<button[39m
+                [33mclass[39m=[32m"btn btn-primary"[39m
+                [33mtype[39m=[32m"button"[39m
+              [36m>[39m
+                [0mSave[0m
+              [36m</button>[39m
+              [36m<div[39m
+                [33mclass[39m=[32m"row"[39m
+              [36m>[39m
+                [36m<div[39m
+                  [33mclass[39m=[32m"col-sm-8"[39m
+                [36m>[39m
+                  [36m<div>[39m
+                    [36m<div[39m
+                      [33mclass[39m=[32m"row"[39m
+                    [36m>[39m
+                      [36m<div[39m
+                        [33mclass[39m=[32m"col-sm-3"[39m
+                      [36m>[39m
+                        [36m<input[39m
+                          [33mclass[39m=[32m"float-end form-control"[39m
+                          [33mid[39m=[32m"search"[39m
+                          [33mplaceholder[39m=[32m"Search"[39m
+                          [33mtype[39m=[32m"text"[39m
+                        [36m/>[39m
+                      [36m</div>[39m
+                    [36m</div>[39m
+                  [36m</div>[39m
+                  [36m<div[39m
+                    [33mstyle[39m=[32m"max-height: 300px; overflow-y: auto;"[39m
+                  [36m>[39m
+                    [36m<table[39m
+                      [33mclass[39m=[32m"table table-striped table-bordered table-hover"[39m
+                    [36m>[39m
+                      [36m<thead[39m
+                        [33mclass[39m=[32m"table-light"[39m
+                        [33mstyle[39m=[32m"position: sticky; top: 0px; z-index: 99;"[39m
+                      [36m>[39m
+                        [36m<tr>[39m
+                          [36m<th[39m
+                            [33mcolspan[39m=[32m"4"[39m
+                          [36m>[39m
+                            [0mCourse Catalog[0m
+                          [36m</th>[39m
+                        [36m</tr>[39m
+                        [36m<tr>[39m
+                          [36m<th>[39m
+                            [0mCourse Code[0m
+                          [36m</th>[39m
+                          [36m<th>[39m
+                            [0mName[0m
+                          [36m</th>[39m
+                          [36m<th>[39m
+                            [0mDescription[0m
+                          [36m</th>[39m
+                          [36m<th>[39m
+                            [0mCredits[0m
+                          [36m</th>[39m
+                          [36m<th>[39m
+                            [0mAction[0m
+                          [36m</th>[39m
+                        [36m</tr>[39m
+                      [36m</thead>[39m
+                      [36m<tbody>[39m
+                        [36m<tr>[39m
+                          [36m<td>[39m
+                            [0mACCT 166[0m
+                          [36m</td>[39m
+                          [36m<td>[39m
+                            [0mSPECIAL PROBLEM[0m
+                          [36m</td>[39m
+                          [36m<td />[39m
+                          [36m<td>[39m
+                            [0m 1-3[0m
+                          [36m</td>[39m
+                          [36m<td>[39m
+                            [36m<button[39m
+                              [33mclass[39m=[32m"btn btn-primary"[39m
+                              [33mtype[39m=[32m"button"[39m
+                            [36m>[39m
+                              [0mADD[0m
+                            [36m</button>[39m
+                          [36m</td>[39m
+                        [36m</tr>[39m
+                        [36m<tr>[39m
+                          [36m<td>[39m
+                            [0mACCT 200[0m
+                          [36m</td>[39m
+                          [36m<td>[39m
+                            [0mSurvey of Accounting[0m
+                          [36m</td>[39m
+                          [36m<td>[39m
+                            [0mSurvey of financial and managerial accounting concepts for the non-business major. Students learn about financial statements for merchandising, manufacturing, and service companies. Topics include: accounting cycle, budgeting, standard costing, contribution margins, cost-volume-profit analysis, and decision making.[0m
+                          [36m</td>[39m
+                          [36m<td>[39m
+                            [0m 4[0m
+                          [36m</td>[39m
+                          [36m<td>[39m
+                            [36m<button[39m
+                              [33mclass[39m=[32m"btn btn-primary"[39m
+                              [33mtype[39m=[32m"button"[39m
+                            [36m>[39m
+                              [0mADD[0m
+                            [36m</button>[39m
+                          [36m</td>[39m
+                        [36m</tr>[39m
+                        [36m<tr>[39m
+                          [36m<td>[39m
+                            [0mACCT 207[0m
+                          [36m</td>[39m
+                          [36m<td>[39m
+                            [0mAccounting I[0m
+                          [36m</td>[39m
+                          [36m<td>[39m
+                            [0mAn introduction to financial accounting. Topics: the accounting cycle, merchandise accounting, accounting procedures for cash, receivables, payables, inventories, plant and equipment, stocks and bonds.[0m
+                          [36m</td>[39m
+                          [36m<td>[39m
+                            [0m 3[0m
+                          [36m</td>[39m
+                          [36m<td>[39m
+                            [36m<button[39m
+                              [33mclass[39m=[32m"btn btn-primary"[39m
+                              [33mtype[39m=[32m"button"[39m
+                            [36m>[39m
+                              [0mADD[0m
+                            [36m</...
+
+      37 | test("Add Course Button works", () => {
+      38 |     render(<App />);
+    > 39 |     const button = screen.getByText(/Add Course/i);
+         |                           ^
+      40 |     button.click();
+      41 |     expect(screen.queryByLabelText("Course Name:")).toBeInTheDocument();
+      42 |     expect(screen.queryByLabelText("Course Ticker:")).toBeInTheDocument();
+
+      at Object.getElementError (node_modules/@testing-library/react/node_modules/@testing-library/dom/dist/config.js:37:19)
+      at node_modules/@testing-library/react/node_modules/@testing-library/dom/dist/query-helpers.js:76:38
+      at node_modules/@testing-library/react/node_modules/@testing-library/dom/dist/query-helpers.js:52:17
+      at getByText (node_modules/@testing-library/react/node_modules/@testing-library/dom/dist/query-helpers.js:95:19)
+      at Object.<anonymous> (src/App.test.tsx:39:27)
+      at TestScheduler.scheduleTests (node_modules/@jest/core/build/TestScheduler.js:333:13)
+      at runJest (node_modules/@jest/core/build/runJest.js:404:19)
+      at _run10000 (node_modules/@jest/core/build/cli/index.js:320:7)
+      at runCLI (node_modules/@jest/core/build/cli/index.js:173:3)
+
+  ● Users can delete courses
+
+    TestingLibraryElementError: Unable to find an element with the text: /CISC108/i. This could be because the text is broken up by multiple elements. In this case, you can provide a function for your text matcher to make your matcher more flexible.
+
+    Ignored nodes: comments, script, style
+    [36m<body>[39m
+      [36m<div>[39m
+        [36m<div[39m
+          [33mclass[39m=[32m"App"[39m
+        [36m>[39m
+          [36m<div[39m
+            [33mclass[39m=[32m"logo"[39m
+          [36m>[39m
+            [36m<h1[39m
+              [33mclass[39m=[32m"App-title"[39m
+            [36m>[39m
+              [36m<div[39m
+                [33mclass[39m=[32m"container"[39m
+              [36m>[39m
+                [0mTest[0m
+              [36m</div>[39m
+              [36m<img[39m
+                [33mheight[39m=[32m"150"[39m
+                [33msrc[39m=[32m"ud_logo.jpg"[39m
+                [33mwidth[39m=[32m"150"[39m
+              [36m/>[39m
+              [0mCIS Scheduler[0m
+              [0m [0m
+            [36m</h1>[39m
+          [36m</div>[39m
+          [36m<header[39m
+            [33mclass[39m=[32m"App-header"[39m
+          [36m>[39m
+            [0mAdam Beck, Zach Reggio, Sam Ferguson, Brandon Marafino, Adam Liu[0m
+          [36m</header>[39m
+          [36m<div[39m
+            [33mclass[39m=[32m"button"[39m
+          [36m>[39m
+            [36m<button[39m
+              [33mclass[39m=[32m"buttonSpacing"[39m
+            [36m>[39m
+              [0mView Course Plans[0m
+            [36m</button>[39m
+            [36m<button>[39m
+              [0mImport CSV[0m
+            [36m</button>[39m
+          [36m</div>[39m
+          [36m<div[39m
+            [33mclass[39m=[32m"container-fluid"[39m
+          [36m>[39m
+            [36m<div>[39m
+              [36m<button[39m
+                [33mclass[39m=[32m"btn btn-primary"[39m
+                [33mtype[39m=[32m"button"[39m
+              [36m>[39m
+                [0mSave[0m
+              [36m</button>[39m
+              [36m<div[39m
+                [33mclass[39m=[32m"row"[39m
+              [36m>[39m
+                [36m<div[39m
+                  [33mclass[39m=[32m"col-sm-8"[39m
+                [36m>[39m
+                  [36m<div>[39m
+                    [36m<div[39m
+                      [33mclass[39m=[32m"row"[39m
+                    [36m>[39m
+                      [36m<div[39m
+                        [33mclass[39m=[32m"col-sm-3"[39m
+                      [36m>[39m
+                        [36m<input[39m
+                          [33mclass[39m=[32m"float-end form-control"[39m
+                          [33mid[39m=[32m"search"[39m
+                          [33mplaceholder[39m=[32m"Search"[39m
+                          [33mtype[39m=[32m"text"[39m
+                        [36m/>[39m
+                      [36m</div>[39m
+                    [36m</div>[39m
+                  [36m</div>[39m
+                  [36m<div[39m
+                    [33mstyle[39m=[32m"max-height: 300px; overflow-y: auto;"[39m
+                  [36m>[39m
+                    [36m<table[39m
+                      [33mclass[39m=[32m"table table-striped table-bordered table-hover"[39m
+                    [36m>[39m
+                      [36m<thead[39m
+                        [33mclass[39m=[32m"table-light"[39m
+                        [33mstyle[39m=[32m"position: sticky; top: 0px; z-index: 99;"[39m
+                      [36m>[39m
+                        [36m<tr>[39m
+                          [36m<th[39m
+                            [33mcolspan[39m=[32m"4"[39m
+                          [36m>[39m
+                            [0mCourse Catalog[0m
+                          [36m</th>[39m
+                        [36m</tr>[39m
+                        [36m<tr>[39m
+                          [36m<th>[39m
+                            [0mCourse Code[0m
+                          [36m</th>[39m
+                          [36m<th>[39m
+                            [0mName[0m
+                          [36m</th>[39m
+                          [36m<th>[39m
+                            [0mDescription[0m
+                          [36m</th>[39m
+                          [36m<th>[39m
+                            [0mCredits[0m
+                          [36m</th>[39m
+                          [36m<th>[39m
+                            [0mAction[0m
+                          [36m</th>[39m
+                        [36m</tr>[39m
+                      [36m</thead>[39m
+                      [36m<tbody>[39m
+                        [36m<tr>[39m
+                          [36m<td>[39m
+                            [0mACCT 166[0m
+                          [36m</td>[39m
+                          [36m<td>[39m
+                            [0mSPECIAL PROBLEM[0m
+                          [36m</td>[39m
+                          [36m<td />[39m
+                          [36m<td>[39m
+                            [0m 1-3[0m
+                          [36m</td>[39m
+                          [36m<td>[39m
+                            [36m<button[39m
+                              [33mclass[39m=[32m"btn btn-primary"[39m
+                              [33mtype[39m=[32m"button"[39m
+                            [36m>[39m
+                              [0mADD[0m
+                            [36m</button>[39m
+                          [36m</td>[39m
+                        [36m</tr>[39m
+                        [36m<tr>[39m
+                          [36m<td>[39m
+                            [0mACCT 200[0m
+                          [36m</td>[39m
+                          [36m<td>[39m
+                            [0mSurvey of Accounting[0m
+                          [36m</td>[39m
+                          [36m<td>[39m
+                            [0mSurvey of financial and managerial accounting concepts for the non-business major. Students learn about financial statements for merchandising, manufacturing, and service companies. Topics include: accounting cycle, budgeting, standard costing, contribution margins, cost-volume-profit analysis, and decision making.[0m
+                          [36m</td>[39m
+                          [36m<td>[39m
+                            [0m 4[0m
+                          [36m</td>[39m
+                          [36m<td>[39m
+                            [36m<button[39m
+                              [33mclass[39m=[32m"btn btn-primary"[39m
+                              [33mtype[39m=[32m"button"[39m
+                            [36m>[39m
+                              [0mADD[0m
+                            [36m</button>[39m
+                          [36m</td>[39m
+                        [36m</tr>[39m
+                        [36m<tr>[39m
+                          [36m<td>[39m
+                            [0mACCT 207[0m
+                          [36m</td>[39m
+                          [36m<td>[39m
+                            [0mAccounting I[0m
+                          [36m</td>[39m
+                          [36m<td>[39m
+                            [0mAn introduction to financial accounting. Topics: the accounting cycle, merchandise accounting, accounting procedures for cash, receivables, payables, inventories, plant and equipment, stocks and bonds.[0m
+                          [36m</td>[39m
+                          [36m<td>[39m
+                            [0m 3[0m
+                          [36m</td>[39m
+                          [36m<td>[39m
+                            [36m<button[39m
+                              [33mclass[39m=[32m"btn btn-primary"[39m
+                              [33mtype[39m=[32m"button"[39m
+                            [36m>[39m
+                              [0mADD[0m
+                            [36m</...
+
+      54 | test("Users can delete courses", () => {
+      55 |     render(<App />);
+    > 56 |     const button = screen.getByText(/CISC108/i);
+         |                           ^
+      57 |     button.click();
+      58 |     expect(screen.queryByLabelText("Name:")).toBeInTheDocument();
+      59 |     expect(screen.queryByLabelText("Ticker:")).toBeInTheDocument();
+
+      at Object.getElementError (node_modules/@testing-library/react/node_modules/@testing-library/dom/dist/config.js:37:19)
+      at node_modules/@testing-library/react/node_modules/@testing-library/dom/dist/query-helpers.js:76:38
+      at node_modules/@testing-library/react/node_modules/@testing-library/dom/dist/query-helpers.js:52:17
+      at getByText (node_modules/@testing-library/react/node_modules/@testing-library/dom/dist/query-helpers.js:95:19)
+      at Object.<anonymous> (src/App.test.tsx:56:27)
+      at TestScheduler.scheduleTests (node_modules/@jest/core/build/TestScheduler.js:333:13)
+      at runJest (node_modules/@jest/core/build/runJest.js:404:19)
+      at _run10000 (node_modules/@jest/core/build/cli/index.js:320:7)
+      at runCLI (node_modules/@jest/core/build/cli/index.js:173:3)
+
+  ● Users can add courses
+
+    TestingLibraryElementError: Unable to find an element with the text: /Add Course/i. This could be because the text is broken up by multiple elements. In this case, you can provide a function for your text matcher to make your matcher more flexible.
+
+    Ignored nodes: comments, script, style
+    [36m<body>[39m
+      [36m<div>[39m
+        [36m<div[39m
+          [33mclass[39m=[32m"App"[39m
+        [36m>[39m
+          [36m<div[39m
+            [33mclass[39m=[32m"logo"[39m
+          [36m>[39m
+            [36m<h1[39m
+              [33mclass[39m=[32m"App-title"[39m
+            [36m>[39m
+              [36m<div[39m
+                [33mclass[39m=[32m"container"[39m
+              [36m>[39m
+                [0mTest[0m
+              [36m</div>[39m
+              [36m<img[39m
+                [33mheight[39m=[32m"150"[39m
+                [33msrc[39m=[32m"ud_logo.jpg"[39m
+                [33mwidth[39m=[32m"150"[39m
+              [36m/>[39m
+              [0mCIS Scheduler[0m
+              [0m [0m
+            [36m</h1>[39m
+          [36m</div>[39m
+          [36m<header[39m
+            [33mclass[39m=[32m"App-header"[39m
+          [36m>[39m
+            [0mAdam Beck, Zach Reggio, Sam Ferguson, Brandon Marafino, Adam Liu[0m
+          [36m</header>[39m
+          [36m<div[39m
+            [33mclass[39m=[32m"button"[39m
+          [36m>[39m
+            [36m<button[39m
+              [33mclass[39m=[32m"buttonSpacing"[39m
+            [36m>[39m
+              [0mView Course Plans[0m
+            [36m</button>[39m
+            [36m<button>[39m
+              [0mImport CSV[0m
+            [36m</button>[39m
+          [36m</div>[39m
+          [36m<div[39m
+            [33mclass[39m=[32m"container-fluid"[39m
+          [36m>[39m
+            [36m<div>[39m
+              [36m<button[39m
+                [33mclass[39m=[32m"btn btn-primary"[39m
+                [33mtype[39m=[32m"button"[39m
+              [36m>[39m
+                [0mSave[0m
+              [36m</button>[39m
+              [36m<div[39m
+                [33mclass[39m=[32m"row"[39m
+              [36m>[39m
+                [36m<div[39m
+                  [33mclass[39m=[32m"col-sm-8"[39m
+                [36m>[39m
+                  [36m<div>[39m
+                    [36m<div[39m
+                      [33mclass[39m=[32m"row"[39m
+                    [36m>[39m
+                      [36m<div[39m
+                        [33mclass[39m=[32m"col-sm-3"[39m
+                      [36m>[39m
+                        [36m<input[39m
+                          [33mclass[39m=[32m"float-end form-control"[39m
+                          [33mid[39m=[32m"search"[39m
+                          [33mplaceholder[39m=[32m"Search"[39m
+                          [33mtype[39m=[32m"text"[39m
+                        [36m/>[39m
+                      [36m</div>[39m
+                    [36m</div>[39m
+                  [36m</div>[39m
+                  [36m<div[39m
+                    [33mstyle[39m=[32m"max-height: 300px; overflow-y: auto;"[39m
+                  [36m>[39m
+                    [36m<table[39m
+                      [33mclass[39m=[32m"table table-striped table-bordered table-hover"[39m
+                    [36m>[39m
+                      [36m<thead[39m
+                        [33mclass[39m=[32m"table-light"[39m
+                        [33mstyle[39m=[32m"position: sticky; top: 0px; z-index: 99;"[39m
+                      [36m>[39m
+                        [36m<tr>[39m
+                          [36m<th[39m
+                            [33mcolspan[39m=[32m"4"[39m
+                          [36m>[39m
+                            [0mCourse Catalog[0m
+                          [36m</th>[39m
+                        [36m</tr>[39m
+                        [36m<tr>[39m
+                          [36m<th>[39m
+                            [0mCourse Code[0m
+                          [36m</th>[39m
+                          [36m<th>[39m
+                            [0mName[0m
+                          [36m</th>[39m
+                          [36m<th>[39m
+                            [0mDescription[0m
+                          [36m</th>[39m
+                          [36m<th>[39m
+                            [0mCredits[0m
+                          [36m</th>[39m
+                          [36m<th>[39m
+                            [0mAction[0m
+                          [36m</th>[39m
+                        [36m</tr>[39m
+                      [36m</thead>[39m
+                      [36m<tbody>[39m
+                        [36m<tr>[39m
+                          [36m<td>[39m
+                            [0mACCT 166[0m
+                          [36m</td>[39m
+                          [36m<td>[39m
+                            [0mSPECIAL PROBLEM[0m
+                          [36m</td>[39m
+                          [36m<td />[39m
+                          [36m<td>[39m
+                            [0m 1-3[0m
+                          [36m</td>[39m
+                          [36m<td>[39m
+                            [36m<button[39m
+                              [33mclass[39m=[32m"btn btn-primary"[39m
+                              [33mtype[39m=[32m"button"[39m
+                            [36m>[39m
+                              [0mADD[0m
+                            [36m</button>[39m
+                          [36m</td>[39m
+                        [36m</tr>[39m
+                        [36m<tr>[39m
+                          [36m<td>[39m
+                            [0mACCT 200[0m
+                          [36m</td>[39m
+                          [36m<td>[39m
+                            [0mSurvey of Accounting[0m
+                          [36m</td>[39m
+                          [36m<td>[39m
+                            [0mSurvey of financial and managerial accounting concepts for the non-business major. Students learn about financial statements for merchandising, manufacturing, and service companies. Topics include: accounting cycle, budgeting, standard costing, contribution margins, cost-volume-profit analysis, and decision making.[0m
+                          [36m</td>[39m
+                          [36m<td>[39m
+                            [0m 4[0m
+                          [36m</td>[39m
+                          [36m<td>[39m
+                            [36m<button[39m
+                              [33mclass[39m=[32m"btn btn-primary"[39m
+                              [33mtype[39m=[32m"button"[39m
+                            [36m>[39m
+                              [0mADD[0m
+                            [36m</button>[39m
+                          [36m</td>[39m
+                        [36m</tr>[39m
+                        [36m<tr>[39m
+                          [36m<td>[39m
+                            [0mACCT 207[0m
+                          [36m</td>[39m
+                          [36m<td>[39m
+                            [0mAccounting I[0m
+                          [36m</td>[39m
+                          [36m<td>[39m
+                            [0mAn introduction to financial accounting. Topics: the accounting cycle, merchandise accounting, accounting procedures for cash, receivables, payables, inventories, plant and equipment, stocks and bonds.[0m
+                          [36m</td>[39m
+                          [36m<td>[39m
+                            [0m 3[0m
+                          [36m</td>[39m
+                          [36m<td>[39m
+                            [36m<button[39m
+                              [33mclass[39m=[32m"btn btn-primary"[39m
+                              [33mtype[39m=[32m"button"[39m
+                            [36m>[39m
+                              [0mADD[0m
+                            [36m</...
+
+      66 | test("Users can add courses", () => {
+      67 |     render(<App />);
+    > 68 |     const button = screen.getByText(/Add Course/i);
+         |                           ^
+      69 |     button.click();
+      70 |     expect(screen.queryByLabelText("Course Name:")).toBeInTheDocument();
+      71 |     expect(screen.queryByLabelText("Course Ticker:")).toBeInTheDocument();
+
+      at Object.getElementError (node_modules/@testing-library/react/node_modules/@testing-library/dom/dist/config.js:37:19)
+      at node_modules/@testing-library/react/node_modules/@testing-library/dom/dist/query-helpers.js:76:38
+      at node_modules/@testing-library/react/node_modules/@testing-library/dom/dist/query-helpers.js:52:17
+      at getByText (node_modules/@testing-library/react/node_modules/@testing-library/dom/dist/query-helpers.js:95:19)
+      at Object.<anonymous> (src/App.test.tsx:68:27)
       at TestScheduler.scheduleTests (node_modules/@jest/core/build/TestScheduler.js:333:13)
       at runJest (node_modules/@jest/core/build/runJest.js:404:19)
       at _run10000 (node_modules/@jest/core/build/cli/index.js:320:7)
@@ -601,24 +1009,28 @@ ever be fixed. Add "@babel/plugin-proposal-private-property-in-object" to
 your devDependencies to work around this error. This will make this message
 go away.[0m
   
----------------------------|---------|----------|---------|---------|--------------------------------
-File                       | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s              
----------------------------|---------|----------|---------|---------|--------------------------------
-All files                  |   54.34 |        0 |   31.57 |   53.93 |                                
- src                       |   54.34 |        0 |   31.57 |   53.93 |                                
-  AddCourseModal.tsx       |    42.1 |        0 |   14.28 |    42.1 | 27-34,49-81                    
-  App.tsx                  |      60 |        0 |   36.36 |   59.37 | 99-112,123,127,130-134,157-162 
-  ClearCourseModal.tsx     |      50 |        0 |   33.33 |      50 | 20-22,36                       
-  DBmanage.tsx             |       0 |        0 |       0 |       0 | 9-43                           
-  EditModal.tsx            |      65 |      100 |   28.57 |      65 | 30-35,38-39,54-68              
-  viewCourseComponents.tsx |     100 |      100 |     100 |     100 |                                
- src/interfaces            |       0 |        0 |       0 |       0 |                                
-  course.ts                |       0 |        0 |       0 |       0 |                                
-  degree.ts                |       0 |        0 |       0 |       0 |                                
-  semester.ts              |       0 |        0 |       0 |       0 |                                
----------------------------|---------|----------|---------|---------|--------------------------------
+-----------------------------|---------|----------|---------|---------|---------------------------------------
+File                         | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s                     
+-----------------------------|---------|----------|---------|---------|---------------------------------------
+All files                    |   31.89 |    23.96 |   18.51 |   31.61 |                                       
+ src                         |   31.89 |    23.96 |   18.51 |   31.61 |                                       
+  AddCourseModal.tsx         |       0 |        0 |       0 |       0 | 20-80                                 
+  AddSemesterModal.tsx       |       0 |      100 |       0 |       0 | 18-44                                 
+  App.tsx                    |   64.51 |    66.66 |   33.33 |   66.66 | 76-77,81-93,121-150                   
+  ClearCourseModal.tsx       |       0 |        0 |       0 |       0 | 10-36                                 
+  DBmanage.tsx               |   16.66 |        0 |   13.33 |   14.63 | 41-120,157-187                        
+  DegreeRequirementCheck.tsx |   82.75 |    58.33 |     100 |   82.14 | 23-24,31-32,51                        
+  EditCoursePlan.tsx         |   31.57 |    42.42 |   18.51 |   31.57 | 36-97,123-229,284-285,292-304,316-336 
+  EditModal.tsx              |   63.15 |      100 |   33.33 |   63.15 | 36-45,64-78                           
+  NewCoursePlan.tsx          |    25.8 |        0 |   21.05 |   24.13 | 45-70,75-108,167-226                  
+  viewCourseComponents.tsx   |       0 |        0 |       0 |       0 | 20-204                                
+ src/interfaces              |       0 |        0 |       0 |       0 |                                       
+  course.ts                  |       0 |        0 |       0 |       0 |                                       
+  degree.ts                  |       0 |        0 |       0 |       0 |                                       
+  semester.ts                |       0 |        0 |       0 |       0 |                                       
+-----------------------------|---------|----------|---------|---------|---------------------------------------
 Test Suites: 1 failed, 1 total
-Tests:       2 failed, 6 passed, 8 total
+Tests:       5 failed, 3 passed, 8 total
 Snapshots:   0 total
-Time:        3.441 s
+Time:        35.931 s
 Ran all test suites.
