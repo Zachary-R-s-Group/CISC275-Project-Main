@@ -7,15 +7,15 @@
 
       at createUUID (src/App.tsx:44:13)
 
-FAIL src/App.test.tsx (31.793 s)
-  ✓ renders the program title (3539 ms)
-  ✓ renders Import CSV button (3544 ms)
-  ✕ renders export CSV button (3972 ms)
-  ✕ renders add course (3822 ms)
-  ✓ renders names (3128 ms)
-  ✕ Add Course Button works (4234 ms)
-  ✕ Users can delete courses (3849 ms)
-  ✕ Users can add courses (3865 ms)
+FAIL src/App.test.tsx (31.111 s)
+  ✓ renders the program title (3452 ms)
+  ✓ renders Import CSV button (3480 ms)
+  ✕ renders export CSV button (3832 ms)
+  ✕ renders add course (3765 ms)
+  ✓ renders names (3057 ms)
+  ✕ Add Course Button works (4173 ms)
+  ✕ Users can delete courses (3852 ms)
+  ✕ Users can add courses (3705 ms)
 
   ● renders export CSV button
 
@@ -110,7 +110,7 @@ FAIL src/App.test.tsx (31.793 s)
                       [36m>[39m
                         [36m<tr>[39m
                           [36m<th[39m
-                            [33mcolspan[39m=[32m"4"[39m
+                            [33mcolspan[39m=[32m"5"[39m
                           [36m>[39m
                             [0mCourse Catalog[0m
                           [36m</th>[39m
@@ -305,7 +305,7 @@ FAIL src/App.test.tsx (31.793 s)
                       [36m>[39m
                         [36m<tr>[39m
                           [36m<th[39m
-                            [33mcolspan[39m=[32m"4"[39m
+                            [33mcolspan[39m=[32m"5"[39m
                           [36m>[39m
                             [0mCourse Catalog[0m
                           [36m</th>[39m
@@ -500,7 +500,7 @@ FAIL src/App.test.tsx (31.793 s)
                       [36m>[39m
                         [36m<tr>[39m
                           [36m<th[39m
-                            [33mcolspan[39m=[32m"4"[39m
+                            [33mcolspan[39m=[32m"5"[39m
                           [36m>[39m
                             [0mCourse Catalog[0m
                           [36m</th>[39m
@@ -695,7 +695,7 @@ FAIL src/App.test.tsx (31.793 s)
                       [36m>[39m
                         [36m<tr>[39m
                           [36m<th[39m
-                            [33mcolspan[39m=[32m"4"[39m
+                            [33mcolspan[39m=[32m"5"[39m
                           [36m>[39m
                             [0mCourse Catalog[0m
                           [36m</th>[39m
@@ -890,7 +890,7 @@ FAIL src/App.test.tsx (31.793 s)
                       [36m>[39m
                         [36m<tr>[39m
                           [36m<th[39m
-                            [33mcolspan[39m=[32m"4"[39m
+                            [33mcolspan[39m=[32m"5"[39m
                           [36m>[39m
                             [0mCourse Catalog[0m
                           [36m</th>[39m
@@ -1027,5 +1027,5 @@ All files                    |   31.89 |    23.96 |   18.51 |   31.61 |
 Test Suites: 1 failed, 1 total
 Tests:       5 failed, 3 passed, 8 total
 Snapshots:   0 total
-Time:        34.009 s
+Time:        33.191 s
 Ran all test suites.
