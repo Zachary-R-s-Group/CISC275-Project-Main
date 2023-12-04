@@ -7,15 +7,15 @@
 
       at createUUID (src/App.tsx:44:13)
 
-FAIL src/App.test.tsx (32.486 s)
-  ✓ renders the program title (3650 ms)
-  ✓ renders Import CSV button (3563 ms)
-  ✕ renders export CSV button (3950 ms)
-  ✕ renders add course (3914 ms)
-  ✓ renders names (3215 ms)
-  ✕ Add Course Button works (4412 ms)
-  ✕ Users can delete courses (3969 ms)
-  ✕ Users can add courses (3899 ms)
+FAIL src/App.test.tsx (31.793 s)
+  ✓ renders the program title (3539 ms)
+  ✓ renders Import CSV button (3544 ms)
+  ✕ renders export CSV button (3972 ms)
+  ✕ renders add course (3822 ms)
+  ✓ renders names (3128 ms)
+  ✕ Add Course Button works (4234 ms)
+  ✕ Users can delete courses (3849 ms)
+  ✕ Users can add courses (3865 ms)
 
   ● renders export CSV button
 
@@ -69,7 +69,7 @@ FAIL src/App.test.tsx (32.486 s)
           [36m>[39m
             [36m<div>[39m
               [36m<button[39m
-                [33mclass[39m=[32m"btn btn-primary"[39m
+                [33mclass[39m=[32m"save-button btn btn-primary"[39m
                 [33mtype[39m=[32m"button"[39m
               [36m>[39m
                 [0mSave[0m
@@ -80,7 +80,9 @@ FAIL src/App.test.tsx (32.486 s)
                 [36m<div[39m
                   [33mclass[39m=[32m"col-sm-8"[39m
                 [36m>[39m
-                  [36m<div>[39m
+                  [36m<div[39m
+                    [33mstyle[39m=[32m"margin-bottom: .5rem;"[39m
+                  [36m>[39m
                     [36m<div[39m
                       [33mclass[39m=[32m"row"[39m
                     [36m>[39m
@@ -108,7 +110,7 @@ FAIL src/App.test.tsx (32.486 s)
                       [36m>[39m
                         [36m<tr>[39m
                           [36m<th[39m
-                            [33mcolspan[39m=[32m"5"[39m
+                            [33mcolspan[39m=[32m"4"[39m
                           [36m>[39m
                             [0mCourse Catalog[0m
                           [36m</th>[39m
@@ -145,7 +147,7 @@ FAIL src/App.test.tsx (32.486 s)
                           [36m</td>[39m
                           [36m<td>[39m
                             [36m<button[39m
-                              [33mclass[39m=[32m"btn btn-primary"[39m
+                              [33mclass[39m=[32m"add-button btn btn-primary"[39m
                               [33mtype[39m=[32m"button"[39m
                             [36m>[39m
                               [0mADD[0m
@@ -167,7 +169,7 @@ FAIL src/App.test.tsx (32.486 s)
                           [36m</td>[39m
                           [36m<td>[39m
                             [36m<button[39m
-                              [33mclass[39m=[32m"btn btn-primary"[39m
+                              [33mclass[39m=[32m"add-button btn btn-primary"[39m
                               [33mtype[39m=[32m"button"[39m
                             [36m>[39m
                               [0mADD[0m
@@ -189,11 +191,8 @@ FAIL src/App.test.tsx (32.486 s)
                           [36m</td>[39m
                           [36m<td>[39m
                             [36m<button[39m
-                              [33mclass[39m=[32m"btn btn-primary"[39m
-                              [33mtype[39m=[32m"button"[39m
-                            [36m>[39m
-                              [0mADD[0m
-                            [36m<...
+                              [33mclass[39m=[32m"add-button btn btn-primary"[39m
+                              [...
 
       17 | test("renders export CSV button", () => {
       18 |     render(<App />);
@@ -265,7 +264,7 @@ FAIL src/App.test.tsx (32.486 s)
           [36m>[39m
             [36m<div>[39m
               [36m<button[39m
-                [33mclass[39m=[32m"btn btn-primary"[39m
+                [33mclass[39m=[32m"save-button btn btn-primary"[39m
                 [33mtype[39m=[32m"button"[39m
               [36m>[39m
                 [0mSave[0m
@@ -276,7 +275,9 @@ FAIL src/App.test.tsx (32.486 s)
                 [36m<div[39m
                   [33mclass[39m=[32m"col-sm-8"[39m
                 [36m>[39m
-                  [36m<div>[39m
+                  [36m<div[39m
+                    [33mstyle[39m=[32m"margin-bottom: .5rem;"[39m
+                  [36m>[39m
                     [36m<div[39m
                       [33mclass[39m=[32m"row"[39m
                     [36m>[39m
@@ -304,7 +305,7 @@ FAIL src/App.test.tsx (32.486 s)
                       [36m>[39m
                         [36m<tr>[39m
                           [36m<th[39m
-                            [33mcolspan[39m=[32m"5"[39m
+                            [33mcolspan[39m=[32m"4"[39m
                           [36m>[39m
                             [0mCourse Catalog[0m
                           [36m</th>[39m
@@ -341,7 +342,7 @@ FAIL src/App.test.tsx (32.486 s)
                           [36m</td>[39m
                           [36m<td>[39m
                             [36m<button[39m
-                              [33mclass[39m=[32m"btn btn-primary"[39m
+                              [33mclass[39m=[32m"add-button btn btn-primary"[39m
                               [33mtype[39m=[32m"button"[39m
                             [36m>[39m
                               [0mADD[0m
@@ -363,7 +364,7 @@ FAIL src/App.test.tsx (32.486 s)
                           [36m</td>[39m
                           [36m<td>[39m
                             [36m<button[39m
-                              [33mclass[39m=[32m"btn btn-primary"[39m
+                              [33mclass[39m=[32m"add-button btn btn-primary"[39m
                               [33mtype[39m=[32m"button"[39m
                             [36m>[39m
                               [0mADD[0m
@@ -385,11 +386,8 @@ FAIL src/App.test.tsx (32.486 s)
                           [36m</td>[39m
                           [36m<td>[39m
                             [36m<button[39m
-                              [33mclass[39m=[32m"btn btn-primary"[39m
-                              [33mtype[39m=[32m"button"[39m
-                            [36m>[39m
-                              [0mADD[0m
-                            [36m<...
+                              [33mclass[39m=[32m"add-button btn btn-primary"[39m
+                              [...
 
       23 | test("renders add course", () => {
       24 |     render(<App />);
@@ -461,7 +459,7 @@ FAIL src/App.test.tsx (32.486 s)
           [36m>[39m
             [36m<div>[39m
               [36m<button[39m
-                [33mclass[39m=[32m"btn btn-primary"[39m
+                [33mclass[39m=[32m"save-button btn btn-primary"[39m
                 [33mtype[39m=[32m"button"[39m
               [36m>[39m
                 [0mSave[0m
@@ -472,7 +470,9 @@ FAIL src/App.test.tsx (32.486 s)
                 [36m<div[39m
                   [33mclass[39m=[32m"col-sm-8"[39m
                 [36m>[39m
-                  [36m<div>[39m
+                  [36m<div[39m
+                    [33mstyle[39m=[32m"margin-bottom: .5rem;"[39m
+                  [36m>[39m
                     [36m<div[39m
                       [33mclass[39m=[32m"row"[39m
                     [36m>[39m
@@ -500,7 +500,7 @@ FAIL src/App.test.tsx (32.486 s)
                       [36m>[39m
                         [36m<tr>[39m
                           [36m<th[39m
-                            [33mcolspan[39m=[32m"5"[39m
+                            [33mcolspan[39m=[32m"4"[39m
                           [36m>[39m
                             [0mCourse Catalog[0m
                           [36m</th>[39m
@@ -537,7 +537,7 @@ FAIL src/App.test.tsx (32.486 s)
                           [36m</td>[39m
                           [36m<td>[39m
                             [36m<button[39m
-                              [33mclass[39m=[32m"btn btn-primary"[39m
+                              [33mclass[39m=[32m"add-button btn btn-primary"[39m
                               [33mtype[39m=[32m"button"[39m
                             [36m>[39m
                               [0mADD[0m
@@ -559,7 +559,7 @@ FAIL src/App.test.tsx (32.486 s)
                           [36m</td>[39m
                           [36m<td>[39m
                             [36m<button[39m
-                              [33mclass[39m=[32m"btn btn-primary"[39m
+                              [33mclass[39m=[32m"add-button btn btn-primary"[39m
                               [33mtype[39m=[32m"button"[39m
                             [36m>[39m
                               [0mADD[0m
@@ -581,11 +581,8 @@ FAIL src/App.test.tsx (32.486 s)
                           [36m</td>[39m
                           [36m<td>[39m
                             [36m<button[39m
-                              [33mclass[39m=[32m"btn btn-primary"[39m
-                              [33mtype[39m=[32m"button"[39m
-                            [36m>[39m
-                              [0mADD[0m
-                            [36m<...
+                              [33mclass[39m=[32m"add-button btn btn-primary"[39m
+                              [...
 
       37 | test("Add Course Button works", () => {
       38 |     render(<App />);
@@ -657,7 +654,7 @@ FAIL src/App.test.tsx (32.486 s)
           [36m>[39m
             [36m<div>[39m
               [36m<button[39m
-                [33mclass[39m=[32m"btn btn-primary"[39m
+                [33mclass[39m=[32m"save-button btn btn-primary"[39m
                 [33mtype[39m=[32m"button"[39m
               [36m>[39m
                 [0mSave[0m
@@ -668,7 +665,9 @@ FAIL src/App.test.tsx (32.486 s)
                 [36m<div[39m
                   [33mclass[39m=[32m"col-sm-8"[39m
                 [36m>[39m
-                  [36m<div>[39m
+                  [36m<div[39m
+                    [33mstyle[39m=[32m"margin-bottom: .5rem;"[39m
+                  [36m>[39m
                     [36m<div[39m
                       [33mclass[39m=[32m"row"[39m
                     [36m>[39m
@@ -696,7 +695,7 @@ FAIL src/App.test.tsx (32.486 s)
                       [36m>[39m
                         [36m<tr>[39m
                           [36m<th[39m
-                            [33mcolspan[39m=[32m"5"[39m
+                            [33mcolspan[39m=[32m"4"[39m
                           [36m>[39m
                             [0mCourse Catalog[0m
                           [36m</th>[39m
@@ -733,7 +732,7 @@ FAIL src/App.test.tsx (32.486 s)
                           [36m</td>[39m
                           [36m<td>[39m
                             [36m<button[39m
-                              [33mclass[39m=[32m"btn btn-primary"[39m
+                              [33mclass[39m=[32m"add-button btn btn-primary"[39m
                               [33mtype[39m=[32m"button"[39m
                             [36m>[39m
                               [0mADD[0m
@@ -755,7 +754,7 @@ FAIL src/App.test.tsx (32.486 s)
                           [36m</td>[39m
                           [36m<td>[39m
                             [36m<button[39m
-                              [33mclass[39m=[32m"btn btn-primary"[39m
+                              [33mclass[39m=[32m"add-button btn btn-primary"[39m
                               [33mtype[39m=[32m"button"[39m
                             [36m>[39m
                               [0mADD[0m
@@ -777,11 +776,8 @@ FAIL src/App.test.tsx (32.486 s)
                           [36m</td>[39m
                           [36m<td>[39m
                             [36m<button[39m
-                              [33mclass[39m=[32m"btn btn-primary"[39m
-                              [33mtype[39m=[32m"button"[39m
-                            [36m>[39m
-                              [0mADD[0m
-                            [36m<...
+                              [33mclass[39m=[32m"add-button btn btn-primary"[39m
+                              [...
 
       54 | test("Users can delete courses", () => {
       55 |     render(<App />);
@@ -853,7 +849,7 @@ FAIL src/App.test.tsx (32.486 s)
           [36m>[39m
             [36m<div>[39m
               [36m<button[39m
-                [33mclass[39m=[32m"btn btn-primary"[39m
+                [33mclass[39m=[32m"save-button btn btn-primary"[39m
                 [33mtype[39m=[32m"button"[39m
               [36m>[39m
                 [0mSave[0m
@@ -864,7 +860,9 @@ FAIL src/App.test.tsx (32.486 s)
                 [36m<div[39m
                   [33mclass[39m=[32m"col-sm-8"[39m
                 [36m>[39m
-                  [36m<div>[39m
+                  [36m<div[39m
+                    [33mstyle[39m=[32m"margin-bottom: .5rem;"[39m
+                  [36m>[39m
                     [36m<div[39m
                       [33mclass[39m=[32m"row"[39m
                     [36m>[39m
@@ -892,7 +890,7 @@ FAIL src/App.test.tsx (32.486 s)
                       [36m>[39m
                         [36m<tr>[39m
                           [36m<th[39m
-                            [33mcolspan[39m=[32m"5"[39m
+                            [33mcolspan[39m=[32m"4"[39m
                           [36m>[39m
                             [0mCourse Catalog[0m
                           [36m</th>[39m
@@ -929,7 +927,7 @@ FAIL src/App.test.tsx (32.486 s)
                           [36m</td>[39m
                           [36m<td>[39m
                             [36m<button[39m
-                              [33mclass[39m=[32m"btn btn-primary"[39m
+                              [33mclass[39m=[32m"add-button btn btn-primary"[39m
                               [33mtype[39m=[32m"button"[39m
                             [36m>[39m
                               [0mADD[0m
@@ -951,7 +949,7 @@ FAIL src/App.test.tsx (32.486 s)
                           [36m</td>[39m
                           [36m<td>[39m
                             [36m<button[39m
-                              [33mclass[39m=[32m"btn btn-primary"[39m
+                              [33mclass[39m=[32m"add-button btn btn-primary"[39m
                               [33mtype[39m=[32m"button"[39m
                             [36m>[39m
                               [0mADD[0m
@@ -973,11 +971,8 @@ FAIL src/App.test.tsx (32.486 s)
                           [36m</td>[39m
                           [36m<td>[39m
                             [36m<button[39m
-                              [33mclass[39m=[32m"btn btn-primary"[39m
-                              [33mtype[39m=[32m"button"[39m
-                            [36m>[39m
-                              [0mADD[0m
-                            [36m<...
+                              [33mclass[39m=[32m"add-button btn btn-primary"[39m
+                              [...
 
       66 | test("Users can add courses", () => {
       67 |     render(<App />);
@@ -1022,7 +1017,7 @@ All files                    |   31.89 |    23.96 |   18.51 |   31.61 |
   DegreeRequirementCheck.tsx |   82.75 |    58.33 |     100 |   82.14 | 23-24,31-32,51                        
   EditCoursePlan.tsx         |   31.57 |    42.42 |   18.51 |   31.57 | 36-97,123-229,284-285,292-304,316-336 
   EditModal.tsx              |   63.15 |      100 |   33.33 |   63.15 | 36-45,64-78                           
-  NewCoursePlan.tsx          |    25.8 |        0 |   21.05 |   24.13 | 45-70,75-108,167-226                  
+  NewCoursePlan.tsx          |    25.8 |        0 |   21.05 |   24.13 | 46-71,76-109,170-236                  
   viewCourseComponents.tsx   |       0 |        0 |       0 |       0 | 20-204                                
  src/interfaces              |       0 |        0 |       0 |       0 |                                       
   course.ts                  |       0 |        0 |       0 |       0 |                                       
@@ -1032,5 +1027,5 @@ All files                    |   31.89 |    23.96 |   18.51 |   31.61 |
 Test Suites: 1 failed, 1 total
 Tests:       5 failed, 3 passed, 8 total
 Snapshots:   0 total
-Time:        34.57 s
+Time:        34.009 s
 Ran all test suites.
