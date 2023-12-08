@@ -1,16 +1,16 @@
 {
   "files": {
     "main.css": "/CISC275-Project-Main/static/css/main.eb4b76fb.css",
-    "main.js": "/CISC275-Project-Main/static/js/main.059ac992.js",
+    "main.js": "/CISC275-Project-Main/static/js/main.cf0e56e7.js",
     "static/js/787.4ef7427d.chunk.js": "/CISC275-Project-Main/static/js/787.4ef7427d.chunk.js",
     "static/media/ud_logo.jpg": "/CISC275-Project-Main/static/media/ud_logo.707959df1a8f2da38100.jpg",
     "index.html": "/CISC275-Project-Main/index.html",
     "main.eb4b76fb.css.map": "/CISC275-Project-Main/static/css/main.eb4b76fb.css.map",
-    "main.059ac992.js.map": "/CISC275-Project-Main/static/js/main.059ac992.js.map",
+    "main.cf0e56e7.js.map": "/CISC275-Project-Main/static/js/main.cf0e56e7.js.map",
     "787.4ef7427d.chunk.js.map": "/CISC275-Project-Main/static/js/787.4ef7427d.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.eb4b76fb.css",
-    "static/js/main.059ac992.js"
+    "static/js/main.cf0e56e7.js"
   ]
 }

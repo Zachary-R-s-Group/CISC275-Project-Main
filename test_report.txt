@@ -7,15 +7,15 @@
 
       at createUUID (src/App.tsx:51:13)
 
-FAIL src/App.test.tsx (30.745 s)
-  ✓ renders the program title (3331 ms)
-  ✓ renders Import CSV button (3455 ms)
-  ✕ renders export CSV button (3800 ms)
-  ✕ renders add course (3858 ms)
-  ✓ renders names (3025 ms)
-  ✕ Add Course Button works (4002 ms)
-  ✕ Users can delete courses (3726 ms)
-  ✕ Users can add courses (3738 ms)
+FAIL src/App.test.tsx (31.313 s)
+  ✓ renders the program title (3446 ms)
+  ✓ renders Import CSV button (3442 ms)
+  ✕ renders export CSV button (3849 ms)
+  ✕ renders add course (3800 ms)
+  ✓ renders names (3042 ms)
+  ✕ Add Course Button works (4192 ms)
+  ✕ Users can delete courses (3922 ms)
+  ✕ Users can add courses (3729 ms)
 
   ● renders export CSV button
 
@@ -1016,7 +1016,7 @@ All files                    |   22.52 |    18.18 |   13.82 |   22.29 |
   DBmanage.tsx               |   13.72 |        0 |   10.52 |      12 | 24-135,172-202                                 
   DegreeRequirementCheck.tsx |       0 |        0 |       0 |       0 | 16-77                                          
   DeleteCourseModal.tsx      |       0 |      100 |       0 |       0 | 12-18                                          
-  EditCoursePlan.tsx         |   29.68 |       40 |   17.24 |   29.68 | 45-125,151-257,316-317,323-329,335-347,359-380 
+  EditCoursePlan.tsx         |   29.68 |       40 |   17.24 |   29.68 | 45-127,153-259,318-319,325-331,337-349,361-382 
   EditModal.tsx              |      65 |      100 |   33.33 |      65 | 41-50,65-79                                    
   NewCoursePlan.tsx          |   23.52 |        0 |      20 |   21.87 | 48-87,92-125,186-252                           
   viewCourseComponents.tsx   |       0 |        0 |       0 |       0 | 20-204                                         
@@ -1028,5 +1028,5 @@ All files                    |   22.52 |    18.18 |   13.82 |   22.29 |
 Test Suites: 1 failed, 1 total
 Tests:       5 failed, 3 passed, 8 total
 Snapshots:   0 total
-Time:        32.999 s
+Time:        33.4 s
 Ran all test suites.
