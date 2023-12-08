@@ -5,17 +5,17 @@
   console.log
     initialize
 
-      at createUUID (src/App.tsx:44:13)
+      at createUUID (src/App.tsx:51:13)
 
-FAIL src/App.test.tsx (31.111 s)
-  ✓ renders the program title (3452 ms)
-  ✓ renders Import CSV button (3480 ms)
-  ✕ renders export CSV button (3832 ms)
-  ✕ renders add course (3765 ms)
-  ✓ renders names (3057 ms)
-  ✕ Add Course Button works (4173 ms)
-  ✕ Users can delete courses (3852 ms)
-  ✕ Users can add courses (3705 ms)
+FAIL src/App.test.tsx (30.745 s)
+  ✓ renders the program title (3331 ms)
+  ✓ renders Import CSV button (3455 ms)
+  ✕ renders export CSV button (3800 ms)
+  ✕ renders add course (3858 ms)
+  ✓ renders names (3025 ms)
+  ✕ Add Course Button works (4002 ms)
+  ✕ Users can delete courses (3726 ms)
+  ✕ Users can add courses (3738 ms)
 
   ● renders export CSV button
 
@@ -1004,28 +1004,29 @@ ever be fixed. Add "@babel/plugin-proposal-private-property-in-object" to
 your devDependencies to work around this error. This will make this message
 go away.[0m
   
------------------------------|---------|----------|---------|---------|---------------------------------------
-File                         | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s                     
------------------------------|---------|----------|---------|---------|---------------------------------------
-All files                    |   31.89 |    23.96 |   18.51 |   31.61 |                                       
- src                         |   31.89 |    23.96 |   18.51 |   31.61 |                                       
-  AddCourseModal.tsx         |       0 |        0 |       0 |       0 | 20-80                                 
-  AddSemesterModal.tsx       |       0 |      100 |       0 |       0 | 18-44                                 
-  App.tsx                    |   64.51 |    66.66 |   33.33 |   66.66 | 76-77,81-93,121-150                   
-  ClearCourseModal.tsx       |       0 |        0 |       0 |       0 | 10-36                                 
-  DBmanage.tsx               |   16.66 |        0 |   13.33 |   14.63 | 41-120,157-187                        
-  DegreeRequirementCheck.tsx |   82.75 |    58.33 |     100 |   82.14 | 23-24,31-32,51                        
-  EditCoursePlan.tsx         |   31.57 |    42.42 |   18.51 |   31.57 | 36-97,123-229,284-285,292-304,316-336 
-  EditModal.tsx              |   63.15 |      100 |   33.33 |   63.15 | 36-45,64-78                           
-  NewCoursePlan.tsx          |    25.8 |        0 |   21.05 |   24.13 | 46-71,76-109,170-236                  
-  viewCourseComponents.tsx   |       0 |        0 |       0 |       0 | 20-204                                
- src/interfaces              |       0 |        0 |       0 |       0 |                                       
-  course.ts                  |       0 |        0 |       0 |       0 |                                       
-  degree.ts                  |       0 |        0 |       0 |       0 |                                       
-  semester.ts                |       0 |        0 |       0 |       0 |                                       
------------------------------|---------|----------|---------|---------|---------------------------------------
+-----------------------------|---------|----------|---------|---------|------------------------------------------------
+File                         | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s                              
+-----------------------------|---------|----------|---------|---------|------------------------------------------------
+All files                    |   22.52 |    18.18 |   13.82 |   22.29 |                                                
+ src                         |   22.52 |    18.18 |   13.82 |   22.29 |                                                
+  AddCourseModal.tsx         |       0 |        0 |       0 |       0 | 20-80                                          
+  AddSemesterModal.tsx       |       0 |      100 |       0 |       0 | 18-44                                          
+  App.tsx                    |   57.57 |    66.66 |   28.57 |   59.37 | 83-94,100-112,140-169                          
+  ClearCourseModal.tsx       |       0 |        0 |       0 |       0 | 10-36                                          
+  DBmanage.tsx               |   13.72 |        0 |   10.52 |      12 | 24-135,172-202                                 
+  DegreeRequirementCheck.tsx |       0 |        0 |       0 |       0 | 16-77                                          
+  DeleteCourseModal.tsx      |       0 |      100 |       0 |       0 | 12-18                                          
+  EditCoursePlan.tsx         |   29.68 |       40 |   17.24 |   29.68 | 45-125,151-257,316-317,323-329,335-347,359-380 
+  EditModal.tsx              |      65 |      100 |   33.33 |      65 | 41-50,65-79                                    
+  NewCoursePlan.tsx          |   23.52 |        0 |      20 |   21.87 | 48-87,92-125,186-252                           
+  viewCourseComponents.tsx   |       0 |        0 |       0 |       0 | 20-204                                         
+ src/interfaces              |       0 |        0 |       0 |       0 |                                                
+  course.ts                  |       0 |        0 |       0 |       0 |                                                
+  degree.ts                  |       0 |        0 |       0 |       0 |                                                
+  semester.ts                |       0 |        0 |       0 |       0 |                                                
+-----------------------------|---------|----------|---------|---------|------------------------------------------------
 Test Suites: 1 failed, 1 total
 Tests:       5 failed, 3 passed, 8 total
 Snapshots:   0 total
-Time:        33.191 s
+Time:        32.999 s
 Ran all test suites.
