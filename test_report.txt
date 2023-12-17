@@ -315,27 +315,27 @@
 
       at UpdateCourseplan (src/NewCoursePlan.tsx:79:17)
 
-PASS src/App.test.tsx (80.304 s)
-  ✓ renders the program title (135 ms)
-  ✓ renders need help button (40 ms)
-  ✓ renders names (54 ms)
-  ✓ renders export to csv (35 ms)
-  ✓ renders new course plans (35 ms)
-  ✓ Switch to/from course plan button (3627 ms)
-  ✓ Testing add course to queue 1 (4414 ms)
-  ✓ Testing add course to queue 2 (4281 ms)
-  ✓ Testing search bar (5013 ms)
-  ✓ Testing semester remove button (fall) (4446 ms)
-  ✓ Testing semester remove button (winter) (4343 ms)
-  ✓ Testing degree plan drop down (3213 ms)
-  ✓ Testing save degree plan and delete degree plan (6381 ms)
-  ✓ Testing requirements feature (4837 ms)
-  ✓ Testing clear semester (6398 ms)
-  ✓ Testing remove from queue (8424 ms)
-  ✓ Testing clear all semesters button (9413 ms)
-  ✓ Testing edit degree plan (4362 ms)
-  ✓ Testing save degree plan (4298 ms)
-  ✓ Testing save plan as a given name (4417 ms)
+PASS src/App.test.tsx (81.09 s)
+  ✓ renders the program title (131 ms)
+  ✓ renders need help button (39 ms)
+  ✓ renders names (29 ms)
+  ✓ renders export to csv (32 ms)
+  ✓ renders new course plans (33 ms)
+  ✓ Switch to/from course plan button (3657 ms)
+  ✓ Testing add course to queue 1 (4708 ms)
+  ✓ Testing add course to queue 2 (4512 ms)
+  ✓ Testing search bar (4892 ms)
+  ✓ Testing semester remove button (fall) (4377 ms)
+  ✓ Testing semester remove button (winter) (4397 ms)
+  ✓ Testing degree plan drop down (3506 ms)
+  ✓ Testing save degree plan and delete degree plan (6426 ms)
+  ✓ Testing requirements feature (4831 ms)
+  ✓ Testing clear semester (6694 ms)
+  ✓ Testing remove from queue (8349 ms)
+  ✓ Testing clear all semesters button (9123 ms)
+  ✓ Testing edit degree plan (4563 ms)
+  ✓ Testing save degree plan (4199 ms)
+  ✓ Testing save plan as a given name (4418 ms)
 
 [0;33mOne of your dependencies, babel-preset-react-app, is importing the
 "@babel/plugin-proposal-private-property-in-object" package without
@@ -375,5 +375,5 @@ All files                    |   50.34 |    50.93 |   50.28 |   51.47 |
 Test Suites: 1 passed, 1 total
 Tests:       20 passed, 20 total
 Snapshots:   0 total
-Time:        82.549 s
+Time:        83.291 s
 Ran all test suites.
