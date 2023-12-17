@@ -25,13 +25,13 @@
         at div
         at App (/home/runner/work/CISC275-Project-Main/CISC275-Project-Main/src/App.tsx:62:55)
 
-      39 |     render(<App />);
-      40 |     const button = screen.getByText(/View Course Plans/i);
-    > 41 |     button.click();
-         |            ^
-      42 |     //expect(screen.queryByLabelText("New Course Plans")).toBeInTheDocument();
-      43 |     const SwitchButton = screen.getByText(/New Course Plans/i);
-      44 |     SwitchButton.click();
+       5 |
+       6 | test("renders the program title", () => {
+    >  7 |     render(<App />);
+         |           ^
+       8 |     const linkElement = screen.getByText(/CIS Scheduler/i);
+       9 |     expect(linkElement).toBeInTheDocument();
+      10 | });
 
       at printWarning (node_modules/react-dom/cjs/react-dom.development.js:67:30)
       at error (node_modules/react-dom/cjs/react-dom.development.js:43:5)
@@ -43,304 +43,2195 @@
       at workLoopSync (node_modules/react-dom/cjs/react-dom.development.js:22707:5)
       at renderRootSync (node_modules/react-dom/cjs/react-dom.development.js:22670:7)
       at performSyncWorkOnRoot (node_modules/react-dom/cjs/react-dom.development.js:22293:18)
-      at node_modules/react-dom/cjs/react-dom.development.js:11327:26
-      at unstable_runWithPriority (node_modules/scheduler/cjs/scheduler.development.js:468:12)
-      at runWithPriority$1 (node_modules/react-dom/cjs/react-dom.development.js:11276:10)
-      at flushSyncCallbackQueueImpl (node_modules/react-dom/cjs/react-dom.development.js:11322:9)
-      at flushSyncCallbackQueue (node_modules/react-dom/cjs/react-dom.development.js:11309:3)
-      at discreteUpdates$1 (node_modules/react-dom/cjs/react-dom.development.js:22420:9)
-      at discreteUpdates (node_modules/react-dom/cjs/react-dom.development.js:3756:12)
-      at dispatchDiscreteEvent (node_modules/react-dom/cjs/react-dom.development.js:5889:3)
-      at HTMLDivElement.callTheUserObjectsOperation (node_modules/jsdom/lib/jsdom/living/generated/EventListener.js:26:30)
-      at innerInvokeEventListeners (node_modules/jsdom/lib/jsdom/living/events/EventTarget-impl.js:338:25)
-      at invokeEventListeners (node_modules/jsdom/lib/jsdom/living/events/EventTarget-impl.js:274:3)
-      at HTMLButtonElementImpl._dispatch (node_modules/jsdom/lib/jsdom/living/events/EventTarget-impl.js:221:9)
-      at fireAnEvent (node_modules/jsdom/lib/jsdom/living/helpers/events.js:18:36)
-      at HTMLButtonElementImpl.click (node_modules/jsdom/lib/jsdom/living/nodes/HTMLElement-impl.js:79:5)
-      at HTMLButtonElement.click (node_modules/jsdom/lib/jsdom/living/generated/HTMLElement.js:110:34)
-      at Object.<anonymous> (src/App.test.tsx:41:12)
+      at scheduleUpdateOnFiber (node_modules/react-dom/cjs/react-dom.development.js:21881:7)
+      at updateContainer (node_modules/react-dom/cjs/react-dom.development.js:25482:3)
+      at node_modules/react-dom/cjs/react-dom.development.js:26021:7
+      at unbatchedUpdates (node_modules/react-dom/cjs/react-dom.development.js:22431:12)
+      at legacyRenderSubtreeIntoContainer (node_modules/react-dom/cjs/react-dom.development.js:26020:5)
+      at Object.render (node_modules/react-dom/cjs/react-dom.development.js:26103:10)
+      at node_modules/@testing-library/react/dist/pure.js:101:25
+      at batchedUpdates$1 (node_modules/react-dom/cjs/react-dom.development.js:22380:12)
+      at act (node_modules/react-dom/cjs/react-dom-test-utils.development.js:1042:14)
+      at render (node_modules/@testing-library/react/dist/pure.js:97:26)
+      at Object.<anonymous> (src/App.test.tsx:7:11)
       at TestScheduler.scheduleTests (node_modules/@jest/core/build/TestScheduler.js:333:13)
       at runJest (node_modules/@jest/core/build/runJest.js:404:19)
       at _run10000 (node_modules/@jest/core/build/cli/index.js:320:7)
       at runCLI (node_modules/@jest/core/build/cli/index.js:173:3)
 
-  console.log
-    looking for old semesterfall
+FAIL src/App.test.tsx
+  ✓ renders the program title (128 ms)
+  ✓ renders need help button (38 ms)
+  ✓ renders names (30 ms)
+  ✓ renders export to csv (32 ms)
+  ✕ renders view course plans (39 ms)
+  ✕ Switch to/from course plan button (33 ms)
+  ✕ Testing add course to queue 1 (28 ms)
+  ✕ Testing add course to queue 2 (34 ms)
+  ✕ Testing search bar (27 ms)
+  ✕ Testing semester remove button (fall) (34 ms)
+  ✕ Testing semester remove button (winter) (30 ms)
+  ✕ Testing degree plan drop down (38 ms)
+  ✕ Testing save degree plan and delete degree plan (26 ms)
+  ✕ Testing requirements feature (24 ms)
+  ✕ Testing clear semester (24 ms)
+  ✕ Testing remove from queue (32 ms)
+  ✕ Testing clear all semesters button (23 ms)
+  ✕ Testing edit degree plan (29 ms)
+  ✕ Testing save degree plan (33 ms)
+  ✕ Testing save plan as a given name (22 ms)
 
-      at removeSemesterYear (src/DBmanage.tsx:138:13)
+  ● renders view course plans
 
-  console.log
-    looking for old yeat
+    TestingLibraryElementError: Unable to find an element with the text: /View Course Plans/i. This could be because the text is broken up by multiple elements. In this case, you can provide a function for your text matcher to make your matcher more flexible.
 
-      at UpdateCoureplanYear (src/DBmanage.tsx:146:13)
+    Ignored nodes: comments, script, style
+    [36m<body>[39m
+      [36m<div>[39m
+        [36m<div[39m
+          [33mclass[39m=[32m"App"[39m
+        [36m>[39m
+          [36m<div[39m
+            [33mclass[39m=[32m"logo"[39m
+          [36m>[39m
+            [36m<h1[39m
+              [33mclass[39m=[32m"App-title"[39m
+            [36m>[39m
+              [36m<img[39m
+                [33mheight[39m=[32m"150"[39m
+                [33msrc[39m=[32m"ud_logo.jpg"[39m
+                [33mwidth[39m=[32m"150"[39m
+              [36m/>[39m
+              [0mCIS Scheduler[0m
+              [0m [0m
+            [36m</h1>[39m
+          [36m</div>[39m
+          [36m<header[39m
+            [33mclass[39m=[32m"App-header"[39m
+          [36m>[39m
+            [0mAdam Beck, Zach Reggio, Sam Ferguson, Brandon Marafino, Adam Liu[0m
+          [36m</header>[39m
+          [36m<div[39m
+            [33mclass[39m=[32m"button"[39m
+          [36m>[39m
+            [36m<button[39m
+              [33mclass[39m=[32m"buttonSpacing"[39m
+            [36m>[39m
+              [0mNew Course Plans[0m
+            [36m</button>[39m
+            [36m<a[39m
+              [33mdownload[39m=[32m"coursePlan.csv"[39m
+              [33mhref[39m=[32m"data:text/csv;charset=utf-8,﻿\"Plan Name\",\"Year\",\"Season\",\"Course Ticker\",\"Course Name\",\"Credits\",\"Prerequisites\",\"UUID\",\"Description\"
+    \"Bachelor of Computer Science\",\"Year 1\",\"spring\",\"CISC 108\",\"Introduction to Computer Science I\",\"3\",\"\",\"303bec5c-bd0b-484b-a363-b98324e767b2\",\"\"
+    \"Bachelor of Computer Science\",\"Year 1\",\"spring\",\"EGGG 101\",\"Introduction to Engineering\",\"2\",\"\",\"c72b134c-0f64-4ebc-96a7-11cd93e72994\",\"\"
+    \"Bachelor of Computer Science\",\"Year 1\",\"spring\",\"ENGL 110\",\"Seminar in Composition\",\"3\",\"\",\"28307fdd-1826-4edf-aa24-e82ff34b8a97\",\"\"
+    \"Bachelor of Computer Science\",\"Year 1\",\"spring\",\"MATH 241\",\"Analytic Geometry and Calculus A\",\"4\",\"MATH 117 or acceptable score on the Math Placement Exam in accordance with current standards determined by the Department of Mathematical Sciences. See https://www.mathsci.udel.edu/courses-placement/ud-math-placement for more information.\",\"b4352928-14d4-4566-a7ef-3ba258568b27\",\"\"
+    \"Bachelor of Computer Science\",\"Year 1\",\"fall\",\"CISC 181\",\"Introduction to Computer Science II\",\"3\",\"Grade of C- or better in CISC 108 or CISC 106.\",\"6287933b-4031-41a7-b58b-0f66f9ddefb1\",\"\"
+    \"Bachelor of Computer Science\",\"Year 1\",\"fall\",\"CISC 210\",\"Introduction to Systems Programming\",\"3\",\"A grade of C- or better in CISC 106 or CISC 108.\",\"ca3e1e22-8962-4494-a736-7fb549c45359\",\"\"
+    \"Bachelor of Computer Science\",\"Year 1\",\"fall\",\"MATH 242\",\"Analytic Geometry and Calculus B\",\"4\",\"MATH 241 or MATH 232.\",\"17b29c4c-71c1-411c-ae50-5412e537fdc1\",\"\"
+    \"Bachelor of Computer Science\",\"Year 1\",\"fall\",\"PHYS 207\",\"Fundamentals of Physics I\",\"3\",\"\",\"18fc3db8-3d41-4847-ab67-5b337f2129dd\",\"\"
+    \"Bachelor of Computer Science\",\"Year 1\",\"fall\",\"PHYS 227\",\"Fundamentals of Physics Laboratory I\",\"1\",\"\",\"51ec6a2e-d753-4971-abb9-d0a9581e14ef\",\"\"
+    \"Bachelor of Computer Science\",\"Year 2\",\"spring\",\"CISC 220\",\"Data Structures\",\"3\",\"A minimum grade of C- in CISC 210.\",\"6077fa9d-9d0f-4fee-bdfe-edceda2b64ca\",\"\"
+    \"Bachelor of Computer Science\",\"Year 2\",\"spring\",\"CISC 260\",\"Machine Organization and Assembly Language\",\"3\",\"A minimum grade of C- in CISC 210.\",\"f2a5ab99-c30f-40ea-8d2b-f3a19d918426\",\"\"
+    \"Bachelor of Computer Science\",\"Year 2\",\"spring\",\"MATH 210\",\"Discrete Mathematics I\",\"3\",\"\",\"5ca2501c-6a70-4d3a-9a89-ceb41f90971e\",\"\"
+    \"Bachelor of Computer Science\",\"Year 2\",\"spring\",\"PHYS 208\",\"Fundamentals of Physics II\",\"3\",\"PHYS 203 or PHYS 207 and PHYS 227, MATH 241 or MATH 232.\",\"8c2e043d-328d-4d2f-835a-5597188e5cc1\",\"\"
+    \"Bachelor of Computer Science\",\"Year 2\",\"spring\",\"PHYS 228\",\"Fundamentials of Physics Laboratory II\",\"1\",\"\",\"0cb9e47b-ffb4-4ad1-b98f-4cdba9f8e49f\",\"\"
+    \"Bachelor of Computer Science\",\"Year 2\",\"fall\",\"CISC 275\",\"Introduction to Software Engineering\",\"3\",\"Minimum grade of C- in CISC 181 and CISC 220.\",\"f86a5c1d-c6d7-41c9-8e26-1a9d695f28eb\",\"\"
+    \"Bachelor of Computer Science\",\"Year 2\",\"fall\",\"CISC 355\",\"Computers, Ethics and Society\",\"3\",\"\",\"c9c5e0db-ed41-429c-9c80-70bfe3358ec1\",\"\"
+    \"Bachelor of Computer Science\",\"Year 2\",\"fall\",\"MATH 205\",\"Statistical Methods\",\"4\",\"MATH 210 or MATH 230.\",\"0bc66c87-b0eb-47aa-8280-b4ae3443f56a\",\"\"
+    \"Bachelor of Computer Science\",\"Year 2\",\"fall\",\"CHEM 103\",\"General Chemistry\",\"3\",\"\",\"bb7fe5ba-b36d-4439-9fac-8123c1d4eadf\",\"\"
+    \"Bachelor of Computer Science\",\"Year 2\",\"fall\",\"CHEM 133\",\"General Chemistry Laboratory\",\"1\",\"\",\"ca23d065-3cdf-43b2-9665-2fd13c5efb2b\",\"\""[39m
+              [33mtarget[39m=[32m"_self"[39m
+            [36m>[39m
+              [36m<button[39m
+                [33mclass[39m=[32m"buttonSpacing btn btn-primary"[39m
+                [33mtype[39m=[32m"button"[39m
+              [36m>[39m
+                [0mExport to CSV[0m
+              [36m</button>[39m
+            [36m</a>[39m
+            [36m<button>[39m
+              [0mNeed Help?[0m
+            [36m</button>[39m
+            [36m<div[39m
+              [33mclass[39m=[32m"csv-reader-input"[39m
+            [36m>[39m
+              [36m<input[39m
+                [33maccept[39m=[32m".csv, text/csv"[39m
+                [33mclass[39m=[32m"csv-input"[39m
+                [33mid[39m=[32m"react-csv-reader-input"[39m
+                [33mname[39m=[32m"react-csv-reader-input"[39m
+                [33mtype[39m=[32m"file"[39m
+              [36m/>[39m
+            [36m</div>[39m
+          [36m</div>[39m
+          [36m<div[39m
+            [33mclass[39m=[32m"container-fluid"[39m
+          [36m>[39m
+            [36m<div>[39m
+              [36m<div[39m
+                [33mclass[39m=[32m"accordion"[39m
+              [36m>[39m
+                [36m<div[39m
+                  [33mclass[39m=[32m"beigebackground accordion-item"[39m
+                [36m>[39m
+                  [36m<h2[39m
+                    [33mclass[39m=[32m"accordion-header"[39m
+                  [36m>[39m
+                    [36m<button[39m
+                      [33maria-expanded[39m=[32m"false"[39m
+                      [33mclass[39m=[32m"accordion-button collapsed"[39m
+                      [33mtype[39m=[32m"button"[39m
+                    [36m>[39m
+                      [0mBachelor of Computer Science[0m
+                      [36m<button[39m
+                        [33mclass[39m=[32m"pull-left btn btn-primary"[39m
+                        [33mtype[39m=[32m"button"[39m
+                      [36m>[39m
+                        [0mDelete[0m
+                      [36m</button>[39m
+                      [36m<button[39m
+                        [33mclass[39m=[32m"pull-left btn btn-primary"[39m
+                        [33mtype[39m=[32m"button"[39m
+                      [36m>[39m
+                        [0mEdit[0m
+                      [36m</button>[39m
+                    [36m</button>[3...
 
-  console.log
-    debug
+      32 | test("renders view course plans", () => {
+      33 |     render(<App />);
+    > 34 |     const linkElement = screen.getByText(/View Course Plans/i);
+         |                                ^
+      35 |     expect(linkElement).toBeInTheDocument();
+      36 | });
+      37 |
 
-      at UpdateCourseplan (src/NewCoursePlan.tsx:78:17)
+      at Object.getElementError (node_modules/@testing-library/react/node_modules/@testing-library/dom/dist/config.js:37:19)
+      at node_modules/@testing-library/react/node_modules/@testing-library/dom/dist/query-helpers.js:76:38
+      at node_modules/@testing-library/react/node_modules/@testing-library/dom/dist/query-helpers.js:52:17
+      at getByText (node_modules/@testing-library/react/node_modules/@testing-library/dom/dist/query-helpers.js:95:19)
+      at Object.<anonymous> (src/App.test.tsx:34:32)
+      at TestScheduler.scheduleTests (node_modules/@jest/core/build/TestScheduler.js:333:13)
+      at runJest (node_modules/@jest/core/build/runJest.js:404:19)
+      at _run10000 (node_modules/@jest/core/build/cli/index.js:320:7)
+      at runCLI (node_modules/@jest/core/build/cli/index.js:173:3)
 
-  console.log
-    {
-      name: 'Click To Edit Name',
-      years: [
-        {
-          name: 'Year 1',
-          winter: [Object],
-          spring: [Object],
-          summer: [Object],
-          fall: null
-        },
-        {
-          name: 'Year 2',
-          winter: [Object],
-          spring: [Object],
-          summer: [Object],
-          fall: [Object]
-        },
-        {
-          name: 'Year 3',
-          winter: [Object],
-          spring: [Object],
-          summer: [Object],
-          fall: [Object]
-        },
-        {
-          name: 'Year 4',
-          winter: [Object],
-          spring: [Object],
-          summer: [Object],
-          fall: [Object]
-        }
-      ]
-    }
+  ● Switch to/from course plan button
 
-      at UpdateCourseplan (src/NewCoursePlan.tsx:79:17)
+    TestingLibraryElementError: Unable to find an element with the text: /View Course Plans/i. This could be because the text is broken up by multiple elements. In this case, you can provide a function for your text matcher to make your matcher more flexible.
 
-  console.log
-    looking for old semesterwinter
+    Ignored nodes: comments, script, style
+    [36m<body>[39m
+      [36m<div>[39m
+        [36m<div[39m
+          [33mclass[39m=[32m"App"[39m
+        [36m>[39m
+          [36m<div[39m
+            [33mclass[39m=[32m"logo"[39m
+          [36m>[39m
+            [36m<h1[39m
+              [33mclass[39m=[32m"App-title"[39m
+            [36m>[39m
+              [36m<img[39m
+                [33mheight[39m=[32m"150"[39m
+                [33msrc[39m=[32m"ud_logo.jpg"[39m
+                [33mwidth[39m=[32m"150"[39m
+              [36m/>[39m
+              [0mCIS Scheduler[0m
+              [0m [0m
+            [36m</h1>[39m
+          [36m</div>[39m
+          [36m<header[39m
+            [33mclass[39m=[32m"App-header"[39m
+          [36m>[39m
+            [0mAdam Beck, Zach Reggio, Sam Ferguson, Brandon Marafino, Adam Liu[0m
+          [36m</header>[39m
+          [36m<div[39m
+            [33mclass[39m=[32m"button"[39m
+          [36m>[39m
+            [36m<button[39m
+              [33mclass[39m=[32m"buttonSpacing"[39m
+            [36m>[39m
+              [0mNew Course Plans[0m
+            [36m</button>[39m
+            [36m<a[39m
+              [33mdownload[39m=[32m"coursePlan.csv"[39m
+              [33mhref[39m=[32m"data:text/csv;charset=utf-8,﻿\"Plan Name\",\"Year\",\"Season\",\"Course Ticker\",\"Course Name\",\"Credits\",\"Prerequisites\",\"UUID\",\"Description\"
+    \"Bachelor of Computer Science\",\"Year 1\",\"spring\",\"CISC 108\",\"Introduction to Computer Science I\",\"3\",\"\",\"303bec5c-bd0b-484b-a363-b98324e767b2\",\"\"
+    \"Bachelor of Computer Science\",\"Year 1\",\"spring\",\"EGGG 101\",\"Introduction to Engineering\",\"2\",\"\",\"c72b134c-0f64-4ebc-96a7-11cd93e72994\",\"\"
+    \"Bachelor of Computer Science\",\"Year 1\",\"spring\",\"ENGL 110\",\"Seminar in Composition\",\"3\",\"\",\"28307fdd-1826-4edf-aa24-e82ff34b8a97\",\"\"
+    \"Bachelor of Computer Science\",\"Year 1\",\"spring\",\"MATH 241\",\"Analytic Geometry and Calculus A\",\"4\",\"MATH 117 or acceptable score on the Math Placement Exam in accordance with current standards determined by the Department of Mathematical Sciences. See https://www.mathsci.udel.edu/courses-placement/ud-math-placement for more information.\",\"b4352928-14d4-4566-a7ef-3ba258568b27\",\"\"
+    \"Bachelor of Computer Science\",\"Year 1\",\"fall\",\"CISC 181\",\"Introduction to Computer Science II\",\"3\",\"Grade of C- or better in CISC 108 or CISC 106.\",\"6287933b-4031-41a7-b58b-0f66f9ddefb1\",\"\"
+    \"Bachelor of Computer Science\",\"Year 1\",\"fall\",\"CISC 210\",\"Introduction to Systems Programming\",\"3\",\"A grade of C- or better in CISC 106 or CISC 108.\",\"ca3e1e22-8962-4494-a736-7fb549c45359\",\"\"
+    \"Bachelor of Computer Science\",\"Year 1\",\"fall\",\"MATH 242\",\"Analytic Geometry and Calculus B\",\"4\",\"MATH 241 or MATH 232.\",\"17b29c4c-71c1-411c-ae50-5412e537fdc1\",\"\"
+    \"Bachelor of Computer Science\",\"Year 1\",\"fall\",\"PHYS 207\",\"Fundamentals of Physics I\",\"3\",\"\",\"18fc3db8-3d41-4847-ab67-5b337f2129dd\",\"\"
+    \"Bachelor of Computer Science\",\"Year 1\",\"fall\",\"PHYS 227\",\"Fundamentals of Physics Laboratory I\",\"1\",\"\",\"51ec6a2e-d753-4971-abb9-d0a9581e14ef\",\"\"
+    \"Bachelor of Computer Science\",\"Year 2\",\"spring\",\"CISC 220\",\"Data Structures\",\"3\",\"A minimum grade of C- in CISC 210.\",\"6077fa9d-9d0f-4fee-bdfe-edceda2b64ca\",\"\"
+    \"Bachelor of Computer Science\",\"Year 2\",\"spring\",\"CISC 260\",\"Machine Organization and Assembly Language\",\"3\",\"A minimum grade of C- in CISC 210.\",\"f2a5ab99-c30f-40ea-8d2b-f3a19d918426\",\"\"
+    \"Bachelor of Computer Science\",\"Year 2\",\"spring\",\"MATH 210\",\"Discrete Mathematics I\",\"3\",\"\",\"5ca2501c-6a70-4d3a-9a89-ceb41f90971e\",\"\"
+    \"Bachelor of Computer Science\",\"Year 2\",\"spring\",\"PHYS 208\",\"Fundamentals of Physics II\",\"3\",\"PHYS 203 or PHYS 207 and PHYS 227, MATH 241 or MATH 232.\",\"8c2e043d-328d-4d2f-835a-5597188e5cc1\",\"\"
+    \"Bachelor of Computer Science\",\"Year 2\",\"spring\",\"PHYS 228\",\"Fundamentials of Physics Laboratory II\",\"1\",\"\",\"0cb9e47b-ffb4-4ad1-b98f-4cdba9f8e49f\",\"\"
+    \"Bachelor of Computer Science\",\"Year 2\",\"fall\",\"CISC 275\",\"Introduction to Software Engineering\",\"3\",\"Minimum grade of C- in CISC 181 and CISC 220.\",\"f86a5c1d-c6d7-41c9-8e26-1a9d695f28eb\",\"\"
+    \"Bachelor of Computer Science\",\"Year 2\",\"fall\",\"CISC 355\",\"Computers, Ethics and Society\",\"3\",\"\",\"c9c5e0db-ed41-429c-9c80-70bfe3358ec1\",\"\"
+    \"Bachelor of Computer Science\",\"Year 2\",\"fall\",\"MATH 205\",\"Statistical Methods\",\"4\",\"MATH 210 or MATH 230.\",\"0bc66c87-b0eb-47aa-8280-b4ae3443f56a\",\"\"
+    \"Bachelor of Computer Science\",\"Year 2\",\"fall\",\"CHEM 103\",\"General Chemistry\",\"3\",\"\",\"bb7fe5ba-b36d-4439-9fac-8123c1d4eadf\",\"\"
+    \"Bachelor of Computer Science\",\"Year 2\",\"fall\",\"CHEM 133\",\"General Chemistry Laboratory\",\"1\",\"\",\"ca23d065-3cdf-43b2-9665-2fd13c5efb2b\",\"\""[39m
+              [33mtarget[39m=[32m"_self"[39m
+            [36m>[39m
+              [36m<button[39m
+                [33mclass[39m=[32m"buttonSpacing btn btn-primary"[39m
+                [33mtype[39m=[32m"button"[39m
+              [36m>[39m
+                [0mExport to CSV[0m
+              [36m</button>[39m
+            [36m</a>[39m
+            [36m<button>[39m
+              [0mNeed Help?[0m
+            [36m</button>[39m
+            [36m<div[39m
+              [33mclass[39m=[32m"csv-reader-input"[39m
+            [36m>[39m
+              [36m<input[39m
+                [33maccept[39m=[32m".csv, text/csv"[39m
+                [33mclass[39m=[32m"csv-input"[39m
+                [33mid[39m=[32m"react-csv-reader-input"[39m
+                [33mname[39m=[32m"react-csv-reader-input"[39m
+                [33mtype[39m=[32m"file"[39m
+              [36m/>[39m
+            [36m</div>[39m
+          [36m</div>[39m
+          [36m<div[39m
+            [33mclass[39m=[32m"container-fluid"[39m
+          [36m>[39m
+            [36m<div>[39m
+              [36m<div[39m
+                [33mclass[39m=[32m"accordion"[39m
+              [36m>[39m
+                [36m<div[39m
+                  [33mclass[39m=[32m"beigebackground accordion-item"[39m
+                [36m>[39m
+                  [36m<h2[39m
+                    [33mclass[39m=[32m"accordion-header"[39m
+                  [36m>[39m
+                    [36m<button[39m
+                      [33maria-expanded[39m=[32m"false"[39m
+                      [33mclass[39m=[32m"accordion-button collapsed"[39m
+                      [33mtype[39m=[32m"button"[39m
+                    [36m>[39m
+                      [0mBachelor of Computer Science[0m
+                      [36m<button[39m
+                        [33mclass[39m=[32m"pull-left btn btn-primary"[39m
+                        [33mtype[39m=[32m"button"[39m
+                      [36m>[39m
+                        [0mDelete[0m
+                      [36m</button>[39m
+                      [36m<button[39m
+                        [33mclass[39m=[32m"pull-left btn btn-primary"[39m
+                        [33mtype[39m=[32m"button"[39m
+                      [36m>[39m
+                        [0mEdit[0m
+                      [36m</button>[39m
+                    [36m</button>[3...
 
-      at removeSemesterYear (src/DBmanage.tsx:138:13)
+      38 | test("Switch to/from course plan button", () => {
+      39 |     render(<App />);
+    > 40 |     const button = screen.getByText(/View Course Plans/i);
+         |                           ^
+      41 |     button.click();
+      42 |     //expect(screen.queryByLabelText("New Course Plans")).toBeInTheDocument();
+      43 |     const SwitchButton = screen.getByText(/New Course Plans/i);
 
-  console.log
-    looking for old yeat
+      at Object.getElementError (node_modules/@testing-library/react/node_modules/@testing-library/dom/dist/config.js:37:19)
+      at node_modules/@testing-library/react/node_modules/@testing-library/dom/dist/query-helpers.js:76:38
+      at node_modules/@testing-library/react/node_modules/@testing-library/dom/dist/query-helpers.js:52:17
+      at getByText (node_modules/@testing-library/react/node_modules/@testing-library/dom/dist/query-helpers.js:95:19)
+      at Object.<anonymous> (src/App.test.tsx:40:27)
+      at TestScheduler.scheduleTests (node_modules/@jest/core/build/TestScheduler.js:333:13)
+      at runJest (node_modules/@jest/core/build/runJest.js:404:19)
+      at _run10000 (node_modules/@jest/core/build/cli/index.js:320:7)
+      at runCLI (node_modules/@jest/core/build/cli/index.js:173:3)
 
-      at UpdateCoureplanYear (src/DBmanage.tsx:146:13)
+  ● Testing add course to queue 1
 
-  console.log
-    debug
+    TestingLibraryElementError: Unable to find an element with the text: ADD. This could be because the text is broken up by multiple elements. In this case, you can provide a function for your text matcher to make your matcher more flexible.
 
-      at UpdateCourseplan (src/NewCoursePlan.tsx:78:17)
+    Ignored nodes: comments, script, style
+    [36m<body>[39m
+      [36m<div>[39m
+        [36m<div[39m
+          [33mclass[39m=[32m"App"[39m
+        [36m>[39m
+          [36m<div[39m
+            [33mclass[39m=[32m"logo"[39m
+          [36m>[39m
+            [36m<h1[39m
+              [33mclass[39m=[32m"App-title"[39m
+            [36m>[39m
+              [36m<img[39m
+                [33mheight[39m=[32m"150"[39m
+                [33msrc[39m=[32m"ud_logo.jpg"[39m
+                [33mwidth[39m=[32m"150"[39m
+              [36m/>[39m
+              [0mCIS Scheduler[0m
+              [0m [0m
+            [36m</h1>[39m
+          [36m</div>[39m
+          [36m<header[39m
+            [33mclass[39m=[32m"App-header"[39m
+          [36m>[39m
+            [0mAdam Beck, Zach Reggio, Sam Ferguson, Brandon Marafino, Adam Liu[0m
+          [36m</header>[39m
+          [36m<div[39m
+            [33mclass[39m=[32m"button"[39m
+          [36m>[39m
+            [36m<button[39m
+              [33mclass[39m=[32m"buttonSpacing"[39m
+            [36m>[39m
+              [0mNew Course Plans[0m
+            [36m</button>[39m
+            [36m<a[39m
+              [33mdownload[39m=[32m"coursePlan.csv"[39m
+              [33mhref[39m=[32m"data:text/csv;charset=utf-8,﻿\"Plan Name\",\"Year\",\"Season\",\"Course Ticker\",\"Course Name\",\"Credits\",\"Prerequisites\",\"UUID\",\"Description\"
+    \"Bachelor of Computer Science\",\"Year 1\",\"spring\",\"CISC 108\",\"Introduction to Computer Science I\",\"3\",\"\",\"303bec5c-bd0b-484b-a363-b98324e767b2\",\"\"
+    \"Bachelor of Computer Science\",\"Year 1\",\"spring\",\"EGGG 101\",\"Introduction to Engineering\",\"2\",\"\",\"c72b134c-0f64-4ebc-96a7-11cd93e72994\",\"\"
+    \"Bachelor of Computer Science\",\"Year 1\",\"spring\",\"ENGL 110\",\"Seminar in Composition\",\"3\",\"\",\"28307fdd-1826-4edf-aa24-e82ff34b8a97\",\"\"
+    \"Bachelor of Computer Science\",\"Year 1\",\"spring\",\"MATH 241\",\"Analytic Geometry and Calculus A\",\"4\",\"MATH 117 or acceptable score on the Math Placement Exam in accordance with current standards determined by the Department of Mathematical Sciences. See https://www.mathsci.udel.edu/courses-placement/ud-math-placement for more information.\",\"b4352928-14d4-4566-a7ef-3ba258568b27\",\"\"
+    \"Bachelor of Computer Science\",\"Year 1\",\"fall\",\"CISC 181\",\"Introduction to Computer Science II\",\"3\",\"Grade of C- or better in CISC 108 or CISC 106.\",\"6287933b-4031-41a7-b58b-0f66f9ddefb1\",\"\"
+    \"Bachelor of Computer Science\",\"Year 1\",\"fall\",\"CISC 210\",\"Introduction to Systems Programming\",\"3\",\"A grade of C- or better in CISC 106 or CISC 108.\",\"ca3e1e22-8962-4494-a736-7fb549c45359\",\"\"
+    \"Bachelor of Computer Science\",\"Year 1\",\"fall\",\"MATH 242\",\"Analytic Geometry and Calculus B\",\"4\",\"MATH 241 or MATH 232.\",\"17b29c4c-71c1-411c-ae50-5412e537fdc1\",\"\"
+    \"Bachelor of Computer Science\",\"Year 1\",\"fall\",\"PHYS 207\",\"Fundamentals of Physics I\",\"3\",\"\",\"18fc3db8-3d41-4847-ab67-5b337f2129dd\",\"\"
+    \"Bachelor of Computer Science\",\"Year 1\",\"fall\",\"PHYS 227\",\"Fundamentals of Physics Laboratory I\",\"1\",\"\",\"51ec6a2e-d753-4971-abb9-d0a9581e14ef\",\"\"
+    \"Bachelor of Computer Science\",\"Year 2\",\"spring\",\"CISC 220\",\"Data Structures\",\"3\",\"A minimum grade of C- in CISC 210.\",\"6077fa9d-9d0f-4fee-bdfe-edceda2b64ca\",\"\"
+    \"Bachelor of Computer Science\",\"Year 2\",\"spring\",\"CISC 260\",\"Machine Organization and Assembly Language\",\"3\",\"A minimum grade of C- in CISC 210.\",\"f2a5ab99-c30f-40ea-8d2b-f3a19d918426\",\"\"
+    \"Bachelor of Computer Science\",\"Year 2\",\"spring\",\"MATH 210\",\"Discrete Mathematics I\",\"3\",\"\",\"5ca2501c-6a70-4d3a-9a89-ceb41f90971e\",\"\"
+    \"Bachelor of Computer Science\",\"Year 2\",\"spring\",\"PHYS 208\",\"Fundamentals of Physics II\",\"3\",\"PHYS 203 or PHYS 207 and PHYS 227, MATH 241 or MATH 232.\",\"8c2e043d-328d-4d2f-835a-5597188e5cc1\",\"\"
+    \"Bachelor of Computer Science\",\"Year 2\",\"spring\",\"PHYS 228\",\"Fundamentials of Physics Laboratory II\",\"1\",\"\",\"0cb9e47b-ffb4-4ad1-b98f-4cdba9f8e49f\",\"\"
+    \"Bachelor of Computer Science\",\"Year 2\",\"fall\",\"CISC 275\",\"Introduction to Software Engineering\",\"3\",\"Minimum grade of C- in CISC 181 and CISC 220.\",\"f86a5c1d-c6d7-41c9-8e26-1a9d695f28eb\",\"\"
+    \"Bachelor of Computer Science\",\"Year 2\",\"fall\",\"CISC 355\",\"Computers, Ethics and Society\",\"3\",\"\",\"c9c5e0db-ed41-429c-9c80-70bfe3358ec1\",\"\"
+    \"Bachelor of Computer Science\",\"Year 2\",\"fall\",\"MATH 205\",\"Statistical Methods\",\"4\",\"MATH 210 or MATH 230.\",\"0bc66c87-b0eb-47aa-8280-b4ae3443f56a\",\"\"
+    \"Bachelor of Computer Science\",\"Year 2\",\"fall\",\"CHEM 103\",\"General Chemistry\",\"3\",\"\",\"bb7fe5ba-b36d-4439-9fac-8123c1d4eadf\",\"\"
+    \"Bachelor of Computer Science\",\"Year 2\",\"fall\",\"CHEM 133\",\"General Chemistry Laboratory\",\"1\",\"\",\"ca23d065-3cdf-43b2-9665-2fd13c5efb2b\",\"\""[39m
+              [33mtarget[39m=[32m"_self"[39m
+            [36m>[39m
+              [36m<button[39m
+                [33mclass[39m=[32m"buttonSpacing btn btn-primary"[39m
+                [33mtype[39m=[32m"button"[39m
+              [36m>[39m
+                [0mExport to CSV[0m
+              [36m</button>[39m
+            [36m</a>[39m
+            [36m<button>[39m
+              [0mNeed Help?[0m
+            [36m</button>[39m
+            [36m<div[39m
+              [33mclass[39m=[32m"csv-reader-input"[39m
+            [36m>[39m
+              [36m<input[39m
+                [33maccept[39m=[32m".csv, text/csv"[39m
+                [33mclass[39m=[32m"csv-input"[39m
+                [33mid[39m=[32m"react-csv-reader-input"[39m
+                [33mname[39m=[32m"react-csv-reader-input"[39m
+                [33mtype[39m=[32m"file"[39m
+              [36m/>[39m
+            [36m</div>[39m
+          [36m</div>[39m
+          [36m<div[39m
+            [33mclass[39m=[32m"container-fluid"[39m
+          [36m>[39m
+            [36m<div>[39m
+              [36m<div[39m
+                [33mclass[39m=[32m"accordion"[39m
+              [36m>[39m
+                [36m<div[39m
+                  [33mclass[39m=[32m"beigebackground accordion-item"[39m
+                [36m>[39m
+                  [36m<h2[39m
+                    [33mclass[39m=[32m"accordion-header"[39m
+                  [36m>[39m
+                    [36m<button[39m
+                      [33maria-expanded[39m=[32m"false"[39m
+                      [33mclass[39m=[32m"accordion-button collapsed"[39m
+                      [33mtype[39m=[32m"button"[39m
+                    [36m>[39m
+                      [0mBachelor of Computer Science[0m
+                      [36m<button[39m
+                        [33mclass[39m=[32m"pull-left btn btn-primary"[39m
+                        [33mtype[39m=[32m"button"[39m
+                      [36m>[39m
+                        [0mDelete[0m
+                      [36m</button>[39m
+                      [36m<button[39m
+                        [33mclass[39m=[32m"pull-left btn btn-primary"[39m
+                        [33mtype[39m=[32m"button"[39m
+                      [36m>[39m
+                        [0mEdit[0m
+                      [36m</button>[39m
+                    [36m</button>[3...
 
-  console.log
-    {
-      name: 'Click To Edit Name',
-      years: [
-        {
-          name: 'Year 1',
-          winter: null,
-          spring: [Object],
-          summer: [Object],
-          fall: [Object]
-        },
-        {
-          name: 'Year 2',
-          winter: [Object],
-          spring: [Object],
-          summer: [Object],
-          fall: [Object]
-        },
-        {
-          name: 'Year 3',
-          winter: [Object],
-          spring: [Object],
-          summer: [Object],
-          fall: [Object]
-        },
-        {
-          name: 'Year 4',
-          winter: [Object],
-          spring: [Object],
-          summer: [Object],
-          fall: [Object]
-        }
-      ]
-    }
+      49 | test("Testing add course to queue 1", () => {
+      50 |     render(<App />);
+    > 51 |     const buttons = screen.getAllByText("ADD");
+         |                            ^
+      52 |     const specificButton = buttons[0];
+      53 |     specificButton.click();
+      54 |     const textElements = screen.getAllByText("ACCT 166");
 
-      at UpdateCourseplan (src/NewCoursePlan.tsx:79:17)
+      at Object.getElementError (node_modules/@testing-library/react/node_modules/@testing-library/dom/dist/config.js:37:19)
+      at node_modules/@testing-library/react/node_modules/@testing-library/dom/dist/query-helpers.js:76:38
+      at getAllByText (node_modules/@testing-library/react/node_modules/@testing-library/dom/dist/query-helpers.js:109:15)
+      at Object.<anonymous> (src/App.test.tsx:51:28)
+      at TestScheduler.scheduleTests (node_modules/@jest/core/build/TestScheduler.js:333:13)
+      at runJest (node_modules/@jest/core/build/runJest.js:404:19)
+      at _run10000 (node_modules/@jest/core/build/cli/index.js:320:7)
+      at runCLI (node_modules/@jest/core/build/cli/index.js:173:3)
 
-  console.log
-    click registered
+  ● Testing add course to queue 2
 
-      at selectedSemester (src/NewCoursePlan.tsx:56:17)
+    TestingLibraryElementError: Unable to find an element with the text: ADD. This could be because the text is broken up by multiple elements. In this case, you can provide a function for your text matcher to make your matcher more flexible.
 
-  console.log
-    click registered
+    Ignored nodes: comments, script, style
+    [36m<body>[39m
+      [36m<div>[39m
+        [36m<div[39m
+          [33mclass[39m=[32m"App"[39m
+        [36m>[39m
+          [36m<div[39m
+            [33mclass[39m=[32m"logo"[39m
+          [36m>[39m
+            [36m<h1[39m
+              [33mclass[39m=[32m"App-title"[39m
+            [36m>[39m
+              [36m<img[39m
+                [33mheight[39m=[32m"150"[39m
+                [33msrc[39m=[32m"ud_logo.jpg"[39m
+                [33mwidth[39m=[32m"150"[39m
+              [36m/>[39m
+              [0mCIS Scheduler[0m
+              [0m [0m
+            [36m</h1>[39m
+          [36m</div>[39m
+          [36m<header[39m
+            [33mclass[39m=[32m"App-header"[39m
+          [36m>[39m
+            [0mAdam Beck, Zach Reggio, Sam Ferguson, Brandon Marafino, Adam Liu[0m
+          [36m</header>[39m
+          [36m<div[39m
+            [33mclass[39m=[32m"button"[39m
+          [36m>[39m
+            [36m<button[39m
+              [33mclass[39m=[32m"buttonSpacing"[39m
+            [36m>[39m
+              [0mNew Course Plans[0m
+            [36m</button>[39m
+            [36m<a[39m
+              [33mdownload[39m=[32m"coursePlan.csv"[39m
+              [33mhref[39m=[32m"data:text/csv;charset=utf-8,﻿\"Plan Name\",\"Year\",\"Season\",\"Course Ticker\",\"Course Name\",\"Credits\",\"Prerequisites\",\"UUID\",\"Description\"
+    \"Bachelor of Computer Science\",\"Year 1\",\"spring\",\"CISC 108\",\"Introduction to Computer Science I\",\"3\",\"\",\"303bec5c-bd0b-484b-a363-b98324e767b2\",\"\"
+    \"Bachelor of Computer Science\",\"Year 1\",\"spring\",\"EGGG 101\",\"Introduction to Engineering\",\"2\",\"\",\"c72b134c-0f64-4ebc-96a7-11cd93e72994\",\"\"
+    \"Bachelor of Computer Science\",\"Year 1\",\"spring\",\"ENGL 110\",\"Seminar in Composition\",\"3\",\"\",\"28307fdd-1826-4edf-aa24-e82ff34b8a97\",\"\"
+    \"Bachelor of Computer Science\",\"Year 1\",\"spring\",\"MATH 241\",\"Analytic Geometry and Calculus A\",\"4\",\"MATH 117 or acceptable score on the Math Placement Exam in accordance with current standards determined by the Department of Mathematical Sciences. See https://www.mathsci.udel.edu/courses-placement/ud-math-placement for more information.\",\"b4352928-14d4-4566-a7ef-3ba258568b27\",\"\"
+    \"Bachelor of Computer Science\",\"Year 1\",\"fall\",\"CISC 181\",\"Introduction to Computer Science II\",\"3\",\"Grade of C- or better in CISC 108 or CISC 106.\",\"6287933b-4031-41a7-b58b-0f66f9ddefb1\",\"\"
+    \"Bachelor of Computer Science\",\"Year 1\",\"fall\",\"CISC 210\",\"Introduction to Systems Programming\",\"3\",\"A grade of C- or better in CISC 106 or CISC 108.\",\"ca3e1e22-8962-4494-a736-7fb549c45359\",\"\"
+    \"Bachelor of Computer Science\",\"Year 1\",\"fall\",\"MATH 242\",\"Analytic Geometry and Calculus B\",\"4\",\"MATH 241 or MATH 232.\",\"17b29c4c-71c1-411c-ae50-5412e537fdc1\",\"\"
+    \"Bachelor of Computer Science\",\"Year 1\",\"fall\",\"PHYS 207\",\"Fundamentals of Physics I\",\"3\",\"\",\"18fc3db8-3d41-4847-ab67-5b337f2129dd\",\"\"
+    \"Bachelor of Computer Science\",\"Year 1\",\"fall\",\"PHYS 227\",\"Fundamentals of Physics Laboratory I\",\"1\",\"\",\"51ec6a2e-d753-4971-abb9-d0a9581e14ef\",\"\"
+    \"Bachelor of Computer Science\",\"Year 2\",\"spring\",\"CISC 220\",\"Data Structures\",\"3\",\"A minimum grade of C- in CISC 210.\",\"6077fa9d-9d0f-4fee-bdfe-edceda2b64ca\",\"\"
+    \"Bachelor of Computer Science\",\"Year 2\",\"spring\",\"CISC 260\",\"Machine Organization and Assembly Language\",\"3\",\"A minimum grade of C- in CISC 210.\",\"f2a5ab99-c30f-40ea-8d2b-f3a19d918426\",\"\"
+    \"Bachelor of Computer Science\",\"Year 2\",\"spring\",\"MATH 210\",\"Discrete Mathematics I\",\"3\",\"\",\"5ca2501c-6a70-4d3a-9a89-ceb41f90971e\",\"\"
+    \"Bachelor of Computer Science\",\"Year 2\",\"spring\",\"PHYS 208\",\"Fundamentals of Physics II\",\"3\",\"PHYS 203 or PHYS 207 and PHYS 227, MATH 241 or MATH 232.\",\"8c2e043d-328d-4d2f-835a-5597188e5cc1\",\"\"
+    \"Bachelor of Computer Science\",\"Year 2\",\"spring\",\"PHYS 228\",\"Fundamentials of Physics Laboratory II\",\"1\",\"\",\"0cb9e47b-ffb4-4ad1-b98f-4cdba9f8e49f\",\"\"
+    \"Bachelor of Computer Science\",\"Year 2\",\"fall\",\"CISC 275\",\"Introduction to Software Engineering\",\"3\",\"Minimum grade of C- in CISC 181 and CISC 220.\",\"f86a5c1d-c6d7-41c9-8e26-1a9d695f28eb\",\"\"
+    \"Bachelor of Computer Science\",\"Year 2\",\"fall\",\"CISC 355\",\"Computers, Ethics and Society\",\"3\",\"\",\"c9c5e0db-ed41-429c-9c80-70bfe3358ec1\",\"\"
+    \"Bachelor of Computer Science\",\"Year 2\",\"fall\",\"MATH 205\",\"Statistical Methods\",\"4\",\"MATH 210 or MATH 230.\",\"0bc66c87-b0eb-47aa-8280-b4ae3443f56a\",\"\"
+    \"Bachelor of Computer Science\",\"Year 2\",\"fall\",\"CHEM 103\",\"General Chemistry\",\"3\",\"\",\"bb7fe5ba-b36d-4439-9fac-8123c1d4eadf\",\"\"
+    \"Bachelor of Computer Science\",\"Year 2\",\"fall\",\"CHEM 133\",\"General Chemistry Laboratory\",\"1\",\"\",\"ca23d065-3cdf-43b2-9665-2fd13c5efb2b\",\"\""[39m
+              [33mtarget[39m=[32m"_self"[39m
+            [36m>[39m
+              [36m<button[39m
+                [33mclass[39m=[32m"buttonSpacing btn btn-primary"[39m
+                [33mtype[39m=[32m"button"[39m
+              [36m>[39m
+                [0mExport to CSV[0m
+              [36m</button>[39m
+            [36m</a>[39m
+            [36m<button>[39m
+              [0mNeed Help?[0m
+            [36m</button>[39m
+            [36m<div[39m
+              [33mclass[39m=[32m"csv-reader-input"[39m
+            [36m>[39m
+              [36m<input[39m
+                [33maccept[39m=[32m".csv, text/csv"[39m
+                [33mclass[39m=[32m"csv-input"[39m
+                [33mid[39m=[32m"react-csv-reader-input"[39m
+                [33mname[39m=[32m"react-csv-reader-input"[39m
+                [33mtype[39m=[32m"file"[39m
+              [36m/>[39m
+            [36m</div>[39m
+          [36m</div>[39m
+          [36m<div[39m
+            [33mclass[39m=[32m"container-fluid"[39m
+          [36m>[39m
+            [36m<div>[39m
+              [36m<div[39m
+                [33mclass[39m=[32m"accordion"[39m
+              [36m>[39m
+                [36m<div[39m
+                  [33mclass[39m=[32m"beigebackground accordion-item"[39m
+                [36m>[39m
+                  [36m<h2[39m
+                    [33mclass[39m=[32m"accordion-header"[39m
+                  [36m>[39m
+                    [36m<button[39m
+                      [33maria-expanded[39m=[32m"false"[39m
+                      [33mclass[39m=[32m"accordion-button collapsed"[39m
+                      [33mtype[39m=[32m"button"[39m
+                    [36m>[39m
+                      [0mBachelor of Computer Science[0m
+                      [36m<button[39m
+                        [33mclass[39m=[32m"pull-left btn btn-primary"[39m
+                        [33mtype[39m=[32m"button"[39m
+                      [36m>[39m
+                        [0mDelete[0m
+                      [36m</button>[39m
+                      [36m<button[39m
+                        [33mclass[39m=[32m"pull-left btn btn-primary"[39m
+                        [33mtype[39m=[32m"button"[39m
+                      [36m>[39m
+                        [0mEdit[0m
+                      [36m</button>[39m
+                    [36m</button>[3...
 
-      at selectedSemester (src/NewCoursePlan.tsx:56:17)
+      58 | test("Testing add course to queue 2", () => {
+      59 |     render(<App />);
+    > 60 |     const buttons = screen.getAllByText("ADD");
+         |                            ^
+      61 |     const specificButton = buttons[4];
+      62 |     specificButton.click();
+      63 |     const textElements = screen.getAllByText("ACCT 266");
 
-  console.log
-    click registered
+      at Object.getElementError (node_modules/@testing-library/react/node_modules/@testing-library/dom/dist/config.js:37:19)
+      at node_modules/@testing-library/react/node_modules/@testing-library/dom/dist/query-helpers.js:76:38
+      at getAllByText (node_modules/@testing-library/react/node_modules/@testing-library/dom/dist/query-helpers.js:109:15)
+      at Object.<anonymous> (src/App.test.tsx:60:28)
+      at TestScheduler.scheduleTests (node_modules/@jest/core/build/TestScheduler.js:333:13)
+      at runJest (node_modules/@jest/core/build/runJest.js:404:19)
+      at _run10000 (node_modules/@jest/core/build/cli/index.js:320:7)
+      at runCLI (node_modules/@jest/core/build/cli/index.js:173:3)
 
-      at selectedSemester (src/NewCoursePlan.tsx:56:17)
+  ● Testing search bar
 
-  console.log
-    looking for old yeat
+    TestingLibraryElementError: Unable to find an element with the placeholder text of: Search
 
-      at UpdateCoureplanYear (src/DBmanage.tsx:146:13)
+    Ignored nodes: comments, script, style
+    [36m<body>[39m
+      [36m<div>[39m
+        [36m<div[39m
+          [33mclass[39m=[32m"App"[39m
+        [36m>[39m
+          [36m<div[39m
+            [33mclass[39m=[32m"logo"[39m
+          [36m>[39m
+            [36m<h1[39m
+              [33mclass[39m=[32m"App-title"[39m
+            [36m>[39m
+              [36m<img[39m
+                [33mheight[39m=[32m"150"[39m
+                [33msrc[39m=[32m"ud_logo.jpg"[39m
+                [33mwidth[39m=[32m"150"[39m
+              [36m/>[39m
+              [0mCIS Scheduler[0m
+              [0m [0m
+            [36m</h1>[39m
+          [36m</div>[39m
+          [36m<header[39m
+            [33mclass[39m=[32m"App-header"[39m
+          [36m>[39m
+            [0mAdam Beck, Zach Reggio, Sam Ferguson, Brandon Marafino, Adam Liu[0m
+          [36m</header>[39m
+          [36m<div[39m
+            [33mclass[39m=[32m"button"[39m
+          [36m>[39m
+            [36m<button[39m
+              [33mclass[39m=[32m"buttonSpacing"[39m
+            [36m>[39m
+              [0mNew Course Plans[0m
+            [36m</button>[39m
+            [36m<a[39m
+              [33mdownload[39m=[32m"coursePlan.csv"[39m
+              [33mhref[39m=[32m"data:text/csv;charset=utf-8,﻿\"Plan Name\",\"Year\",\"Season\",\"Course Ticker\",\"Course Name\",\"Credits\",\"Prerequisites\",\"UUID\",\"Description\"
+    \"Bachelor of Computer Science\",\"Year 1\",\"spring\",\"CISC 108\",\"Introduction to Computer Science I\",\"3\",\"\",\"303bec5c-bd0b-484b-a363-b98324e767b2\",\"\"
+    \"Bachelor of Computer Science\",\"Year 1\",\"spring\",\"EGGG 101\",\"Introduction to Engineering\",\"2\",\"\",\"c72b134c-0f64-4ebc-96a7-11cd93e72994\",\"\"
+    \"Bachelor of Computer Science\",\"Year 1\",\"spring\",\"ENGL 110\",\"Seminar in Composition\",\"3\",\"\",\"28307fdd-1826-4edf-aa24-e82ff34b8a97\",\"\"
+    \"Bachelor of Computer Science\",\"Year 1\",\"spring\",\"MATH 241\",\"Analytic Geometry and Calculus A\",\"4\",\"MATH 117 or acceptable score on the Math Placement Exam in accordance with current standards determined by the Department of Mathematical Sciences. See https://www.mathsci.udel.edu/courses-placement/ud-math-placement for more information.\",\"b4352928-14d4-4566-a7ef-3ba258568b27\",\"\"
+    \"Bachelor of Computer Science\",\"Year 1\",\"fall\",\"CISC 181\",\"Introduction to Computer Science II\",\"3\",\"Grade of C- or better in CISC 108 or CISC 106.\",\"6287933b-4031-41a7-b58b-0f66f9ddefb1\",\"\"
+    \"Bachelor of Computer Science\",\"Year 1\",\"fall\",\"CISC 210\",\"Introduction to Systems Programming\",\"3\",\"A grade of C- or better in CISC 106 or CISC 108.\",\"ca3e1e22-8962-4494-a736-7fb549c45359\",\"\"
+    \"Bachelor of Computer Science\",\"Year 1\",\"fall\",\"MATH 242\",\"Analytic Geometry and Calculus B\",\"4\",\"MATH 241 or MATH 232.\",\"17b29c4c-71c1-411c-ae50-5412e537fdc1\",\"\"
+    \"Bachelor of Computer Science\",\"Year 1\",\"fall\",\"PHYS 207\",\"Fundamentals of Physics I\",\"3\",\"\",\"18fc3db8-3d41-4847-ab67-5b337f2129dd\",\"\"
+    \"Bachelor of Computer Science\",\"Year 1\",\"fall\",\"PHYS 227\",\"Fundamentals of Physics Laboratory I\",\"1\",\"\",\"51ec6a2e-d753-4971-abb9-d0a9581e14ef\",\"\"
+    \"Bachelor of Computer Science\",\"Year 2\",\"spring\",\"CISC 220\",\"Data Structures\",\"3\",\"A minimum grade of C- in CISC 210.\",\"6077fa9d-9d0f-4fee-bdfe-edceda2b64ca\",\"\"
+    \"Bachelor of Computer Science\",\"Year 2\",\"spring\",\"CISC 260\",\"Machine Organization and Assembly Language\",\"3\",\"A minimum grade of C- in CISC 210.\",\"f2a5ab99-c30f-40ea-8d2b-f3a19d918426\",\"\"
+    \"Bachelor of Computer Science\",\"Year 2\",\"spring\",\"MATH 210\",\"Discrete Mathematics I\",\"3\",\"\",\"5ca2501c-6a70-4d3a-9a89-ceb41f90971e\",\"\"
+    \"Bachelor of Computer Science\",\"Year 2\",\"spring\",\"PHYS 208\",\"Fundamentals of Physics II\",\"3\",\"PHYS 203 or PHYS 207 and PHYS 227, MATH 241 or MATH 232.\",\"8c2e043d-328d-4d2f-835a-5597188e5cc1\",\"\"
+    \"Bachelor of Computer Science\",\"Year 2\",\"spring\",\"PHYS 228\",\"Fundamentials of Physics Laboratory II\",\"1\",\"\",\"0cb9e47b-ffb4-4ad1-b98f-4cdba9f8e49f\",\"\"
+    \"Bachelor of Computer Science\",\"Year 2\",\"fall\",\"CISC 275\",\"Introduction to Software Engineering\",\"3\",\"Minimum grade of C- in CISC 181 and CISC 220.\",\"f86a5c1d-c6d7-41c9-8e26-1a9d695f28eb\",\"\"
+    \"Bachelor of Computer Science\",\"Year 2\",\"fall\",\"CISC 355\",\"Computers, Ethics and Society\",\"3\",\"\",\"c9c5e0db-ed41-429c-9c80-70bfe3358ec1\",\"\"
+    \"Bachelor of Computer Science\",\"Year 2\",\"fall\",\"MATH 205\",\"Statistical Methods\",\"4\",\"MATH 210 or MATH 230.\",\"0bc66c87-b0eb-47aa-8280-b4ae3443f56a\",\"\"
+    \"Bachelor of Computer Science\",\"Year 2\",\"fall\",\"CHEM 103\",\"General Chemistry\",\"3\",\"\",\"bb7fe5ba-b36d-4439-9fac-8123c1d4eadf\",\"\"
+    \"Bachelor of Computer Science\",\"Year 2\",\"fall\",\"CHEM 133\",\"General Chemistry Laboratory\",\"1\",\"\",\"ca23d065-3cdf-43b2-9665-2fd13c5efb2b\",\"\""[39m
+              [33mtarget[39m=[32m"_self"[39m
+            [36m>[39m
+              [36m<button[39m
+                [33mclass[39m=[32m"buttonSpacing btn btn-primary"[39m
+                [33mtype[39m=[32m"button"[39m
+              [36m>[39m
+                [0mExport to CSV[0m
+              [36m</button>[39m
+            [36m</a>[39m
+            [36m<button>[39m
+              [0mNeed Help?[0m
+            [36m</button>[39m
+            [36m<div[39m
+              [33mclass[39m=[32m"csv-reader-input"[39m
+            [36m>[39m
+              [36m<input[39m
+                [33maccept[39m=[32m".csv, text/csv"[39m
+                [33mclass[39m=[32m"csv-input"[39m
+                [33mid[39m=[32m"react-csv-reader-input"[39m
+                [33mname[39m=[32m"react-csv-reader-input"[39m
+                [33mtype[39m=[32m"file"[39m
+              [36m/>[39m
+            [36m</div>[39m
+          [36m</div>[39m
+          [36m<div[39m
+            [33mclass[39m=[32m"container-fluid"[39m
+          [36m>[39m
+            [36m<div>[39m
+              [36m<div[39m
+                [33mclass[39m=[32m"accordion"[39m
+              [36m>[39m
+                [36m<div[39m
+                  [33mclass[39m=[32m"beigebackground accordion-item"[39m
+                [36m>[39m
+                  [36m<h2[39m
+                    [33mclass[39m=[32m"accordion-header"[39m
+                  [36m>[39m
+                    [36m<button[39m
+                      [33maria-expanded[39m=[32m"false"[39m
+                      [33mclass[39m=[32m"accordion-button collapsed"[39m
+                      [33mtype[39m=[32m"button"[39m
+                    [36m>[39m
+                      [0mBachelor of Computer Science[0m
+                      [36m<button[39m
+                        [33mclass[39m=[32m"pull-left btn btn-primary"[39m
+                        [33mtype[39m=[32m"button"[39m
+                      [36m>[39m
+                        [0mDelete[0m
+                      [36m</button>[39m
+                      [36m<button[39m
+                        [33mclass[39m=[32m"pull-left btn btn-primary"[39m
+                        [33mtype[39m=[32m"button"[39m
+                      [36m>[39m
+                        [0mEdit[0m
+                      [36m</button>[39m
+                    [36m</button>[3...
 
-  console.log
-    debug
+      67 | test("Testing search bar", () => {
+      68 |     render(<App />);
+    > 69 |     const textBox = screen.getByPlaceholderText("Search");
+         |                            ^
+      70 |     userEvent.type(textBox, "CISC 106");
+      71 |     const buttons = screen.getAllByText("ADD");
+      72 |     const specificButton = buttons[0];
 
-      at UpdateCourseplan (src/NewCoursePlan.tsx:78:17)
+      at Object.getElementError (node_modules/@testing-library/react/node_modules/@testing-library/dom/dist/config.js:37:19)
+      at node_modules/@testing-library/react/node_modules/@testing-library/dom/dist/query-helpers.js:76:38
+      at node_modules/@testing-library/react/node_modules/@testing-library/dom/dist/query-helpers.js:52:17
+      at getByPlaceholderText (node_modules/@testing-library/react/node_modules/@testing-library/dom/dist/query-helpers.js:95:19)
+      at Object.<anonymous> (src/App.test.tsx:69:28)
+      at TestScheduler.scheduleTests (node_modules/@jest/core/build/TestScheduler.js:333:13)
+      at runJest (node_modules/@jest/core/build/runJest.js:404:19)
+      at _run10000 (node_modules/@jest/core/build/cli/index.js:320:7)
+      at runCLI (node_modules/@jest/core/build/cli/index.js:173:3)
 
-  console.log
-    {
-      name: 'Click To Edit Name',
-      years: [
-        {
-          name: 'Year 1',
-          winter: [Object],
-          spring: [Object],
-          summer: [Object],
-          fall: [Object]
-        },
-        {
-          name: 'Year 2',
-          winter: [Object],
-          spring: [Object],
-          summer: [Object],
-          fall: [Object]
-        },
-        {
-          name: 'Year 3',
-          winter: [Object],
-          spring: [Object],
-          summer: [Object],
-          fall: [Object]
-        },
-        {
-          name: 'Year 4',
-          winter: [Object],
-          spring: [Object],
-          summer: [Object],
-          fall: [Object]
-        }
-      ]
-    }
+  ● Testing semester remove button (fall)
 
-      at UpdateCourseplan (src/NewCoursePlan.tsx:79:17)
+    TestingLibraryElementError: Unable to find an element with the text: remove. This could be because the text is broken up by multiple elements. In this case, you can provide a function for your text matcher to make your matcher more flexible.
 
-  console.log
-    click registered
+    Ignored nodes: comments, script, style
+    [36m<body>[39m
+      [36m<div>[39m
+        [36m<div[39m
+          [33mclass[39m=[32m"App"[39m
+        [36m>[39m
+          [36m<div[39m
+            [33mclass[39m=[32m"logo"[39m
+          [36m>[39m
+            [36m<h1[39m
+              [33mclass[39m=[32m"App-title"[39m
+            [36m>[39m
+              [36m<img[39m
+                [33mheight[39m=[32m"150"[39m
+                [33msrc[39m=[32m"ud_logo.jpg"[39m
+                [33mwidth[39m=[32m"150"[39m
+              [36m/>[39m
+              [0mCIS Scheduler[0m
+              [0m [0m
+            [36m</h1>[39m
+          [36m</div>[39m
+          [36m<header[39m
+            [33mclass[39m=[32m"App-header"[39m
+          [36m>[39m
+            [0mAdam Beck, Zach Reggio, Sam Ferguson, Brandon Marafino, Adam Liu[0m
+          [36m</header>[39m
+          [36m<div[39m
+            [33mclass[39m=[32m"button"[39m
+          [36m>[39m
+            [36m<button[39m
+              [33mclass[39m=[32m"buttonSpacing"[39m
+            [36m>[39m
+              [0mNew Course Plans[0m
+            [36m</button>[39m
+            [36m<a[39m
+              [33mdownload[39m=[32m"coursePlan.csv"[39m
+              [33mhref[39m=[32m"data:text/csv;charset=utf-8,﻿\"Plan Name\",\"Year\",\"Season\",\"Course Ticker\",\"Course Name\",\"Credits\",\"Prerequisites\",\"UUID\",\"Description\"
+    \"Bachelor of Computer Science\",\"Year 1\",\"spring\",\"CISC 108\",\"Introduction to Computer Science I\",\"3\",\"\",\"303bec5c-bd0b-484b-a363-b98324e767b2\",\"\"
+    \"Bachelor of Computer Science\",\"Year 1\",\"spring\",\"EGGG 101\",\"Introduction to Engineering\",\"2\",\"\",\"c72b134c-0f64-4ebc-96a7-11cd93e72994\",\"\"
+    \"Bachelor of Computer Science\",\"Year 1\",\"spring\",\"ENGL 110\",\"Seminar in Composition\",\"3\",\"\",\"28307fdd-1826-4edf-aa24-e82ff34b8a97\",\"\"
+    \"Bachelor of Computer Science\",\"Year 1\",\"spring\",\"MATH 241\",\"Analytic Geometry and Calculus A\",\"4\",\"MATH 117 or acceptable score on the Math Placement Exam in accordance with current standards determined by the Department of Mathematical Sciences. See https://www.mathsci.udel.edu/courses-placement/ud-math-placement for more information.\",\"b4352928-14d4-4566-a7ef-3ba258568b27\",\"\"
+    \"Bachelor of Computer Science\",\"Year 1\",\"fall\",\"CISC 181\",\"Introduction to Computer Science II\",\"3\",\"Grade of C- or better in CISC 108 or CISC 106.\",\"6287933b-4031-41a7-b58b-0f66f9ddefb1\",\"\"
+    \"Bachelor of Computer Science\",\"Year 1\",\"fall\",\"CISC 210\",\"Introduction to Systems Programming\",\"3\",\"A grade of C- or better in CISC 106 or CISC 108.\",\"ca3e1e22-8962-4494-a736-7fb549c45359\",\"\"
+    \"Bachelor of Computer Science\",\"Year 1\",\"fall\",\"MATH 242\",\"Analytic Geometry and Calculus B\",\"4\",\"MATH 241 or MATH 232.\",\"17b29c4c-71c1-411c-ae50-5412e537fdc1\",\"\"
+    \"Bachelor of Computer Science\",\"Year 1\",\"fall\",\"PHYS 207\",\"Fundamentals of Physics I\",\"3\",\"\",\"18fc3db8-3d41-4847-ab67-5b337f2129dd\",\"\"
+    \"Bachelor of Computer Science\",\"Year 1\",\"fall\",\"PHYS 227\",\"Fundamentals of Physics Laboratory I\",\"1\",\"\",\"51ec6a2e-d753-4971-abb9-d0a9581e14ef\",\"\"
+    \"Bachelor of Computer Science\",\"Year 2\",\"spring\",\"CISC 220\",\"Data Structures\",\"3\",\"A minimum grade of C- in CISC 210.\",\"6077fa9d-9d0f-4fee-bdfe-edceda2b64ca\",\"\"
+    \"Bachelor of Computer Science\",\"Year 2\",\"spring\",\"CISC 260\",\"Machine Organization and Assembly Language\",\"3\",\"A minimum grade of C- in CISC 210.\",\"f2a5ab99-c30f-40ea-8d2b-f3a19d918426\",\"\"
+    \"Bachelor of Computer Science\",\"Year 2\",\"spring\",\"MATH 210\",\"Discrete Mathematics I\",\"3\",\"\",\"5ca2501c-6a70-4d3a-9a89-ceb41f90971e\",\"\"
+    \"Bachelor of Computer Science\",\"Year 2\",\"spring\",\"PHYS 208\",\"Fundamentals of Physics II\",\"3\",\"PHYS 203 or PHYS 207 and PHYS 227, MATH 241 or MATH 232.\",\"8c2e043d-328d-4d2f-835a-5597188e5cc1\",\"\"
+    \"Bachelor of Computer Science\",\"Year 2\",\"spring\",\"PHYS 228\",\"Fundamentials of Physics Laboratory II\",\"1\",\"\",\"0cb9e47b-ffb4-4ad1-b98f-4cdba9f8e49f\",\"\"
+    \"Bachelor of Computer Science\",\"Year 2\",\"fall\",\"CISC 275\",\"Introduction to Software Engineering\",\"3\",\"Minimum grade of C- in CISC 181 and CISC 220.\",\"f86a5c1d-c6d7-41c9-8e26-1a9d695f28eb\",\"\"
+    \"Bachelor of Computer Science\",\"Year 2\",\"fall\",\"CISC 355\",\"Computers, Ethics and Society\",\"3\",\"\",\"c9c5e0db-ed41-429c-9c80-70bfe3358ec1\",\"\"
+    \"Bachelor of Computer Science\",\"Year 2\",\"fall\",\"MATH 205\",\"Statistical Methods\",\"4\",\"MATH 210 or MATH 230.\",\"0bc66c87-b0eb-47aa-8280-b4ae3443f56a\",\"\"
+    \"Bachelor of Computer Science\",\"Year 2\",\"fall\",\"CHEM 103\",\"General Chemistry\",\"3\",\"\",\"bb7fe5ba-b36d-4439-9fac-8123c1d4eadf\",\"\"
+    \"Bachelor of Computer Science\",\"Year 2\",\"fall\",\"CHEM 133\",\"General Chemistry Laboratory\",\"1\",\"\",\"ca23d065-3cdf-43b2-9665-2fd13c5efb2b\",\"\""[39m
+              [33mtarget[39m=[32m"_self"[39m
+            [36m>[39m
+              [36m<button[39m
+                [33mclass[39m=[32m"buttonSpacing btn btn-primary"[39m
+                [33mtype[39m=[32m"button"[39m
+              [36m>[39m
+                [0mExport to CSV[0m
+              [36m</button>[39m
+            [36m</a>[39m
+            [36m<button>[39m
+              [0mNeed Help?[0m
+            [36m</button>[39m
+            [36m<div[39m
+              [33mclass[39m=[32m"csv-reader-input"[39m
+            [36m>[39m
+              [36m<input[39m
+                [33maccept[39m=[32m".csv, text/csv"[39m
+                [33mclass[39m=[32m"csv-input"[39m
+                [33mid[39m=[32m"react-csv-reader-input"[39m
+                [33mname[39m=[32m"react-csv-reader-input"[39m
+                [33mtype[39m=[32m"file"[39m
+              [36m/>[39m
+            [36m</div>[39m
+          [36m</div>[39m
+          [36m<div[39m
+            [33mclass[39m=[32m"container-fluid"[39m
+          [36m>[39m
+            [36m<div>[39m
+              [36m<div[39m
+                [33mclass[39m=[32m"accordion"[39m
+              [36m>[39m
+                [36m<div[39m
+                  [33mclass[39m=[32m"beigebackground accordion-item"[39m
+                [36m>[39m
+                  [36m<h2[39m
+                    [33mclass[39m=[32m"accordion-header"[39m
+                  [36m>[39m
+                    [36m<button[39m
+                      [33maria-expanded[39m=[32m"false"[39m
+                      [33mclass[39m=[32m"accordion-button collapsed"[39m
+                      [33mtype[39m=[32m"button"[39m
+                    [36m>[39m
+                      [0mBachelor of Computer Science[0m
+                      [36m<button[39m
+                        [33mclass[39m=[32m"pull-left btn btn-primary"[39m
+                        [33mtype[39m=[32m"button"[39m
+                      [36m>[39m
+                        [0mDelete[0m
+                      [36m</button>[39m
+                      [36m<button[39m
+                        [33mclass[39m=[32m"pull-left btn btn-primary"[39m
+                        [33mtype[39m=[32m"button"[39m
+                      [36m>[39m
+                        [0mEdit[0m
+                      [36m</button>[39m
+                    [36m</button>[3...
 
-      at selectedSemester (src/NewCoursePlan.tsx:56:17)
+      78 | test("Testing semester remove button (fall)", () => {
+      79 |     render(<App />);
+    > 80 |     const buttons = screen.getAllByText("remove");
+         |                            ^
+      81 |     const specificButton = buttons[0];
+      82 |     specificButton.click();
+      83 |     const textElements = screen.getAllByText("Fall");
 
-  console.log
-    click registered
+      at Object.getElementError (node_modules/@testing-library/react/node_modules/@testing-library/dom/dist/config.js:37:19)
+      at node_modules/@testing-library/react/node_modules/@testing-library/dom/dist/query-helpers.js:76:38
+      at getAllByText (node_modules/@testing-library/react/node_modules/@testing-library/dom/dist/query-helpers.js:109:15)
+      at Object.<anonymous> (src/App.test.tsx:80:28)
+      at TestScheduler.scheduleTests (node_modules/@jest/core/build/TestScheduler.js:333:13)
+      at runJest (node_modules/@jest/core/build/runJest.js:404:19)
+      at _run10000 (node_modules/@jest/core/build/cli/index.js:320:7)
+      at runCLI (node_modules/@jest/core/build/cli/index.js:173:3)
 
-      at selectedSemester (src/NewCoursePlan.tsx:56:17)
+  ● Testing semester remove button (winter)
 
-  console.log
-    debug
+    TestingLibraryElementError: Unable to find an element with the text: remove. This could be because the text is broken up by multiple elements. In this case, you can provide a function for your text matcher to make your matcher more flexible.
 
-      at UpdateCourseplan (src/NewCoursePlan.tsx:78:17)
+    Ignored nodes: comments, script, style
+    [36m<body>[39m
+      [36m<div>[39m
+        [36m<div[39m
+          [33mclass[39m=[32m"App"[39m
+        [36m>[39m
+          [36m<div[39m
+            [33mclass[39m=[32m"logo"[39m
+          [36m>[39m
+            [36m<h1[39m
+              [33mclass[39m=[32m"App-title"[39m
+            [36m>[39m
+              [36m<img[39m
+                [33mheight[39m=[32m"150"[39m
+                [33msrc[39m=[32m"ud_logo.jpg"[39m
+                [33mwidth[39m=[32m"150"[39m
+              [36m/>[39m
+              [0mCIS Scheduler[0m
+              [0m [0m
+            [36m</h1>[39m
+          [36m</div>[39m
+          [36m<header[39m
+            [33mclass[39m=[32m"App-header"[39m
+          [36m>[39m
+            [0mAdam Beck, Zach Reggio, Sam Ferguson, Brandon Marafino, Adam Liu[0m
+          [36m</header>[39m
+          [36m<div[39m
+            [33mclass[39m=[32m"button"[39m
+          [36m>[39m
+            [36m<button[39m
+              [33mclass[39m=[32m"buttonSpacing"[39m
+            [36m>[39m
+              [0mNew Course Plans[0m
+            [36m</button>[39m
+            [36m<a[39m
+              [33mdownload[39m=[32m"coursePlan.csv"[39m
+              [33mhref[39m=[32m"data:text/csv;charset=utf-8,﻿\"Plan Name\",\"Year\",\"Season\",\"Course Ticker\",\"Course Name\",\"Credits\",\"Prerequisites\",\"UUID\",\"Description\"
+    \"Bachelor of Computer Science\",\"Year 1\",\"spring\",\"CISC 108\",\"Introduction to Computer Science I\",\"3\",\"\",\"303bec5c-bd0b-484b-a363-b98324e767b2\",\"\"
+    \"Bachelor of Computer Science\",\"Year 1\",\"spring\",\"EGGG 101\",\"Introduction to Engineering\",\"2\",\"\",\"c72b134c-0f64-4ebc-96a7-11cd93e72994\",\"\"
+    \"Bachelor of Computer Science\",\"Year 1\",\"spring\",\"ENGL 110\",\"Seminar in Composition\",\"3\",\"\",\"28307fdd-1826-4edf-aa24-e82ff34b8a97\",\"\"
+    \"Bachelor of Computer Science\",\"Year 1\",\"spring\",\"MATH 241\",\"Analytic Geometry and Calculus A\",\"4\",\"MATH 117 or acceptable score on the Math Placement Exam in accordance with current standards determined by the Department of Mathematical Sciences. See https://www.mathsci.udel.edu/courses-placement/ud-math-placement for more information.\",\"b4352928-14d4-4566-a7ef-3ba258568b27\",\"\"
+    \"Bachelor of Computer Science\",\"Year 1\",\"fall\",\"CISC 181\",\"Introduction to Computer Science II\",\"3\",\"Grade of C- or better in CISC 108 or CISC 106.\",\"6287933b-4031-41a7-b58b-0f66f9ddefb1\",\"\"
+    \"Bachelor of Computer Science\",\"Year 1\",\"fall\",\"CISC 210\",\"Introduction to Systems Programming\",\"3\",\"A grade of C- or better in CISC 106 or CISC 108.\",\"ca3e1e22-8962-4494-a736-7fb549c45359\",\"\"
+    \"Bachelor of Computer Science\",\"Year 1\",\"fall\",\"MATH 242\",\"Analytic Geometry and Calculus B\",\"4\",\"MATH 241 or MATH 232.\",\"17b29c4c-71c1-411c-ae50-5412e537fdc1\",\"\"
+    \"Bachelor of Computer Science\",\"Year 1\",\"fall\",\"PHYS 207\",\"Fundamentals of Physics I\",\"3\",\"\",\"18fc3db8-3d41-4847-ab67-5b337f2129dd\",\"\"
+    \"Bachelor of Computer Science\",\"Year 1\",\"fall\",\"PHYS 227\",\"Fundamentals of Physics Laboratory I\",\"1\",\"\",\"51ec6a2e-d753-4971-abb9-d0a9581e14ef\",\"\"
+    \"Bachelor of Computer Science\",\"Year 2\",\"spring\",\"CISC 220\",\"Data Structures\",\"3\",\"A minimum grade of C- in CISC 210.\",\"6077fa9d-9d0f-4fee-bdfe-edceda2b64ca\",\"\"
+    \"Bachelor of Computer Science\",\"Year 2\",\"spring\",\"CISC 260\",\"Machine Organization and Assembly Language\",\"3\",\"A minimum grade of C- in CISC 210.\",\"f2a5ab99-c30f-40ea-8d2b-f3a19d918426\",\"\"
+    \"Bachelor of Computer Science\",\"Year 2\",\"spring\",\"MATH 210\",\"Discrete Mathematics I\",\"3\",\"\",\"5ca2501c-6a70-4d3a-9a89-ceb41f90971e\",\"\"
+    \"Bachelor of Computer Science\",\"Year 2\",\"spring\",\"PHYS 208\",\"Fundamentals of Physics II\",\"3\",\"PHYS 203 or PHYS 207 and PHYS 227, MATH 241 or MATH 232.\",\"8c2e043d-328d-4d2f-835a-5597188e5cc1\",\"\"
+    \"Bachelor of Computer Science\",\"Year 2\",\"spring\",\"PHYS 228\",\"Fundamentials of Physics Laboratory II\",\"1\",\"\",\"0cb9e47b-ffb4-4ad1-b98f-4cdba9f8e49f\",\"\"
+    \"Bachelor of Computer Science\",\"Year 2\",\"fall\",\"CISC 275\",\"Introduction to Software Engineering\",\"3\",\"Minimum grade of C- in CISC 181 and CISC 220.\",\"f86a5c1d-c6d7-41c9-8e26-1a9d695f28eb\",\"\"
+    \"Bachelor of Computer Science\",\"Year 2\",\"fall\",\"CISC 355\",\"Computers, Ethics and Society\",\"3\",\"\",\"c9c5e0db-ed41-429c-9c80-70bfe3358ec1\",\"\"
+    \"Bachelor of Computer Science\",\"Year 2\",\"fall\",\"MATH 205\",\"Statistical Methods\",\"4\",\"MATH 210 or MATH 230.\",\"0bc66c87-b0eb-47aa-8280-b4ae3443f56a\",\"\"
+    \"Bachelor of Computer Science\",\"Year 2\",\"fall\",\"CHEM 103\",\"General Chemistry\",\"3\",\"\",\"bb7fe5ba-b36d-4439-9fac-8123c1d4eadf\",\"\"
+    \"Bachelor of Computer Science\",\"Year 2\",\"fall\",\"CHEM 133\",\"General Chemistry Laboratory\",\"1\",\"\",\"ca23d065-3cdf-43b2-9665-2fd13c5efb2b\",\"\""[39m
+              [33mtarget[39m=[32m"_self"[39m
+            [36m>[39m
+              [36m<button[39m
+                [33mclass[39m=[32m"buttonSpacing btn btn-primary"[39m
+                [33mtype[39m=[32m"button"[39m
+              [36m>[39m
+                [0mExport to CSV[0m
+              [36m</button>[39m
+            [36m</a>[39m
+            [36m<button>[39m
+              [0mNeed Help?[0m
+            [36m</button>[39m
+            [36m<div[39m
+              [33mclass[39m=[32m"csv-reader-input"[39m
+            [36m>[39m
+              [36m<input[39m
+                [33maccept[39m=[32m".csv, text/csv"[39m
+                [33mclass[39m=[32m"csv-input"[39m
+                [33mid[39m=[32m"react-csv-reader-input"[39m
+                [33mname[39m=[32m"react-csv-reader-input"[39m
+                [33mtype[39m=[32m"file"[39m
+              [36m/>[39m
+            [36m</div>[39m
+          [36m</div>[39m
+          [36m<div[39m
+            [33mclass[39m=[32m"container-fluid"[39m
+          [36m>[39m
+            [36m<div>[39m
+              [36m<div[39m
+                [33mclass[39m=[32m"accordion"[39m
+              [36m>[39m
+                [36m<div[39m
+                  [33mclass[39m=[32m"beigebackground accordion-item"[39m
+                [36m>[39m
+                  [36m<h2[39m
+                    [33mclass[39m=[32m"accordion-header"[39m
+                  [36m>[39m
+                    [36m<button[39m
+                      [33maria-expanded[39m=[32m"false"[39m
+                      [33mclass[39m=[32m"accordion-button collapsed"[39m
+                      [33mtype[39m=[32m"button"[39m
+                    [36m>[39m
+                      [0mBachelor of Computer Science[0m
+                      [36m<button[39m
+                        [33mclass[39m=[32m"pull-left btn btn-primary"[39m
+                        [33mtype[39m=[32m"button"[39m
+                      [36m>[39m
+                        [0mDelete[0m
+                      [36m</button>[39m
+                      [36m<button[39m
+                        [33mclass[39m=[32m"pull-left btn btn-primary"[39m
+                        [33mtype[39m=[32m"button"[39m
+                      [36m>[39m
+                        [0mEdit[0m
+                      [36m</button>[39m
+                    [36m</button>[3...
 
-  console.log
-    {
-      name: 'Click To Edit Name',
-      years: [
-        {
-          name: 'Year 1',
-          winter: [Object],
-          spring: [Object],
-          summer: [Object],
-          fall: [Object]
-        },
-        {
-          name: 'Year 2',
-          winter: [Object],
-          spring: [Object],
-          summer: [Object],
-          fall: [Object]
-        },
-        {
-          name: 'Year 3',
-          winter: [Object],
-          spring: [Object],
-          summer: [Object],
-          fall: [Object]
-        },
-        {
-          name: 'Year 4',
-          winter: [Object],
-          spring: [Object],
-          summer: [Object],
-          fall: [Object]
-        }
-      ]
-    }
+      87 | test("Testing semester remove button (winter)", () => {
+      88 |     render(<App />);
+    > 89 |     const buttons = screen.getAllByText("remove");
+         |                            ^
+      90 |     const specificButton = buttons[1];
+      91 |     specificButton.click();
+      92 |     const textElements = screen.getAllByText("winter");
 
-      at UpdateCourseplan (src/NewCoursePlan.tsx:79:17)
+      at Object.getElementError (node_modules/@testing-library/react/node_modules/@testing-library/dom/dist/config.js:37:19)
+      at node_modules/@testing-library/react/node_modules/@testing-library/dom/dist/query-helpers.js:76:38
+      at getAllByText (node_modules/@testing-library/react/node_modules/@testing-library/dom/dist/query-helpers.js:109:15)
+      at Object.<anonymous> (src/App.test.tsx:89:28)
+      at TestScheduler.scheduleTests (node_modules/@jest/core/build/TestScheduler.js:333:13)
+      at runJest (node_modules/@jest/core/build/runJest.js:404:19)
+      at _run10000 (node_modules/@jest/core/build/cli/index.js:320:7)
+      at runCLI (node_modules/@jest/core/build/cli/index.js:173:3)
 
-  console.log
-    looking for old semesterfall
+  ● Testing degree plan drop down
 
-      at removeSemesterYear (src/DBmanage.tsx:138:13)
+    TestingLibraryElementError: Unable to find an element with the text: /View Course Plans/i. This could be because the text is broken up by multiple elements. In this case, you can provide a function for your text matcher to make your matcher more flexible.
 
-  console.log
-    looking for old yeat
+    Ignored nodes: comments, script, style
+    [36m<body>[39m
+      [36m<div>[39m
+        [36m<div[39m
+          [33mclass[39m=[32m"App"[39m
+        [36m>[39m
+          [36m<div[39m
+            [33mclass[39m=[32m"logo"[39m
+          [36m>[39m
+            [36m<h1[39m
+              [33mclass[39m=[32m"App-title"[39m
+            [36m>[39m
+              [36m<img[39m
+                [33mheight[39m=[32m"150"[39m
+                [33msrc[39m=[32m"ud_logo.jpg"[39m
+                [33mwidth[39m=[32m"150"[39m
+              [36m/>[39m
+              [0mCIS Scheduler[0m
+              [0m [0m
+            [36m</h1>[39m
+          [36m</div>[39m
+          [36m<header[39m
+            [33mclass[39m=[32m"App-header"[39m
+          [36m>[39m
+            [0mAdam Beck, Zach Reggio, Sam Ferguson, Brandon Marafino, Adam Liu[0m
+          [36m</header>[39m
+          [36m<div[39m
+            [33mclass[39m=[32m"button"[39m
+          [36m>[39m
+            [36m<button[39m
+              [33mclass[39m=[32m"buttonSpacing"[39m
+            [36m>[39m
+              [0mNew Course Plans[0m
+            [36m</button>[39m
+            [36m<a[39m
+              [33mdownload[39m=[32m"coursePlan.csv"[39m
+              [33mhref[39m=[32m"data:text/csv;charset=utf-8,﻿\"Plan Name\",\"Year\",\"Season\",\"Course Ticker\",\"Course Name\",\"Credits\",\"Prerequisites\",\"UUID\",\"Description\"
+    \"Bachelor of Computer Science\",\"Year 1\",\"spring\",\"CISC 108\",\"Introduction to Computer Science I\",\"3\",\"\",\"303bec5c-bd0b-484b-a363-b98324e767b2\",\"\"
+    \"Bachelor of Computer Science\",\"Year 1\",\"spring\",\"EGGG 101\",\"Introduction to Engineering\",\"2\",\"\",\"c72b134c-0f64-4ebc-96a7-11cd93e72994\",\"\"
+    \"Bachelor of Computer Science\",\"Year 1\",\"spring\",\"ENGL 110\",\"Seminar in Composition\",\"3\",\"\",\"28307fdd-1826-4edf-aa24-e82ff34b8a97\",\"\"
+    \"Bachelor of Computer Science\",\"Year 1\",\"spring\",\"MATH 241\",\"Analytic Geometry and Calculus A\",\"4\",\"MATH 117 or acceptable score on the Math Placement Exam in accordance with current standards determined by the Department of Mathematical Sciences. See https://www.mathsci.udel.edu/courses-placement/ud-math-placement for more information.\",\"b4352928-14d4-4566-a7ef-3ba258568b27\",\"\"
+    \"Bachelor of Computer Science\",\"Year 1\",\"fall\",\"CISC 181\",\"Introduction to Computer Science II\",\"3\",\"Grade of C- or better in CISC 108 or CISC 106.\",\"6287933b-4031-41a7-b58b-0f66f9ddefb1\",\"\"
+    \"Bachelor of Computer Science\",\"Year 1\",\"fall\",\"CISC 210\",\"Introduction to Systems Programming\",\"3\",\"A grade of C- or better in CISC 106 or CISC 108.\",\"ca3e1e22-8962-4494-a736-7fb549c45359\",\"\"
+    \"Bachelor of Computer Science\",\"Year 1\",\"fall\",\"MATH 242\",\"Analytic Geometry and Calculus B\",\"4\",\"MATH 241 or MATH 232.\",\"17b29c4c-71c1-411c-ae50-5412e537fdc1\",\"\"
+    \"Bachelor of Computer Science\",\"Year 1\",\"fall\",\"PHYS 207\",\"Fundamentals of Physics I\",\"3\",\"\",\"18fc3db8-3d41-4847-ab67-5b337f2129dd\",\"\"
+    \"Bachelor of Computer Science\",\"Year 1\",\"fall\",\"PHYS 227\",\"Fundamentals of Physics Laboratory I\",\"1\",\"\",\"51ec6a2e-d753-4971-abb9-d0a9581e14ef\",\"\"
+    \"Bachelor of Computer Science\",\"Year 2\",\"spring\",\"CISC 220\",\"Data Structures\",\"3\",\"A minimum grade of C- in CISC 210.\",\"6077fa9d-9d0f-4fee-bdfe-edceda2b64ca\",\"\"
+    \"Bachelor of Computer Science\",\"Year 2\",\"spring\",\"CISC 260\",\"Machine Organization and Assembly Language\",\"3\",\"A minimum grade of C- in CISC 210.\",\"f2a5ab99-c30f-40ea-8d2b-f3a19d918426\",\"\"
+    \"Bachelor of Computer Science\",\"Year 2\",\"spring\",\"MATH 210\",\"Discrete Mathematics I\",\"3\",\"\",\"5ca2501c-6a70-4d3a-9a89-ceb41f90971e\",\"\"
+    \"Bachelor of Computer Science\",\"Year 2\",\"spring\",\"PHYS 208\",\"Fundamentals of Physics II\",\"3\",\"PHYS 203 or PHYS 207 and PHYS 227, MATH 241 or MATH 232.\",\"8c2e043d-328d-4d2f-835a-5597188e5cc1\",\"\"
+    \"Bachelor of Computer Science\",\"Year 2\",\"spring\",\"PHYS 228\",\"Fundamentials of Physics Laboratory II\",\"1\",\"\",\"0cb9e47b-ffb4-4ad1-b98f-4cdba9f8e49f\",\"\"
+    \"Bachelor of Computer Science\",\"Year 2\",\"fall\",\"CISC 275\",\"Introduction to Software Engineering\",\"3\",\"Minimum grade of C- in CISC 181 and CISC 220.\",\"f86a5c1d-c6d7-41c9-8e26-1a9d695f28eb\",\"\"
+    \"Bachelor of Computer Science\",\"Year 2\",\"fall\",\"CISC 355\",\"Computers, Ethics and Society\",\"3\",\"\",\"c9c5e0db-ed41-429c-9c80-70bfe3358ec1\",\"\"
+    \"Bachelor of Computer Science\",\"Year 2\",\"fall\",\"MATH 205\",\"Statistical Methods\",\"4\",\"MATH 210 or MATH 230.\",\"0bc66c87-b0eb-47aa-8280-b4ae3443f56a\",\"\"
+    \"Bachelor of Computer Science\",\"Year 2\",\"fall\",\"CHEM 103\",\"General Chemistry\",\"3\",\"\",\"bb7fe5ba-b36d-4439-9fac-8123c1d4eadf\",\"\"
+    \"Bachelor of Computer Science\",\"Year 2\",\"fall\",\"CHEM 133\",\"General Chemistry Laboratory\",\"1\",\"\",\"ca23d065-3cdf-43b2-9665-2fd13c5efb2b\",\"\""[39m
+              [33mtarget[39m=[32m"_self"[39m
+            [36m>[39m
+              [36m<button[39m
+                [33mclass[39m=[32m"buttonSpacing btn btn-primary"[39m
+                [33mtype[39m=[32m"button"[39m
+              [36m>[39m
+                [0mExport to CSV[0m
+              [36m</button>[39m
+            [36m</a>[39m
+            [36m<button>[39m
+              [0mNeed Help?[0m
+            [36m</button>[39m
+            [36m<div[39m
+              [33mclass[39m=[32m"csv-reader-input"[39m
+            [36m>[39m
+              [36m<input[39m
+                [33maccept[39m=[32m".csv, text/csv"[39m
+                [33mclass[39m=[32m"csv-input"[39m
+                [33mid[39m=[32m"react-csv-reader-input"[39m
+                [33mname[39m=[32m"react-csv-reader-input"[39m
+                [33mtype[39m=[32m"file"[39m
+              [36m/>[39m
+            [36m</div>[39m
+          [36m</div>[39m
+          [36m<div[39m
+            [33mclass[39m=[32m"container-fluid"[39m
+          [36m>[39m
+            [36m<div>[39m
+              [36m<div[39m
+                [33mclass[39m=[32m"accordion"[39m
+              [36m>[39m
+                [36m<div[39m
+                  [33mclass[39m=[32m"beigebackground accordion-item"[39m
+                [36m>[39m
+                  [36m<h2[39m
+                    [33mclass[39m=[32m"accordion-header"[39m
+                  [36m>[39m
+                    [36m<button[39m
+                      [33maria-expanded[39m=[32m"false"[39m
+                      [33mclass[39m=[32m"accordion-button collapsed"[39m
+                      [33mtype[39m=[32m"button"[39m
+                    [36m>[39m
+                      [0mBachelor of Computer Science[0m
+                      [36m<button[39m
+                        [33mclass[39m=[32m"pull-left btn btn-primary"[39m
+                        [33mtype[39m=[32m"button"[39m
+                      [36m>[39m
+                        [0mDelete[0m
+                      [36m</button>[39m
+                      [36m<button[39m
+                        [33mclass[39m=[32m"pull-left btn btn-primary"[39m
+                        [33mtype[39m=[32m"button"[39m
+                      [36m>[39m
+                        [0mEdit[0m
+                      [36m</button>[39m
+                    [36m</button>[3...
 
-      at UpdateCoureplanYear (src/DBmanage.tsx:146:13)
+       96 | test("Testing degree plan drop down", () => {
+       97 |     render(<App />);
+    >  98 |     const button = screen.getByText(/View Course Plans/i);
+          |                           ^
+       99 |     button.click();
+      100 |     const buttons = screen.getAllByText("Bachelor of Computer Science");
+      101 |     const specificButton = buttons[0];
 
-  console.log
-    debug
+      at Object.getElementError (node_modules/@testing-library/react/node_modules/@testing-library/dom/dist/config.js:37:19)
+      at node_modules/@testing-library/react/node_modules/@testing-library/dom/dist/query-helpers.js:76:38
+      at node_modules/@testing-library/react/node_modules/@testing-library/dom/dist/query-helpers.js:52:17
+      at getByText (node_modules/@testing-library/react/node_modules/@testing-library/dom/dist/query-helpers.js:95:19)
+      at Object.<anonymous> (src/App.test.tsx:98:27)
+      at TestScheduler.scheduleTests (node_modules/@jest/core/build/TestScheduler.js:333:13)
+      at runJest (node_modules/@jest/core/build/runJest.js:404:19)
+      at _run10000 (node_modules/@jest/core/build/cli/index.js:320:7)
+      at runCLI (node_modules/@jest/core/build/cli/index.js:173:3)
 
-      at UpdateCourseplan (src/NewCoursePlan.tsx:78:17)
+  ● Testing save degree plan and delete degree plan
 
-  console.log
-    {
-      name: 'Bachelor of Computer Science',
-      years: [
-        {
-          name: 'Year 1',
-          winter: null,
-          spring: [Object],
-          summer: null,
-          fall: null
-        },
-        {
-          name: 'Year 2',
-          winter: null,
-          spring: [Object],
-          summer: null,
-          fall: [Object]
-        }
-      ]
-    }
+    TestingLibraryElementError: Unable to find an element with the text: ADD. This could be because the text is broken up by multiple elements. In this case, you can provide a function for your text matcher to make your matcher more flexible.
 
-      at UpdateCourseplan (src/NewCoursePlan.tsx:79:17)
+    Ignored nodes: comments, script, style
+    [36m<body>[39m
+      [36m<div>[39m
+        [36m<div[39m
+          [33mclass[39m=[32m"App"[39m
+        [36m>[39m
+          [36m<div[39m
+            [33mclass[39m=[32m"logo"[39m
+          [36m>[39m
+            [36m<h1[39m
+              [33mclass[39m=[32m"App-title"[39m
+            [36m>[39m
+              [36m<img[39m
+                [33mheight[39m=[32m"150"[39m
+                [33msrc[39m=[32m"ud_logo.jpg"[39m
+                [33mwidth[39m=[32m"150"[39m
+              [36m/>[39m
+              [0mCIS Scheduler[0m
+              [0m [0m
+            [36m</h1>[39m
+          [36m</div>[39m
+          [36m<header[39m
+            [33mclass[39m=[32m"App-header"[39m
+          [36m>[39m
+            [0mAdam Beck, Zach Reggio, Sam Ferguson, Brandon Marafino, Adam Liu[0m
+          [36m</header>[39m
+          [36m<div[39m
+            [33mclass[39m=[32m"button"[39m
+          [36m>[39m
+            [36m<button[39m
+              [33mclass[39m=[32m"buttonSpacing"[39m
+            [36m>[39m
+              [0mNew Course Plans[0m
+            [36m</button>[39m
+            [36m<a[39m
+              [33mdownload[39m=[32m"coursePlan.csv"[39m
+              [33mhref[39m=[32m"data:text/csv;charset=utf-8,﻿\"Plan Name\",\"Year\",\"Season\",\"Course Ticker\",\"Course Name\",\"Credits\",\"Prerequisites\",\"UUID\",\"Description\"
+    \"Bachelor of Computer Science\",\"Year 1\",\"spring\",\"CISC 108\",\"Introduction to Computer Science I\",\"3\",\"\",\"303bec5c-bd0b-484b-a363-b98324e767b2\",\"\"
+    \"Bachelor of Computer Science\",\"Year 1\",\"spring\",\"EGGG 101\",\"Introduction to Engineering\",\"2\",\"\",\"c72b134c-0f64-4ebc-96a7-11cd93e72994\",\"\"
+    \"Bachelor of Computer Science\",\"Year 1\",\"spring\",\"ENGL 110\",\"Seminar in Composition\",\"3\",\"\",\"28307fdd-1826-4edf-aa24-e82ff34b8a97\",\"\"
+    \"Bachelor of Computer Science\",\"Year 1\",\"spring\",\"MATH 241\",\"Analytic Geometry and Calculus A\",\"4\",\"MATH 117 or acceptable score on the Math Placement Exam in accordance with current standards determined by the Department of Mathematical Sciences. See https://www.mathsci.udel.edu/courses-placement/ud-math-placement for more information.\",\"b4352928-14d4-4566-a7ef-3ba258568b27\",\"\"
+    \"Bachelor of Computer Science\",\"Year 1\",\"fall\",\"CISC 181\",\"Introduction to Computer Science II\",\"3\",\"Grade of C- or better in CISC 108 or CISC 106.\",\"6287933b-4031-41a7-b58b-0f66f9ddefb1\",\"\"
+    \"Bachelor of Computer Science\",\"Year 1\",\"fall\",\"CISC 210\",\"Introduction to Systems Programming\",\"3\",\"A grade of C- or better in CISC 106 or CISC 108.\",\"ca3e1e22-8962-4494-a736-7fb549c45359\",\"\"
+    \"Bachelor of Computer Science\",\"Year 1\",\"fall\",\"MATH 242\",\"Analytic Geometry and Calculus B\",\"4\",\"MATH 241 or MATH 232.\",\"17b29c4c-71c1-411c-ae50-5412e537fdc1\",\"\"
+    \"Bachelor of Computer Science\",\"Year 1\",\"fall\",\"PHYS 207\",\"Fundamentals of Physics I\",\"3\",\"\",\"18fc3db8-3d41-4847-ab67-5b337f2129dd\",\"\"
+    \"Bachelor of Computer Science\",\"Year 1\",\"fall\",\"PHYS 227\",\"Fundamentals of Physics Laboratory I\",\"1\",\"\",\"51ec6a2e-d753-4971-abb9-d0a9581e14ef\",\"\"
+    \"Bachelor of Computer Science\",\"Year 2\",\"spring\",\"CISC 220\",\"Data Structures\",\"3\",\"A minimum grade of C- in CISC 210.\",\"6077fa9d-9d0f-4fee-bdfe-edceda2b64ca\",\"\"
+    \"Bachelor of Computer Science\",\"Year 2\",\"spring\",\"CISC 260\",\"Machine Organization and Assembly Language\",\"3\",\"A minimum grade of C- in CISC 210.\",\"f2a5ab99-c30f-40ea-8d2b-f3a19d918426\",\"\"
+    \"Bachelor of Computer Science\",\"Year 2\",\"spring\",\"MATH 210\",\"Discrete Mathematics I\",\"3\",\"\",\"5ca2501c-6a70-4d3a-9a89-ceb41f90971e\",\"\"
+    \"Bachelor of Computer Science\",\"Year 2\",\"spring\",\"PHYS 208\",\"Fundamentals of Physics II\",\"3\",\"PHYS 203 or PHYS 207 and PHYS 227, MATH 241 or MATH 232.\",\"8c2e043d-328d-4d2f-835a-5597188e5cc1\",\"\"
+    \"Bachelor of Computer Science\",\"Year 2\",\"spring\",\"PHYS 228\",\"Fundamentials of Physics Laboratory II\",\"1\",\"\",\"0cb9e47b-ffb4-4ad1-b98f-4cdba9f8e49f\",\"\"
+    \"Bachelor of Computer Science\",\"Year 2\",\"fall\",\"CISC 275\",\"Introduction to Software Engineering\",\"3\",\"Minimum grade of C- in CISC 181 and CISC 220.\",\"f86a5c1d-c6d7-41c9-8e26-1a9d695f28eb\",\"\"
+    \"Bachelor of Computer Science\",\"Year 2\",\"fall\",\"CISC 355\",\"Computers, Ethics and Society\",\"3\",\"\",\"c9c5e0db-ed41-429c-9c80-70bfe3358ec1\",\"\"
+    \"Bachelor of Computer Science\",\"Year 2\",\"fall\",\"MATH 205\",\"Statistical Methods\",\"4\",\"MATH 210 or MATH 230.\",\"0bc66c87-b0eb-47aa-8280-b4ae3443f56a\",\"\"
+    \"Bachelor of Computer Science\",\"Year 2\",\"fall\",\"CHEM 103\",\"General Chemistry\",\"3\",\"\",\"bb7fe5ba-b36d-4439-9fac-8123c1d4eadf\",\"\"
+    \"Bachelor of Computer Science\",\"Year 2\",\"fall\",\"CHEM 133\",\"General Chemistry Laboratory\",\"1\",\"\",\"ca23d065-3cdf-43b2-9665-2fd13c5efb2b\",\"\""[39m
+              [33mtarget[39m=[32m"_self"[39m
+            [36m>[39m
+              [36m<button[39m
+                [33mclass[39m=[32m"buttonSpacing btn btn-primary"[39m
+                [33mtype[39m=[32m"button"[39m
+              [36m>[39m
+                [0mExport to CSV[0m
+              [36m</button>[39m
+            [36m</a>[39m
+            [36m<button>[39m
+              [0mNeed Help?[0m
+            [36m</button>[39m
+            [36m<div[39m
+              [33mclass[39m=[32m"csv-reader-input"[39m
+            [36m>[39m
+              [36m<input[39m
+                [33maccept[39m=[32m".csv, text/csv"[39m
+                [33mclass[39m=[32m"csv-input"[39m
+                [33mid[39m=[32m"react-csv-reader-input"[39m
+                [33mname[39m=[32m"react-csv-reader-input"[39m
+                [33mtype[39m=[32m"file"[39m
+              [36m/>[39m
+            [36m</div>[39m
+          [36m</div>[39m
+          [36m<div[39m
+            [33mclass[39m=[32m"container-fluid"[39m
+          [36m>[39m
+            [36m<div>[39m
+              [36m<div[39m
+                [33mclass[39m=[32m"accordion"[39m
+              [36m>[39m
+                [36m<div[39m
+                  [33mclass[39m=[32m"beigebackground accordion-item"[39m
+                [36m>[39m
+                  [36m<h2[39m
+                    [33mclass[39m=[32m"accordion-header"[39m
+                  [36m>[39m
+                    [36m<button[39m
+                      [33maria-expanded[39m=[32m"false"[39m
+                      [33mclass[39m=[32m"accordion-button collapsed"[39m
+                      [33mtype[39m=[32m"button"[39m
+                    [36m>[39m
+                      [0mBachelor of Computer Science[0m
+                      [36m<button[39m
+                        [33mclass[39m=[32m"pull-left btn btn-primary"[39m
+                        [33mtype[39m=[32m"button"[39m
+                      [36m>[39m
+                        [0mDelete[0m
+                      [36m</button>[39m
+                      [36m<button[39m
+                        [33mclass[39m=[32m"pull-left btn btn-primary"[39m
+                        [33mtype[39m=[32m"button"[39m
+                      [36m>[39m
+                        [0mEdit[0m
+                      [36m</button>[39m
+                    [36m</button>[3...
 
-PASS src/App.test.tsx (111.964 s)
-  ✓ renders the program title (3807 ms)
-  ✓ renders need help button (3821 ms)
-  ✓ renders names (3387 ms)
-  ✓ renders export to csv (3396 ms)
-  ✓ renders view course plans (3503 ms)
-  ✓ Switch to/from course plan button (7075 ms)
-  ✓ Testing add course to queue 1 (4813 ms)
-  ✓ Testing add course to queue 2 (4447 ms)
-  ✓ Testing search bar (5093 ms)
-  ✓ Testing semester remove button (fall) (5051 ms)
-  ✓ Testing semester remove button (winter) (4401 ms)
-  ✓ Testing degree plan drop down (3404 ms)
-  ✓ Testing save degree plan and delete degree plan (6729 ms)
-  ✓ Testing requirements feature (5173 ms)
-  ✓ Testing clear semester (7255 ms)
-  ✓ Testing remove from queue (8409 ms)
-  ✓ Testing clear all semesters button (9254 ms)
-  ✓ Testing edit degree plan (7868 ms)
-  ✓ Testing save degree plan (8293 ms)
-  ✓ Testing save plan as a given name (4615 ms)
+      107 | test("Testing save degree plan and delete degree plan", () => {
+      108 |     render(<App />);
+    > 109 |     const buttons = screen.getAllByText("ADD");
+          |                            ^
+      110 |     const specificButton = buttons[0];
+      111 |     specificButton.click();
+      112 |     const buttons2 = screen.getAllByText("AddQueue");
+
+      at Object.getElementError (node_modules/@testing-library/react/node_modules/@testing-library/dom/dist/config.js:37:19)
+      at node_modules/@testing-library/react/node_modules/@testing-library/dom/dist/query-helpers.js:76:38
+      at getAllByText (node_modules/@testing-library/react/node_modules/@testing-library/dom/dist/query-helpers.js:109:15)
+      at Object.<anonymous> (src/App.test.tsx:109:28)
+      at TestScheduler.scheduleTests (node_modules/@jest/core/build/TestScheduler.js:333:13)
+      at runJest (node_modules/@jest/core/build/runJest.js:404:19)
+      at _run10000 (node_modules/@jest/core/build/cli/index.js:320:7)
+      at runCLI (node_modules/@jest/core/build/cli/index.js:173:3)
+
+  ● Testing requirements feature
+
+    TestingLibraryElementError: Unable to find an element with the placeholder text of: Search
+
+    Ignored nodes: comments, script, style
+    [36m<body>[39m
+      [36m<div>[39m
+        [36m<div[39m
+          [33mclass[39m=[32m"App"[39m
+        [36m>[39m
+          [36m<div[39m
+            [33mclass[39m=[32m"logo"[39m
+          [36m>[39m
+            [36m<h1[39m
+              [33mclass[39m=[32m"App-title"[39m
+            [36m>[39m
+              [36m<img[39m
+                [33mheight[39m=[32m"150"[39m
+                [33msrc[39m=[32m"ud_logo.jpg"[39m
+                [33mwidth[39m=[32m"150"[39m
+              [36m/>[39m
+              [0mCIS Scheduler[0m
+              [0m [0m
+            [36m</h1>[39m
+          [36m</div>[39m
+          [36m<header[39m
+            [33mclass[39m=[32m"App-header"[39m
+          [36m>[39m
+            [0mAdam Beck, Zach Reggio, Sam Ferguson, Brandon Marafino, Adam Liu[0m
+          [36m</header>[39m
+          [36m<div[39m
+            [33mclass[39m=[32m"button"[39m
+          [36m>[39m
+            [36m<button[39m
+              [33mclass[39m=[32m"buttonSpacing"[39m
+            [36m>[39m
+              [0mNew Course Plans[0m
+            [36m</button>[39m
+            [36m<a[39m
+              [33mdownload[39m=[32m"coursePlan.csv"[39m
+              [33mhref[39m=[32m"data:text/csv;charset=utf-8,﻿\"Plan Name\",\"Year\",\"Season\",\"Course Ticker\",\"Course Name\",\"Credits\",\"Prerequisites\",\"UUID\",\"Description\"
+    \"Bachelor of Computer Science\",\"Year 1\",\"spring\",\"CISC 108\",\"Introduction to Computer Science I\",\"3\",\"\",\"303bec5c-bd0b-484b-a363-b98324e767b2\",\"\"
+    \"Bachelor of Computer Science\",\"Year 1\",\"spring\",\"EGGG 101\",\"Introduction to Engineering\",\"2\",\"\",\"c72b134c-0f64-4ebc-96a7-11cd93e72994\",\"\"
+    \"Bachelor of Computer Science\",\"Year 1\",\"spring\",\"ENGL 110\",\"Seminar in Composition\",\"3\",\"\",\"28307fdd-1826-4edf-aa24-e82ff34b8a97\",\"\"
+    \"Bachelor of Computer Science\",\"Year 1\",\"spring\",\"MATH 241\",\"Analytic Geometry and Calculus A\",\"4\",\"MATH 117 or acceptable score on the Math Placement Exam in accordance with current standards determined by the Department of Mathematical Sciences. See https://www.mathsci.udel.edu/courses-placement/ud-math-placement for more information.\",\"b4352928-14d4-4566-a7ef-3ba258568b27\",\"\"
+    \"Bachelor of Computer Science\",\"Year 1\",\"fall\",\"CISC 181\",\"Introduction to Computer Science II\",\"3\",\"Grade of C- or better in CISC 108 or CISC 106.\",\"6287933b-4031-41a7-b58b-0f66f9ddefb1\",\"\"
+    \"Bachelor of Computer Science\",\"Year 1\",\"fall\",\"CISC 210\",\"Introduction to Systems Programming\",\"3\",\"A grade of C- or better in CISC 106 or CISC 108.\",\"ca3e1e22-8962-4494-a736-7fb549c45359\",\"\"
+    \"Bachelor of Computer Science\",\"Year 1\",\"fall\",\"MATH 242\",\"Analytic Geometry and Calculus B\",\"4\",\"MATH 241 or MATH 232.\",\"17b29c4c-71c1-411c-ae50-5412e537fdc1\",\"\"
+    \"Bachelor of Computer Science\",\"Year 1\",\"fall\",\"PHYS 207\",\"Fundamentals of Physics I\",\"3\",\"\",\"18fc3db8-3d41-4847-ab67-5b337f2129dd\",\"\"
+    \"Bachelor of Computer Science\",\"Year 1\",\"fall\",\"PHYS 227\",\"Fundamentals of Physics Laboratory I\",\"1\",\"\",\"51ec6a2e-d753-4971-abb9-d0a9581e14ef\",\"\"
+    \"Bachelor of Computer Science\",\"Year 2\",\"spring\",\"CISC 220\",\"Data Structures\",\"3\",\"A minimum grade of C- in CISC 210.\",\"6077fa9d-9d0f-4fee-bdfe-edceda2b64ca\",\"\"
+    \"Bachelor of Computer Science\",\"Year 2\",\"spring\",\"CISC 260\",\"Machine Organization and Assembly Language\",\"3\",\"A minimum grade of C- in CISC 210.\",\"f2a5ab99-c30f-40ea-8d2b-f3a19d918426\",\"\"
+    \"Bachelor of Computer Science\",\"Year 2\",\"spring\",\"MATH 210\",\"Discrete Mathematics I\",\"3\",\"\",\"5ca2501c-6a70-4d3a-9a89-ceb41f90971e\",\"\"
+    \"Bachelor of Computer Science\",\"Year 2\",\"spring\",\"PHYS 208\",\"Fundamentals of Physics II\",\"3\",\"PHYS 203 or PHYS 207 and PHYS 227, MATH 241 or MATH 232.\",\"8c2e043d-328d-4d2f-835a-5597188e5cc1\",\"\"
+    \"Bachelor of Computer Science\",\"Year 2\",\"spring\",\"PHYS 228\",\"Fundamentials of Physics Laboratory II\",\"1\",\"\",\"0cb9e47b-ffb4-4ad1-b98f-4cdba9f8e49f\",\"\"
+    \"Bachelor of Computer Science\",\"Year 2\",\"fall\",\"CISC 275\",\"Introduction to Software Engineering\",\"3\",\"Minimum grade of C- in CISC 181 and CISC 220.\",\"f86a5c1d-c6d7-41c9-8e26-1a9d695f28eb\",\"\"
+    \"Bachelor of Computer Science\",\"Year 2\",\"fall\",\"CISC 355\",\"Computers, Ethics and Society\",\"3\",\"\",\"c9c5e0db-ed41-429c-9c80-70bfe3358ec1\",\"\"
+    \"Bachelor of Computer Science\",\"Year 2\",\"fall\",\"MATH 205\",\"Statistical Methods\",\"4\",\"MATH 210 or MATH 230.\",\"0bc66c87-b0eb-47aa-8280-b4ae3443f56a\",\"\"
+    \"Bachelor of Computer Science\",\"Year 2\",\"fall\",\"CHEM 103\",\"General Chemistry\",\"3\",\"\",\"bb7fe5ba-b36d-4439-9fac-8123c1d4eadf\",\"\"
+    \"Bachelor of Computer Science\",\"Year 2\",\"fall\",\"CHEM 133\",\"General Chemistry Laboratory\",\"1\",\"\",\"ca23d065-3cdf-43b2-9665-2fd13c5efb2b\",\"\""[39m
+              [33mtarget[39m=[32m"_self"[39m
+            [36m>[39m
+              [36m<button[39m
+                [33mclass[39m=[32m"buttonSpacing btn btn-primary"[39m
+                [33mtype[39m=[32m"button"[39m
+              [36m>[39m
+                [0mExport to CSV[0m
+              [36m</button>[39m
+            [36m</a>[39m
+            [36m<button>[39m
+              [0mNeed Help?[0m
+            [36m</button>[39m
+            [36m<div[39m
+              [33mclass[39m=[32m"csv-reader-input"[39m
+            [36m>[39m
+              [36m<input[39m
+                [33maccept[39m=[32m".csv, text/csv"[39m
+                [33mclass[39m=[32m"csv-input"[39m
+                [33mid[39m=[32m"react-csv-reader-input"[39m
+                [33mname[39m=[32m"react-csv-reader-input"[39m
+                [33mtype[39m=[32m"file"[39m
+              [36m/>[39m
+            [36m</div>[39m
+          [36m</div>[39m
+          [36m<div[39m
+            [33mclass[39m=[32m"container-fluid"[39m
+          [36m>[39m
+            [36m<div>[39m
+              [36m<div[39m
+                [33mclass[39m=[32m"accordion"[39m
+              [36m>[39m
+                [36m<div[39m
+                  [33mclass[39m=[32m"beigebackground accordion-item"[39m
+                [36m>[39m
+                  [36m<h2[39m
+                    [33mclass[39m=[32m"accordion-header"[39m
+                  [36m>[39m
+                    [36m<button[39m
+                      [33maria-expanded[39m=[32m"false"[39m
+                      [33mclass[39m=[32m"accordion-button collapsed"[39m
+                      [33mtype[39m=[32m"button"[39m
+                    [36m>[39m
+                      [0mBachelor of Computer Science[0m
+                      [36m<button[39m
+                        [33mclass[39m=[32m"pull-left btn btn-primary"[39m
+                        [33mtype[39m=[32m"button"[39m
+                      [36m>[39m
+                        [0mDelete[0m
+                      [36m</button>[39m
+                      [36m<button[39m
+                        [33mclass[39m=[32m"pull-left btn btn-primary"[39m
+                        [33mtype[39m=[32m"button"[39m
+                      [36m>[39m
+                        [0mEdit[0m
+                      [36m</button>[39m
+                    [36m</button>[3...
+
+      129 | test("Testing requirements feature", () => {
+      130 |     render(<App />);
+    > 131 |     const textBox = screen.getByPlaceholderText("Search");
+          |                            ^
+      132 |     userEvent.type(textBox, "CISC 108");
+      133 |     const buttons = screen.getAllByText("ADD");
+      134 |     const specificButton = buttons[0];
+
+      at Object.getElementError (node_modules/@testing-library/react/node_modules/@testing-library/dom/dist/config.js:37:19)
+      at node_modules/@testing-library/react/node_modules/@testing-library/dom/dist/query-helpers.js:76:38
+      at node_modules/@testing-library/react/node_modules/@testing-library/dom/dist/query-helpers.js:52:17
+      at getByPlaceholderText (node_modules/@testing-library/react/node_modules/@testing-library/dom/dist/query-helpers.js:95:19)
+      at Object.<anonymous> (src/App.test.tsx:131:28)
+      at TestScheduler.scheduleTests (node_modules/@jest/core/build/TestScheduler.js:333:13)
+      at runJest (node_modules/@jest/core/build/runJest.js:404:19)
+      at _run10000 (node_modules/@jest/core/build/cli/index.js:320:7)
+      at runCLI (node_modules/@jest/core/build/cli/index.js:173:3)
+
+  ● Testing clear semester
+
+    TestingLibraryElementError: Unable to find an element with the text: ADD. This could be because the text is broken up by multiple elements. In this case, you can provide a function for your text matcher to make your matcher more flexible.
+
+    Ignored nodes: comments, script, style
+    [36m<body>[39m
+      [36m<div>[39m
+        [36m<div[39m
+          [33mclass[39m=[32m"App"[39m
+        [36m>[39m
+          [36m<div[39m
+            [33mclass[39m=[32m"logo"[39m
+          [36m>[39m
+            [36m<h1[39m
+              [33mclass[39m=[32m"App-title"[39m
+            [36m>[39m
+              [36m<img[39m
+                [33mheight[39m=[32m"150"[39m
+                [33msrc[39m=[32m"ud_logo.jpg"[39m
+                [33mwidth[39m=[32m"150"[39m
+              [36m/>[39m
+              [0mCIS Scheduler[0m
+              [0m [0m
+            [36m</h1>[39m
+          [36m</div>[39m
+          [36m<header[39m
+            [33mclass[39m=[32m"App-header"[39m
+          [36m>[39m
+            [0mAdam Beck, Zach Reggio, Sam Ferguson, Brandon Marafino, Adam Liu[0m
+          [36m</header>[39m
+          [36m<div[39m
+            [33mclass[39m=[32m"button"[39m
+          [36m>[39m
+            [36m<button[39m
+              [33mclass[39m=[32m"buttonSpacing"[39m
+            [36m>[39m
+              [0mNew Course Plans[0m
+            [36m</button>[39m
+            [36m<a[39m
+              [33mdownload[39m=[32m"coursePlan.csv"[39m
+              [33mhref[39m=[32m"data:text/csv;charset=utf-8,﻿\"Plan Name\",\"Year\",\"Season\",\"Course Ticker\",\"Course Name\",\"Credits\",\"Prerequisites\",\"UUID\",\"Description\"
+    \"Bachelor of Computer Science\",\"Year 1\",\"spring\",\"CISC 108\",\"Introduction to Computer Science I\",\"3\",\"\",\"303bec5c-bd0b-484b-a363-b98324e767b2\",\"\"
+    \"Bachelor of Computer Science\",\"Year 1\",\"spring\",\"EGGG 101\",\"Introduction to Engineering\",\"2\",\"\",\"c72b134c-0f64-4ebc-96a7-11cd93e72994\",\"\"
+    \"Bachelor of Computer Science\",\"Year 1\",\"spring\",\"ENGL 110\",\"Seminar in Composition\",\"3\",\"\",\"28307fdd-1826-4edf-aa24-e82ff34b8a97\",\"\"
+    \"Bachelor of Computer Science\",\"Year 1\",\"spring\",\"MATH 241\",\"Analytic Geometry and Calculus A\",\"4\",\"MATH 117 or acceptable score on the Math Placement Exam in accordance with current standards determined by the Department of Mathematical Sciences. See https://www.mathsci.udel.edu/courses-placement/ud-math-placement for more information.\",\"b4352928-14d4-4566-a7ef-3ba258568b27\",\"\"
+    \"Bachelor of Computer Science\",\"Year 1\",\"fall\",\"CISC 181\",\"Introduction to Computer Science II\",\"3\",\"Grade of C- or better in CISC 108 or CISC 106.\",\"6287933b-4031-41a7-b58b-0f66f9ddefb1\",\"\"
+    \"Bachelor of Computer Science\",\"Year 1\",\"fall\",\"CISC 210\",\"Introduction to Systems Programming\",\"3\",\"A grade of C- or better in CISC 106 or CISC 108.\",\"ca3e1e22-8962-4494-a736-7fb549c45359\",\"\"
+    \"Bachelor of Computer Science\",\"Year 1\",\"fall\",\"MATH 242\",\"Analytic Geometry and Calculus B\",\"4\",\"MATH 241 or MATH 232.\",\"17b29c4c-71c1-411c-ae50-5412e537fdc1\",\"\"
+    \"Bachelor of Computer Science\",\"Year 1\",\"fall\",\"PHYS 207\",\"Fundamentals of Physics I\",\"3\",\"\",\"18fc3db8-3d41-4847-ab67-5b337f2129dd\",\"\"
+    \"Bachelor of Computer Science\",\"Year 1\",\"fall\",\"PHYS 227\",\"Fundamentals of Physics Laboratory I\",\"1\",\"\",\"51ec6a2e-d753-4971-abb9-d0a9581e14ef\",\"\"
+    \"Bachelor of Computer Science\",\"Year 2\",\"spring\",\"CISC 220\",\"Data Structures\",\"3\",\"A minimum grade of C- in CISC 210.\",\"6077fa9d-9d0f-4fee-bdfe-edceda2b64ca\",\"\"
+    \"Bachelor of Computer Science\",\"Year 2\",\"spring\",\"CISC 260\",\"Machine Organization and Assembly Language\",\"3\",\"A minimum grade of C- in CISC 210.\",\"f2a5ab99-c30f-40ea-8d2b-f3a19d918426\",\"\"
+    \"Bachelor of Computer Science\",\"Year 2\",\"spring\",\"MATH 210\",\"Discrete Mathematics I\",\"3\",\"\",\"5ca2501c-6a70-4d3a-9a89-ceb41f90971e\",\"\"
+    \"Bachelor of Computer Science\",\"Year 2\",\"spring\",\"PHYS 208\",\"Fundamentals of Physics II\",\"3\",\"PHYS 203 or PHYS 207 and PHYS 227, MATH 241 or MATH 232.\",\"8c2e043d-328d-4d2f-835a-5597188e5cc1\",\"\"
+    \"Bachelor of Computer Science\",\"Year 2\",\"spring\",\"PHYS 228\",\"Fundamentials of Physics Laboratory II\",\"1\",\"\",\"0cb9e47b-ffb4-4ad1-b98f-4cdba9f8e49f\",\"\"
+    \"Bachelor of Computer Science\",\"Year 2\",\"fall\",\"CISC 275\",\"Introduction to Software Engineering\",\"3\",\"Minimum grade of C- in CISC 181 and CISC 220.\",\"f86a5c1d-c6d7-41c9-8e26-1a9d695f28eb\",\"\"
+    \"Bachelor of Computer Science\",\"Year 2\",\"fall\",\"CISC 355\",\"Computers, Ethics and Society\",\"3\",\"\",\"c9c5e0db-ed41-429c-9c80-70bfe3358ec1\",\"\"
+    \"Bachelor of Computer Science\",\"Year 2\",\"fall\",\"MATH 205\",\"Statistical Methods\",\"4\",\"MATH 210 or MATH 230.\",\"0bc66c87-b0eb-47aa-8280-b4ae3443f56a\",\"\"
+    \"Bachelor of Computer Science\",\"Year 2\",\"fall\",\"CHEM 103\",\"General Chemistry\",\"3\",\"\",\"bb7fe5ba-b36d-4439-9fac-8123c1d4eadf\",\"\"
+    \"Bachelor of Computer Science\",\"Year 2\",\"fall\",\"CHEM 133\",\"General Chemistry Laboratory\",\"1\",\"\",\"ca23d065-3cdf-43b2-9665-2fd13c5efb2b\",\"\""[39m
+              [33mtarget[39m=[32m"_self"[39m
+            [36m>[39m
+              [36m<button[39m
+                [33mclass[39m=[32m"buttonSpacing btn btn-primary"[39m
+                [33mtype[39m=[32m"button"[39m
+              [36m>[39m
+                [0mExport to CSV[0m
+              [36m</button>[39m
+            [36m</a>[39m
+            [36m<button>[39m
+              [0mNeed Help?[0m
+            [36m</button>[39m
+            [36m<div[39m
+              [33mclass[39m=[32m"csv-reader-input"[39m
+            [36m>[39m
+              [36m<input[39m
+                [33maccept[39m=[32m".csv, text/csv"[39m
+                [33mclass[39m=[32m"csv-input"[39m
+                [33mid[39m=[32m"react-csv-reader-input"[39m
+                [33mname[39m=[32m"react-csv-reader-input"[39m
+                [33mtype[39m=[32m"file"[39m
+              [36m/>[39m
+            [36m</div>[39m
+          [36m</div>[39m
+          [36m<div[39m
+            [33mclass[39m=[32m"container-fluid"[39m
+          [36m>[39m
+            [36m<div>[39m
+              [36m<div[39m
+                [33mclass[39m=[32m"accordion"[39m
+              [36m>[39m
+                [36m<div[39m
+                  [33mclass[39m=[32m"beigebackground accordion-item"[39m
+                [36m>[39m
+                  [36m<h2[39m
+                    [33mclass[39m=[32m"accordion-header"[39m
+                  [36m>[39m
+                    [36m<button[39m
+                      [33maria-expanded[39m=[32m"false"[39m
+                      [33mclass[39m=[32m"accordion-button collapsed"[39m
+                      [33mtype[39m=[32m"button"[39m
+                    [36m>[39m
+                      [0mBachelor of Computer Science[0m
+                      [36m<button[39m
+                        [33mclass[39m=[32m"pull-left btn btn-primary"[39m
+                        [33mtype[39m=[32m"button"[39m
+                      [36m>[39m
+                        [0mDelete[0m
+                      [36m</button>[39m
+                      [36m<button[39m
+                        [33mclass[39m=[32m"pull-left btn btn-primary"[39m
+                        [33mtype[39m=[32m"button"[39m
+                      [36m>[39m
+                        [0mEdit[0m
+                      [36m</button>[39m
+                    [36m</button>[3...
+
+      143 | test("Testing clear semester", () => {
+      144 |     render(<App />);
+    > 145 |     const buttons = screen.getAllByText("ADD");
+          |                            ^
+      146 |     const specificButton = buttons[0];
+      147 |     specificButton.click();
+      148 |     const buttons2 = screen.getAllByText("AddQueue");
+
+      at Object.getElementError (node_modules/@testing-library/react/node_modules/@testing-library/dom/dist/config.js:37:19)
+      at node_modules/@testing-library/react/node_modules/@testing-library/dom/dist/query-helpers.js:76:38
+      at getAllByText (node_modules/@testing-library/react/node_modules/@testing-library/dom/dist/query-helpers.js:109:15)
+      at Object.<anonymous> (src/App.test.tsx:145:28)
+      at TestScheduler.scheduleTests (node_modules/@jest/core/build/TestScheduler.js:333:13)
+      at runJest (node_modules/@jest/core/build/runJest.js:404:19)
+      at _run10000 (node_modules/@jest/core/build/cli/index.js:320:7)
+      at runCLI (node_modules/@jest/core/build/cli/index.js:173:3)
+
+  ● Testing remove from queue
+
+    TestingLibraryElementError: Unable to find an element with the text: ADD. This could be because the text is broken up by multiple elements. In this case, you can provide a function for your text matcher to make your matcher more flexible.
+
+    Ignored nodes: comments, script, style
+    [36m<body>[39m
+      [36m<div>[39m
+        [36m<div[39m
+          [33mclass[39m=[32m"App"[39m
+        [36m>[39m
+          [36m<div[39m
+            [33mclass[39m=[32m"logo"[39m
+          [36m>[39m
+            [36m<h1[39m
+              [33mclass[39m=[32m"App-title"[39m
+            [36m>[39m
+              [36m<img[39m
+                [33mheight[39m=[32m"150"[39m
+                [33msrc[39m=[32m"ud_logo.jpg"[39m
+                [33mwidth[39m=[32m"150"[39m
+              [36m/>[39m
+              [0mCIS Scheduler[0m
+              [0m [0m
+            [36m</h1>[39m
+          [36m</div>[39m
+          [36m<header[39m
+            [33mclass[39m=[32m"App-header"[39m
+          [36m>[39m
+            [0mAdam Beck, Zach Reggio, Sam Ferguson, Brandon Marafino, Adam Liu[0m
+          [36m</header>[39m
+          [36m<div[39m
+            [33mclass[39m=[32m"button"[39m
+          [36m>[39m
+            [36m<button[39m
+              [33mclass[39m=[32m"buttonSpacing"[39m
+            [36m>[39m
+              [0mNew Course Plans[0m
+            [36m</button>[39m
+            [36m<a[39m
+              [33mdownload[39m=[32m"coursePlan.csv"[39m
+              [33mhref[39m=[32m"data:text/csv;charset=utf-8,﻿\"Plan Name\",\"Year\",\"Season\",\"Course Ticker\",\"Course Name\",\"Credits\",\"Prerequisites\",\"UUID\",\"Description\"
+    \"Bachelor of Computer Science\",\"Year 1\",\"spring\",\"CISC 108\",\"Introduction to Computer Science I\",\"3\",\"\",\"303bec5c-bd0b-484b-a363-b98324e767b2\",\"\"
+    \"Bachelor of Computer Science\",\"Year 1\",\"spring\",\"EGGG 101\",\"Introduction to Engineering\",\"2\",\"\",\"c72b134c-0f64-4ebc-96a7-11cd93e72994\",\"\"
+    \"Bachelor of Computer Science\",\"Year 1\",\"spring\",\"ENGL 110\",\"Seminar in Composition\",\"3\",\"\",\"28307fdd-1826-4edf-aa24-e82ff34b8a97\",\"\"
+    \"Bachelor of Computer Science\",\"Year 1\",\"spring\",\"MATH 241\",\"Analytic Geometry and Calculus A\",\"4\",\"MATH 117 or acceptable score on the Math Placement Exam in accordance with current standards determined by the Department of Mathematical Sciences. See https://www.mathsci.udel.edu/courses-placement/ud-math-placement for more information.\",\"b4352928-14d4-4566-a7ef-3ba258568b27\",\"\"
+    \"Bachelor of Computer Science\",\"Year 1\",\"fall\",\"CISC 181\",\"Introduction to Computer Science II\",\"3\",\"Grade of C- or better in CISC 108 or CISC 106.\",\"6287933b-4031-41a7-b58b-0f66f9ddefb1\",\"\"
+    \"Bachelor of Computer Science\",\"Year 1\",\"fall\",\"CISC 210\",\"Introduction to Systems Programming\",\"3\",\"A grade of C- or better in CISC 106 or CISC 108.\",\"ca3e1e22-8962-4494-a736-7fb549c45359\",\"\"
+    \"Bachelor of Computer Science\",\"Year 1\",\"fall\",\"MATH 242\",\"Analytic Geometry and Calculus B\",\"4\",\"MATH 241 or MATH 232.\",\"17b29c4c-71c1-411c-ae50-5412e537fdc1\",\"\"
+    \"Bachelor of Computer Science\",\"Year 1\",\"fall\",\"PHYS 207\",\"Fundamentals of Physics I\",\"3\",\"\",\"18fc3db8-3d41-4847-ab67-5b337f2129dd\",\"\"
+    \"Bachelor of Computer Science\",\"Year 1\",\"fall\",\"PHYS 227\",\"Fundamentals of Physics Laboratory I\",\"1\",\"\",\"51ec6a2e-d753-4971-abb9-d0a9581e14ef\",\"\"
+    \"Bachelor of Computer Science\",\"Year 2\",\"spring\",\"CISC 220\",\"Data Structures\",\"3\",\"A minimum grade of C- in CISC 210.\",\"6077fa9d-9d0f-4fee-bdfe-edceda2b64ca\",\"\"
+    \"Bachelor of Computer Science\",\"Year 2\",\"spring\",\"CISC 260\",\"Machine Organization and Assembly Language\",\"3\",\"A minimum grade of C- in CISC 210.\",\"f2a5ab99-c30f-40ea-8d2b-f3a19d918426\",\"\"
+    \"Bachelor of Computer Science\",\"Year 2\",\"spring\",\"MATH 210\",\"Discrete Mathematics I\",\"3\",\"\",\"5ca2501c-6a70-4d3a-9a89-ceb41f90971e\",\"\"
+    \"Bachelor of Computer Science\",\"Year 2\",\"spring\",\"PHYS 208\",\"Fundamentals of Physics II\",\"3\",\"PHYS 203 or PHYS 207 and PHYS 227, MATH 241 or MATH 232.\",\"8c2e043d-328d-4d2f-835a-5597188e5cc1\",\"\"
+    \"Bachelor of Computer Science\",\"Year 2\",\"spring\",\"PHYS 228\",\"Fundamentials of Physics Laboratory II\",\"1\",\"\",\"0cb9e47b-ffb4-4ad1-b98f-4cdba9f8e49f\",\"\"
+    \"Bachelor of Computer Science\",\"Year 2\",\"fall\",\"CISC 275\",\"Introduction to Software Engineering\",\"3\",\"Minimum grade of C- in CISC 181 and CISC 220.\",\"f86a5c1d-c6d7-41c9-8e26-1a9d695f28eb\",\"\"
+    \"Bachelor of Computer Science\",\"Year 2\",\"fall\",\"CISC 355\",\"Computers, Ethics and Society\",\"3\",\"\",\"c9c5e0db-ed41-429c-9c80-70bfe3358ec1\",\"\"
+    \"Bachelor of Computer Science\",\"Year 2\",\"fall\",\"MATH 205\",\"Statistical Methods\",\"4\",\"MATH 210 or MATH 230.\",\"0bc66c87-b0eb-47aa-8280-b4ae3443f56a\",\"\"
+    \"Bachelor of Computer Science\",\"Year 2\",\"fall\",\"CHEM 103\",\"General Chemistry\",\"3\",\"\",\"bb7fe5ba-b36d-4439-9fac-8123c1d4eadf\",\"\"
+    \"Bachelor of Computer Science\",\"Year 2\",\"fall\",\"CHEM 133\",\"General Chemistry Laboratory\",\"1\",\"\",\"ca23d065-3cdf-43b2-9665-2fd13c5efb2b\",\"\""[39m
+              [33mtarget[39m=[32m"_self"[39m
+            [36m>[39m
+              [36m<button[39m
+                [33mclass[39m=[32m"buttonSpacing btn btn-primary"[39m
+                [33mtype[39m=[32m"button"[39m
+              [36m>[39m
+                [0mExport to CSV[0m
+              [36m</button>[39m
+            [36m</a>[39m
+            [36m<button>[39m
+              [0mNeed Help?[0m
+            [36m</button>[39m
+            [36m<div[39m
+              [33mclass[39m=[32m"csv-reader-input"[39m
+            [36m>[39m
+              [36m<input[39m
+                [33maccept[39m=[32m".csv, text/csv"[39m
+                [33mclass[39m=[32m"csv-input"[39m
+                [33mid[39m=[32m"react-csv-reader-input"[39m
+                [33mname[39m=[32m"react-csv-reader-input"[39m
+                [33mtype[39m=[32m"file"[39m
+              [36m/>[39m
+            [36m</div>[39m
+          [36m</div>[39m
+          [36m<div[39m
+            [33mclass[39m=[32m"container-fluid"[39m
+          [36m>[39m
+            [36m<div>[39m
+              [36m<div[39m
+                [33mclass[39m=[32m"accordion"[39m
+              [36m>[39m
+                [36m<div[39m
+                  [33mclass[39m=[32m"beigebackground accordion-item"[39m
+                [36m>[39m
+                  [36m<h2[39m
+                    [33mclass[39m=[32m"accordion-header"[39m
+                  [36m>[39m
+                    [36m<button[39m
+                      [33maria-expanded[39m=[32m"false"[39m
+                      [33mclass[39m=[32m"accordion-button collapsed"[39m
+                      [33mtype[39m=[32m"button"[39m
+                    [36m>[39m
+                      [0mBachelor of Computer Science[0m
+                      [36m<button[39m
+                        [33mclass[39m=[32m"pull-left btn btn-primary"[39m
+                        [33mtype[39m=[32m"button"[39m
+                      [36m>[39m
+                        [0mDelete[0m
+                      [36m</button>[39m
+                      [36m<button[39m
+                        [33mclass[39m=[32m"pull-left btn btn-primary"[39m
+                        [33mtype[39m=[32m"button"[39m
+                      [36m>[39m
+                        [0mEdit[0m
+                      [36m</button>[39m
+                    [36m</button>[3...
+
+      158 | test("Testing remove from queue", () => {
+      159 |     render(<App />);
+    > 160 |     const buttons = screen.getAllByText("ADD");
+          |                            ^
+      161 |     const specificButton = buttons[0];
+      162 |     specificButton.click();
+      163 |     specificButton.click();
+
+      at Object.getElementError (node_modules/@testing-library/react/node_modules/@testing-library/dom/dist/config.js:37:19)
+      at node_modules/@testing-library/react/node_modules/@testing-library/dom/dist/query-helpers.js:76:38
+      at getAllByText (node_modules/@testing-library/react/node_modules/@testing-library/dom/dist/query-helpers.js:109:15)
+      at Object.<anonymous> (src/App.test.tsx:160:28)
+      at TestScheduler.scheduleTests (node_modules/@jest/core/build/TestScheduler.js:333:13)
+      at runJest (node_modules/@jest/core/build/runJest.js:404:19)
+      at _run10000 (node_modules/@jest/core/build/cli/index.js:320:7)
+      at runCLI (node_modules/@jest/core/build/cli/index.js:173:3)
+
+  ● Testing clear all semesters button
+
+    TestingLibraryElementError: Unable to find an element with the text: ADD. This could be because the text is broken up by multiple elements. In this case, you can provide a function for your text matcher to make your matcher more flexible.
+
+    Ignored nodes: comments, script, style
+    [36m<body>[39m
+      [36m<div>[39m
+        [36m<div[39m
+          [33mclass[39m=[32m"App"[39m
+        [36m>[39m
+          [36m<div[39m
+            [33mclass[39m=[32m"logo"[39m
+          [36m>[39m
+            [36m<h1[39m
+              [33mclass[39m=[32m"App-title"[39m
+            [36m>[39m
+              [36m<img[39m
+                [33mheight[39m=[32m"150"[39m
+                [33msrc[39m=[32m"ud_logo.jpg"[39m
+                [33mwidth[39m=[32m"150"[39m
+              [36m/>[39m
+              [0mCIS Scheduler[0m
+              [0m [0m
+            [36m</h1>[39m
+          [36m</div>[39m
+          [36m<header[39m
+            [33mclass[39m=[32m"App-header"[39m
+          [36m>[39m
+            [0mAdam Beck, Zach Reggio, Sam Ferguson, Brandon Marafino, Adam Liu[0m
+          [36m</header>[39m
+          [36m<div[39m
+            [33mclass[39m=[32m"button"[39m
+          [36m>[39m
+            [36m<button[39m
+              [33mclass[39m=[32m"buttonSpacing"[39m
+            [36m>[39m
+              [0mNew Course Plans[0m
+            [36m</button>[39m
+            [36m<a[39m
+              [33mdownload[39m=[32m"coursePlan.csv"[39m
+              [33mhref[39m=[32m"data:text/csv;charset=utf-8,﻿\"Plan Name\",\"Year\",\"Season\",\"Course Ticker\",\"Course Name\",\"Credits\",\"Prerequisites\",\"UUID\",\"Description\"
+    \"Bachelor of Computer Science\",\"Year 1\",\"spring\",\"CISC 108\",\"Introduction to Computer Science I\",\"3\",\"\",\"303bec5c-bd0b-484b-a363-b98324e767b2\",\"\"
+    \"Bachelor of Computer Science\",\"Year 1\",\"spring\",\"EGGG 101\",\"Introduction to Engineering\",\"2\",\"\",\"c72b134c-0f64-4ebc-96a7-11cd93e72994\",\"\"
+    \"Bachelor of Computer Science\",\"Year 1\",\"spring\",\"ENGL 110\",\"Seminar in Composition\",\"3\",\"\",\"28307fdd-1826-4edf-aa24-e82ff34b8a97\",\"\"
+    \"Bachelor of Computer Science\",\"Year 1\",\"spring\",\"MATH 241\",\"Analytic Geometry and Calculus A\",\"4\",\"MATH 117 or acceptable score on the Math Placement Exam in accordance with current standards determined by the Department of Mathematical Sciences. See https://www.mathsci.udel.edu/courses-placement/ud-math-placement for more information.\",\"b4352928-14d4-4566-a7ef-3ba258568b27\",\"\"
+    \"Bachelor of Computer Science\",\"Year 1\",\"fall\",\"CISC 181\",\"Introduction to Computer Science II\",\"3\",\"Grade of C- or better in CISC 108 or CISC 106.\",\"6287933b-4031-41a7-b58b-0f66f9ddefb1\",\"\"
+    \"Bachelor of Computer Science\",\"Year 1\",\"fall\",\"CISC 210\",\"Introduction to Systems Programming\",\"3\",\"A grade of C- or better in CISC 106 or CISC 108.\",\"ca3e1e22-8962-4494-a736-7fb549c45359\",\"\"
+    \"Bachelor of Computer Science\",\"Year 1\",\"fall\",\"MATH 242\",\"Analytic Geometry and Calculus B\",\"4\",\"MATH 241 or MATH 232.\",\"17b29c4c-71c1-411c-ae50-5412e537fdc1\",\"\"
+    \"Bachelor of Computer Science\",\"Year 1\",\"fall\",\"PHYS 207\",\"Fundamentals of Physics I\",\"3\",\"\",\"18fc3db8-3d41-4847-ab67-5b337f2129dd\",\"\"
+    \"Bachelor of Computer Science\",\"Year 1\",\"fall\",\"PHYS 227\",\"Fundamentals of Physics Laboratory I\",\"1\",\"\",\"51ec6a2e-d753-4971-abb9-d0a9581e14ef\",\"\"
+    \"Bachelor of Computer Science\",\"Year 2\",\"spring\",\"CISC 220\",\"Data Structures\",\"3\",\"A minimum grade of C- in CISC 210.\",\"6077fa9d-9d0f-4fee-bdfe-edceda2b64ca\",\"\"
+    \"Bachelor of Computer Science\",\"Year 2\",\"spring\",\"CISC 260\",\"Machine Organization and Assembly Language\",\"3\",\"A minimum grade of C- in CISC 210.\",\"f2a5ab99-c30f-40ea-8d2b-f3a19d918426\",\"\"
+    \"Bachelor of Computer Science\",\"Year 2\",\"spring\",\"MATH 210\",\"Discrete Mathematics I\",\"3\",\"\",\"5ca2501c-6a70-4d3a-9a89-ceb41f90971e\",\"\"
+    \"Bachelor of Computer Science\",\"Year 2\",\"spring\",\"PHYS 208\",\"Fundamentals of Physics II\",\"3\",\"PHYS 203 or PHYS 207 and PHYS 227, MATH 241 or MATH 232.\",\"8c2e043d-328d-4d2f-835a-5597188e5cc1\",\"\"
+    \"Bachelor of Computer Science\",\"Year 2\",\"spring\",\"PHYS 228\",\"Fundamentials of Physics Laboratory II\",\"1\",\"\",\"0cb9e47b-ffb4-4ad1-b98f-4cdba9f8e49f\",\"\"
+    \"Bachelor of Computer Science\",\"Year 2\",\"fall\",\"CISC 275\",\"Introduction to Software Engineering\",\"3\",\"Minimum grade of C- in CISC 181 and CISC 220.\",\"f86a5c1d-c6d7-41c9-8e26-1a9d695f28eb\",\"\"
+    \"Bachelor of Computer Science\",\"Year 2\",\"fall\",\"CISC 355\",\"Computers, Ethics and Society\",\"3\",\"\",\"c9c5e0db-ed41-429c-9c80-70bfe3358ec1\",\"\"
+    \"Bachelor of Computer Science\",\"Year 2\",\"fall\",\"MATH 205\",\"Statistical Methods\",\"4\",\"MATH 210 or MATH 230.\",\"0bc66c87-b0eb-47aa-8280-b4ae3443f56a\",\"\"
+    \"Bachelor of Computer Science\",\"Year 2\",\"fall\",\"CHEM 103\",\"General Chemistry\",\"3\",\"\",\"bb7fe5ba-b36d-4439-9fac-8123c1d4eadf\",\"\"
+    \"Bachelor of Computer Science\",\"Year 2\",\"fall\",\"CHEM 133\",\"General Chemistry Laboratory\",\"1\",\"\",\"ca23d065-3cdf-43b2-9665-2fd13c5efb2b\",\"\""[39m
+              [33mtarget[39m=[32m"_self"[39m
+            [36m>[39m
+              [36m<button[39m
+                [33mclass[39m=[32m"buttonSpacing btn btn-primary"[39m
+                [33mtype[39m=[32m"button"[39m
+              [36m>[39m
+                [0mExport to CSV[0m
+              [36m</button>[39m
+            [36m</a>[39m
+            [36m<button>[39m
+              [0mNeed Help?[0m
+            [36m</button>[39m
+            [36m<div[39m
+              [33mclass[39m=[32m"csv-reader-input"[39m
+            [36m>[39m
+              [36m<input[39m
+                [33maccept[39m=[32m".csv, text/csv"[39m
+                [33mclass[39m=[32m"csv-input"[39m
+                [33mid[39m=[32m"react-csv-reader-input"[39m
+                [33mname[39m=[32m"react-csv-reader-input"[39m
+                [33mtype[39m=[32m"file"[39m
+              [36m/>[39m
+            [36m</div>[39m
+          [36m</div>[39m
+          [36m<div[39m
+            [33mclass[39m=[32m"container-fluid"[39m
+          [36m>[39m
+            [36m<div>[39m
+              [36m<div[39m
+                [33mclass[39m=[32m"accordion"[39m
+              [36m>[39m
+                [36m<div[39m
+                  [33mclass[39m=[32m"beigebackground accordion-item"[39m
+                [36m>[39m
+                  [36m<h2[39m
+                    [33mclass[39m=[32m"accordion-header"[39m
+                  [36m>[39m
+                    [36m<button[39m
+                      [33maria-expanded[39m=[32m"false"[39m
+                      [33mclass[39m=[32m"accordion-button collapsed"[39m
+                      [33mtype[39m=[32m"button"[39m
+                    [36m>[39m
+                      [0mBachelor of Computer Science[0m
+                      [36m<button[39m
+                        [33mclass[39m=[32m"pull-left btn btn-primary"[39m
+                        [33mtype[39m=[32m"button"[39m
+                      [36m>[39m
+                        [0mDelete[0m
+                      [36m</button>[39m
+                      [36m<button[39m
+                        [33mclass[39m=[32m"pull-left btn btn-primary"[39m
+                        [33mtype[39m=[32m"button"[39m
+                      [36m>[39m
+                        [0mEdit[0m
+                      [36m</button>[39m
+                    [36m</button>[3...
+
+      179 | test("Testing clear all semesters button", () => {
+      180 |     render(<App />);
+    > 181 |     const buttons = screen.getAllByText("ADD");
+          |                            ^
+      182 |     const specificButton = buttons[0];
+      183 |     specificButton.click();
+      184 |     const buttons2 = screen.getAllByText("AddQueue");
+
+      at Object.getElementError (node_modules/@testing-library/react/node_modules/@testing-library/dom/dist/config.js:37:19)
+      at node_modules/@testing-library/react/node_modules/@testing-library/dom/dist/query-helpers.js:76:38
+      at getAllByText (node_modules/@testing-library/react/node_modules/@testing-library/dom/dist/query-helpers.js:109:15)
+      at Object.<anonymous> (src/App.test.tsx:181:28)
+      at TestScheduler.scheduleTests (node_modules/@jest/core/build/TestScheduler.js:333:13)
+      at runJest (node_modules/@jest/core/build/runJest.js:404:19)
+      at _run10000 (node_modules/@jest/core/build/cli/index.js:320:7)
+      at runCLI (node_modules/@jest/core/build/cli/index.js:173:3)
+
+  ● Testing edit degree plan
+
+    TestingLibraryElementError: Unable to find an element with the text: /View Course Plans/i. This could be because the text is broken up by multiple elements. In this case, you can provide a function for your text matcher to make your matcher more flexible.
+
+    Ignored nodes: comments, script, style
+    [36m<body>[39m
+      [36m<div>[39m
+        [36m<div[39m
+          [33mclass[39m=[32m"App"[39m
+        [36m>[39m
+          [36m<div[39m
+            [33mclass[39m=[32m"logo"[39m
+          [36m>[39m
+            [36m<h1[39m
+              [33mclass[39m=[32m"App-title"[39m
+            [36m>[39m
+              [36m<img[39m
+                [33mheight[39m=[32m"150"[39m
+                [33msrc[39m=[32m"ud_logo.jpg"[39m
+                [33mwidth[39m=[32m"150"[39m
+              [36m/>[39m
+              [0mCIS Scheduler[0m
+              [0m [0m
+            [36m</h1>[39m
+          [36m</div>[39m
+          [36m<header[39m
+            [33mclass[39m=[32m"App-header"[39m
+          [36m>[39m
+            [0mAdam Beck, Zach Reggio, Sam Ferguson, Brandon Marafino, Adam Liu[0m
+          [36m</header>[39m
+          [36m<div[39m
+            [33mclass[39m=[32m"button"[39m
+          [36m>[39m
+            [36m<button[39m
+              [33mclass[39m=[32m"buttonSpacing"[39m
+            [36m>[39m
+              [0mNew Course Plans[0m
+            [36m</button>[39m
+            [36m<a[39m
+              [33mdownload[39m=[32m"coursePlan.csv"[39m
+              [33mhref[39m=[32m"data:text/csv;charset=utf-8,﻿\"Plan Name\",\"Year\",\"Season\",\"Course Ticker\",\"Course Name\",\"Credits\",\"Prerequisites\",\"UUID\",\"Description\"
+    \"Bachelor of Computer Science\",\"Year 1\",\"spring\",\"CISC 108\",\"Introduction to Computer Science I\",\"3\",\"\",\"303bec5c-bd0b-484b-a363-b98324e767b2\",\"\"
+    \"Bachelor of Computer Science\",\"Year 1\",\"spring\",\"EGGG 101\",\"Introduction to Engineering\",\"2\",\"\",\"c72b134c-0f64-4ebc-96a7-11cd93e72994\",\"\"
+    \"Bachelor of Computer Science\",\"Year 1\",\"spring\",\"ENGL 110\",\"Seminar in Composition\",\"3\",\"\",\"28307fdd-1826-4edf-aa24-e82ff34b8a97\",\"\"
+    \"Bachelor of Computer Science\",\"Year 1\",\"spring\",\"MATH 241\",\"Analytic Geometry and Calculus A\",\"4\",\"MATH 117 or acceptable score on the Math Placement Exam in accordance with current standards determined by the Department of Mathematical Sciences. See https://www.mathsci.udel.edu/courses-placement/ud-math-placement for more information.\",\"b4352928-14d4-4566-a7ef-3ba258568b27\",\"\"
+    \"Bachelor of Computer Science\",\"Year 1\",\"fall\",\"CISC 181\",\"Introduction to Computer Science II\",\"3\",\"Grade of C- or better in CISC 108 or CISC 106.\",\"6287933b-4031-41a7-b58b-0f66f9ddefb1\",\"\"
+    \"Bachelor of Computer Science\",\"Year 1\",\"fall\",\"CISC 210\",\"Introduction to Systems Programming\",\"3\",\"A grade of C- or better in CISC 106 or CISC 108.\",\"ca3e1e22-8962-4494-a736-7fb549c45359\",\"\"
+    \"Bachelor of Computer Science\",\"Year 1\",\"fall\",\"MATH 242\",\"Analytic Geometry and Calculus B\",\"4\",\"MATH 241 or MATH 232.\",\"17b29c4c-71c1-411c-ae50-5412e537fdc1\",\"\"
+    \"Bachelor of Computer Science\",\"Year 1\",\"fall\",\"PHYS 207\",\"Fundamentals of Physics I\",\"3\",\"\",\"18fc3db8-3d41-4847-ab67-5b337f2129dd\",\"\"
+    \"Bachelor of Computer Science\",\"Year 1\",\"fall\",\"PHYS 227\",\"Fundamentals of Physics Laboratory I\",\"1\",\"\",\"51ec6a2e-d753-4971-abb9-d0a9581e14ef\",\"\"
+    \"Bachelor of Computer Science\",\"Year 2\",\"spring\",\"CISC 220\",\"Data Structures\",\"3\",\"A minimum grade of C- in CISC 210.\",\"6077fa9d-9d0f-4fee-bdfe-edceda2b64ca\",\"\"
+    \"Bachelor of Computer Science\",\"Year 2\",\"spring\",\"CISC 260\",\"Machine Organization and Assembly Language\",\"3\",\"A minimum grade of C- in CISC 210.\",\"f2a5ab99-c30f-40ea-8d2b-f3a19d918426\",\"\"
+    \"Bachelor of Computer Science\",\"Year 2\",\"spring\",\"MATH 210\",\"Discrete Mathematics I\",\"3\",\"\",\"5ca2501c-6a70-4d3a-9a89-ceb41f90971e\",\"\"
+    \"Bachelor of Computer Science\",\"Year 2\",\"spring\",\"PHYS 208\",\"Fundamentals of Physics II\",\"3\",\"PHYS 203 or PHYS 207 and PHYS 227, MATH 241 or MATH 232.\",\"8c2e043d-328d-4d2f-835a-5597188e5cc1\",\"\"
+    \"Bachelor of Computer Science\",\"Year 2\",\"spring\",\"PHYS 228\",\"Fundamentials of Physics Laboratory II\",\"1\",\"\",\"0cb9e47b-ffb4-4ad1-b98f-4cdba9f8e49f\",\"\"
+    \"Bachelor of Computer Science\",\"Year 2\",\"fall\",\"CISC 275\",\"Introduction to Software Engineering\",\"3\",\"Minimum grade of C- in CISC 181 and CISC 220.\",\"f86a5c1d-c6d7-41c9-8e26-1a9d695f28eb\",\"\"
+    \"Bachelor of Computer Science\",\"Year 2\",\"fall\",\"CISC 355\",\"Computers, Ethics and Society\",\"3\",\"\",\"c9c5e0db-ed41-429c-9c80-70bfe3358ec1\",\"\"
+    \"Bachelor of Computer Science\",\"Year 2\",\"fall\",\"MATH 205\",\"Statistical Methods\",\"4\",\"MATH 210 or MATH 230.\",\"0bc66c87-b0eb-47aa-8280-b4ae3443f56a\",\"\"
+    \"Bachelor of Computer Science\",\"Year 2\",\"fall\",\"CHEM 103\",\"General Chemistry\",\"3\",\"\",\"bb7fe5ba-b36d-4439-9fac-8123c1d4eadf\",\"\"
+    \"Bachelor of Computer Science\",\"Year 2\",\"fall\",\"CHEM 133\",\"General Chemistry Laboratory\",\"1\",\"\",\"ca23d065-3cdf-43b2-9665-2fd13c5efb2b\",\"\""[39m
+              [33mtarget[39m=[32m"_self"[39m
+            [36m>[39m
+              [36m<button[39m
+                [33mclass[39m=[32m"buttonSpacing btn btn-primary"[39m
+                [33mtype[39m=[32m"button"[39m
+              [36m>[39m
+                [0mExport to CSV[0m
+              [36m</button>[39m
+            [36m</a>[39m
+            [36m<button>[39m
+              [0mNeed Help?[0m
+            [36m</button>[39m
+            [36m<div[39m
+              [33mclass[39m=[32m"csv-reader-input"[39m
+            [36m>[39m
+              [36m<input[39m
+                [33maccept[39m=[32m".csv, text/csv"[39m
+                [33mclass[39m=[32m"csv-input"[39m
+                [33mid[39m=[32m"react-csv-reader-input"[39m
+                [33mname[39m=[32m"react-csv-reader-input"[39m
+                [33mtype[39m=[32m"file"[39m
+              [36m/>[39m
+            [36m</div>[39m
+          [36m</div>[39m
+          [36m<div[39m
+            [33mclass[39m=[32m"container-fluid"[39m
+          [36m>[39m
+            [36m<div>[39m
+              [36m<div[39m
+                [33mclass[39m=[32m"accordion"[39m
+              [36m>[39m
+                [36m<div[39m
+                  [33mclass[39m=[32m"beigebackground accordion-item"[39m
+                [36m>[39m
+                  [36m<h2[39m
+                    [33mclass[39m=[32m"accordion-header"[39m
+                  [36m>[39m
+                    [36m<button[39m
+                      [33maria-expanded[39m=[32m"false"[39m
+                      [33mclass[39m=[32m"accordion-button collapsed"[39m
+                      [33mtype[39m=[32m"button"[39m
+                    [36m>[39m
+                      [0mBachelor of Computer Science[0m
+                      [36m<button[39m
+                        [33mclass[39m=[32m"pull-left btn btn-primary"[39m
+                        [33mtype[39m=[32m"button"[39m
+                      [36m>[39m
+                        [0mDelete[0m
+                      [36m</button>[39m
+                      [36m<button[39m
+                        [33mclass[39m=[32m"pull-left btn btn-primary"[39m
+                        [33mtype[39m=[32m"button"[39m
+                      [36m>[39m
+                        [0mEdit[0m
+                      [36m</button>[39m
+                    [36m</button>[3...
+
+      204 | test("Testing edit degree plan", () => {
+      205 |     render(<App />);
+    > 206 |     const button = screen.getByText(/View Course Plans/i);
+          |                           ^
+      207 |     button.click();
+      208 |     const buttons = screen.getAllByText("Edit");
+      209 |     const specificButton = buttons[0];
+
+      at Object.getElementError (node_modules/@testing-library/react/node_modules/@testing-library/dom/dist/config.js:37:19)
+      at node_modules/@testing-library/react/node_modules/@testing-library/dom/dist/query-helpers.js:76:38
+      at node_modules/@testing-library/react/node_modules/@testing-library/dom/dist/query-helpers.js:52:17
+      at getByText (node_modules/@testing-library/react/node_modules/@testing-library/dom/dist/query-helpers.js:95:19)
+      at Object.<anonymous> (src/App.test.tsx:206:27)
+      at TestScheduler.scheduleTests (node_modules/@jest/core/build/TestScheduler.js:333:13)
+      at runJest (node_modules/@jest/core/build/runJest.js:404:19)
+      at _run10000 (node_modules/@jest/core/build/cli/index.js:320:7)
+      at runCLI (node_modules/@jest/core/build/cli/index.js:173:3)
+
+  ● Testing save degree plan
+
+    TestingLibraryElementError: Unable to find an element with the text: /View Course Plans/i. This could be because the text is broken up by multiple elements. In this case, you can provide a function for your text matcher to make your matcher more flexible.
+
+    Ignored nodes: comments, script, style
+    [36m<body>[39m
+      [36m<div>[39m
+        [36m<div[39m
+          [33mclass[39m=[32m"App"[39m
+        [36m>[39m
+          [36m<div[39m
+            [33mclass[39m=[32m"logo"[39m
+          [36m>[39m
+            [36m<h1[39m
+              [33mclass[39m=[32m"App-title"[39m
+            [36m>[39m
+              [36m<img[39m
+                [33mheight[39m=[32m"150"[39m
+                [33msrc[39m=[32m"ud_logo.jpg"[39m
+                [33mwidth[39m=[32m"150"[39m
+              [36m/>[39m
+              [0mCIS Scheduler[0m
+              [0m [0m
+            [36m</h1>[39m
+          [36m</div>[39m
+          [36m<header[39m
+            [33mclass[39m=[32m"App-header"[39m
+          [36m>[39m
+            [0mAdam Beck, Zach Reggio, Sam Ferguson, Brandon Marafino, Adam Liu[0m
+          [36m</header>[39m
+          [36m<div[39m
+            [33mclass[39m=[32m"button"[39m
+          [36m>[39m
+            [36m<button[39m
+              [33mclass[39m=[32m"buttonSpacing"[39m
+            [36m>[39m
+              [0mNew Course Plans[0m
+            [36m</button>[39m
+            [36m<a[39m
+              [33mdownload[39m=[32m"coursePlan.csv"[39m
+              [33mhref[39m=[32m"data:text/csv;charset=utf-8,﻿\"Plan Name\",\"Year\",\"Season\",\"Course Ticker\",\"Course Name\",\"Credits\",\"Prerequisites\",\"UUID\",\"Description\"
+    \"Bachelor of Computer Science\",\"Year 1\",\"spring\",\"CISC 108\",\"Introduction to Computer Science I\",\"3\",\"\",\"303bec5c-bd0b-484b-a363-b98324e767b2\",\"\"
+    \"Bachelor of Computer Science\",\"Year 1\",\"spring\",\"EGGG 101\",\"Introduction to Engineering\",\"2\",\"\",\"c72b134c-0f64-4ebc-96a7-11cd93e72994\",\"\"
+    \"Bachelor of Computer Science\",\"Year 1\",\"spring\",\"ENGL 110\",\"Seminar in Composition\",\"3\",\"\",\"28307fdd-1826-4edf-aa24-e82ff34b8a97\",\"\"
+    \"Bachelor of Computer Science\",\"Year 1\",\"spring\",\"MATH 241\",\"Analytic Geometry and Calculus A\",\"4\",\"MATH 117 or acceptable score on the Math Placement Exam in accordance with current standards determined by the Department of Mathematical Sciences. See https://www.mathsci.udel.edu/courses-placement/ud-math-placement for more information.\",\"b4352928-14d4-4566-a7ef-3ba258568b27\",\"\"
+    \"Bachelor of Computer Science\",\"Year 1\",\"fall\",\"CISC 181\",\"Introduction to Computer Science II\",\"3\",\"Grade of C- or better in CISC 108 or CISC 106.\",\"6287933b-4031-41a7-b58b-0f66f9ddefb1\",\"\"
+    \"Bachelor of Computer Science\",\"Year 1\",\"fall\",\"CISC 210\",\"Introduction to Systems Programming\",\"3\",\"A grade of C- or better in CISC 106 or CISC 108.\",\"ca3e1e22-8962-4494-a736-7fb549c45359\",\"\"
+    \"Bachelor of Computer Science\",\"Year 1\",\"fall\",\"MATH 242\",\"Analytic Geometry and Calculus B\",\"4\",\"MATH 241 or MATH 232.\",\"17b29c4c-71c1-411c-ae50-5412e537fdc1\",\"\"
+    \"Bachelor of Computer Science\",\"Year 1\",\"fall\",\"PHYS 207\",\"Fundamentals of Physics I\",\"3\",\"\",\"18fc3db8-3d41-4847-ab67-5b337f2129dd\",\"\"
+    \"Bachelor of Computer Science\",\"Year 1\",\"fall\",\"PHYS 227\",\"Fundamentals of Physics Laboratory I\",\"1\",\"\",\"51ec6a2e-d753-4971-abb9-d0a9581e14ef\",\"\"
+    \"Bachelor of Computer Science\",\"Year 2\",\"spring\",\"CISC 220\",\"Data Structures\",\"3\",\"A minimum grade of C- in CISC 210.\",\"6077fa9d-9d0f-4fee-bdfe-edceda2b64ca\",\"\"
+    \"Bachelor of Computer Science\",\"Year 2\",\"spring\",\"CISC 260\",\"Machine Organization and Assembly Language\",\"3\",\"A minimum grade of C- in CISC 210.\",\"f2a5ab99-c30f-40ea-8d2b-f3a19d918426\",\"\"
+    \"Bachelor of Computer Science\",\"Year 2\",\"spring\",\"MATH 210\",\"Discrete Mathematics I\",\"3\",\"\",\"5ca2501c-6a70-4d3a-9a89-ceb41f90971e\",\"\"
+    \"Bachelor of Computer Science\",\"Year 2\",\"spring\",\"PHYS 208\",\"Fundamentals of Physics II\",\"3\",\"PHYS 203 or PHYS 207 and PHYS 227, MATH 241 or MATH 232.\",\"8c2e043d-328d-4d2f-835a-5597188e5cc1\",\"\"
+    \"Bachelor of Computer Science\",\"Year 2\",\"spring\",\"PHYS 228\",\"Fundamentials of Physics Laboratory II\",\"1\",\"\",\"0cb9e47b-ffb4-4ad1-b98f-4cdba9f8e49f\",\"\"
+    \"Bachelor of Computer Science\",\"Year 2\",\"fall\",\"CISC 275\",\"Introduction to Software Engineering\",\"3\",\"Minimum grade of C- in CISC 181 and CISC 220.\",\"f86a5c1d-c6d7-41c9-8e26-1a9d695f28eb\",\"\"
+    \"Bachelor of Computer Science\",\"Year 2\",\"fall\",\"CISC 355\",\"Computers, Ethics and Society\",\"3\",\"\",\"c9c5e0db-ed41-429c-9c80-70bfe3358ec1\",\"\"
+    \"Bachelor of Computer Science\",\"Year 2\",\"fall\",\"MATH 205\",\"Statistical Methods\",\"4\",\"MATH 210 or MATH 230.\",\"0bc66c87-b0eb-47aa-8280-b4ae3443f56a\",\"\"
+    \"Bachelor of Computer Science\",\"Year 2\",\"fall\",\"CHEM 103\",\"General Chemistry\",\"3\",\"\",\"bb7fe5ba-b36d-4439-9fac-8123c1d4eadf\",\"\"
+    \"Bachelor of Computer Science\",\"Year 2\",\"fall\",\"CHEM 133\",\"General Chemistry Laboratory\",\"1\",\"\",\"ca23d065-3cdf-43b2-9665-2fd13c5efb2b\",\"\""[39m
+              [33mtarget[39m=[32m"_self"[39m
+            [36m>[39m
+              [36m<button[39m
+                [33mclass[39m=[32m"buttonSpacing btn btn-primary"[39m
+                [33mtype[39m=[32m"button"[39m
+              [36m>[39m
+                [0mExport to CSV[0m
+              [36m</button>[39m
+            [36m</a>[39m
+            [36m<button>[39m
+              [0mNeed Help?[0m
+            [36m</button>[39m
+            [36m<div[39m
+              [33mclass[39m=[32m"csv-reader-input"[39m
+            [36m>[39m
+              [36m<input[39m
+                [33maccept[39m=[32m".csv, text/csv"[39m
+                [33mclass[39m=[32m"csv-input"[39m
+                [33mid[39m=[32m"react-csv-reader-input"[39m
+                [33mname[39m=[32m"react-csv-reader-input"[39m
+                [33mtype[39m=[32m"file"[39m
+              [36m/>[39m
+            [36m</div>[39m
+          [36m</div>[39m
+          [36m<div[39m
+            [33mclass[39m=[32m"container-fluid"[39m
+          [36m>[39m
+            [36m<div>[39m
+              [36m<div[39m
+                [33mclass[39m=[32m"accordion"[39m
+              [36m>[39m
+                [36m<div[39m
+                  [33mclass[39m=[32m"beigebackground accordion-item"[39m
+                [36m>[39m
+                  [36m<h2[39m
+                    [33mclass[39m=[32m"accordion-header"[39m
+                  [36m>[39m
+                    [36m<button[39m
+                      [33maria-expanded[39m=[32m"false"[39m
+                      [33mclass[39m=[32m"accordion-button collapsed"[39m
+                      [33mtype[39m=[32m"button"[39m
+                    [36m>[39m
+                      [0mBachelor of Computer Science[0m
+                      [36m<button[39m
+                        [33mclass[39m=[32m"pull-left btn btn-primary"[39m
+                        [33mtype[39m=[32m"button"[39m
+                      [36m>[39m
+                        [0mDelete[0m
+                      [36m</button>[39m
+                      [36m<button[39m
+                        [33mclass[39m=[32m"pull-left btn btn-primary"[39m
+                        [33mtype[39m=[32m"button"[39m
+                      [36m>[39m
+                        [0mEdit[0m
+                      [36m</button>[39m
+                    [36m</button>[3...
+
+      218 | test("Testing save degree plan", () => {
+      219 |     render(<App />);
+    > 220 |     const button = screen.getByText(/View Course Plans/i);
+          |                           ^
+      221 |     button.click();
+      222 |     const buttons = screen.getAllByText("Edit");
+      223 |     const specificButton = buttons[0];
+
+      at Object.getElementError (node_modules/@testing-library/react/node_modules/@testing-library/dom/dist/config.js:37:19)
+      at node_modules/@testing-library/react/node_modules/@testing-library/dom/dist/query-helpers.js:76:38
+      at node_modules/@testing-library/react/node_modules/@testing-library/dom/dist/query-helpers.js:52:17
+      at getByText (node_modules/@testing-library/react/node_modules/@testing-library/dom/dist/query-helpers.js:95:19)
+      at Object.<anonymous> (src/App.test.tsx:220:27)
+      at TestScheduler.scheduleTests (node_modules/@jest/core/build/TestScheduler.js:333:13)
+      at runJest (node_modules/@jest/core/build/runJest.js:404:19)
+      at _run10000 (node_modules/@jest/core/build/cli/index.js:320:7)
+      at runCLI (node_modules/@jest/core/build/cli/index.js:173:3)
+
+  ● Testing save plan as a given name
+
+    TestingLibraryElementError: Unable to find an element with the placeholder text of: Untittled
+
+    Ignored nodes: comments, script, style
+    [36m<body>[39m
+      [36m<div>[39m
+        [36m<div[39m
+          [33mclass[39m=[32m"App"[39m
+        [36m>[39m
+          [36m<div[39m
+            [33mclass[39m=[32m"logo"[39m
+          [36m>[39m
+            [36m<h1[39m
+              [33mclass[39m=[32m"App-title"[39m
+            [36m>[39m
+              [36m<img[39m
+                [33mheight[39m=[32m"150"[39m
+                [33msrc[39m=[32m"ud_logo.jpg"[39m
+                [33mwidth[39m=[32m"150"[39m
+              [36m/>[39m
+              [0mCIS Scheduler[0m
+              [0m [0m
+            [36m</h1>[39m
+          [36m</div>[39m
+          [36m<header[39m
+            [33mclass[39m=[32m"App-header"[39m
+          [36m>[39m
+            [0mAdam Beck, Zach Reggio, Sam Ferguson, Brandon Marafino, Adam Liu[0m
+          [36m</header>[39m
+          [36m<div[39m
+            [33mclass[39m=[32m"button"[39m
+          [36m>[39m
+            [36m<button[39m
+              [33mclass[39m=[32m"buttonSpacing"[39m
+            [36m>[39m
+              [0mNew Course Plans[0m
+            [36m</button>[39m
+            [36m<a[39m
+              [33mdownload[39m=[32m"coursePlan.csv"[39m
+              [33mhref[39m=[32m"data:text/csv;charset=utf-8,﻿\"Plan Name\",\"Year\",\"Season\",\"Course Ticker\",\"Course Name\",\"Credits\",\"Prerequisites\",\"UUID\",\"Description\"
+    \"Bachelor of Computer Science\",\"Year 1\",\"spring\",\"CISC 108\",\"Introduction to Computer Science I\",\"3\",\"\",\"303bec5c-bd0b-484b-a363-b98324e767b2\",\"\"
+    \"Bachelor of Computer Science\",\"Year 1\",\"spring\",\"EGGG 101\",\"Introduction to Engineering\",\"2\",\"\",\"c72b134c-0f64-4ebc-96a7-11cd93e72994\",\"\"
+    \"Bachelor of Computer Science\",\"Year 1\",\"spring\",\"ENGL 110\",\"Seminar in Composition\",\"3\",\"\",\"28307fdd-1826-4edf-aa24-e82ff34b8a97\",\"\"
+    \"Bachelor of Computer Science\",\"Year 1\",\"spring\",\"MATH 241\",\"Analytic Geometry and Calculus A\",\"4\",\"MATH 117 or acceptable score on the Math Placement Exam in accordance with current standards determined by the Department of Mathematical Sciences. See https://www.mathsci.udel.edu/courses-placement/ud-math-placement for more information.\",\"b4352928-14d4-4566-a7ef-3ba258568b27\",\"\"
+    \"Bachelor of Computer Science\",\"Year 1\",\"fall\",\"CISC 181\",\"Introduction to Computer Science II\",\"3\",\"Grade of C- or better in CISC 108 or CISC 106.\",\"6287933b-4031-41a7-b58b-0f66f9ddefb1\",\"\"
+    \"Bachelor of Computer Science\",\"Year 1\",\"fall\",\"CISC 210\",\"Introduction to Systems Programming\",\"3\",\"A grade of C- or better in CISC 106 or CISC 108.\",\"ca3e1e22-8962-4494-a736-7fb549c45359\",\"\"
+    \"Bachelor of Computer Science\",\"Year 1\",\"fall\",\"MATH 242\",\"Analytic Geometry and Calculus B\",\"4\",\"MATH 241 or MATH 232.\",\"17b29c4c-71c1-411c-ae50-5412e537fdc1\",\"\"
+    \"Bachelor of Computer Science\",\"Year 1\",\"fall\",\"PHYS 207\",\"Fundamentals of Physics I\",\"3\",\"\",\"18fc3db8-3d41-4847-ab67-5b337f2129dd\",\"\"
+    \"Bachelor of Computer Science\",\"Year 1\",\"fall\",\"PHYS 227\",\"Fundamentals of Physics Laboratory I\",\"1\",\"\",\"51ec6a2e-d753-4971-abb9-d0a9581e14ef\",\"\"
+    \"Bachelor of Computer Science\",\"Year 2\",\"spring\",\"CISC 220\",\"Data Structures\",\"3\",\"A minimum grade of C- in CISC 210.\",\"6077fa9d-9d0f-4fee-bdfe-edceda2b64ca\",\"\"
+    \"Bachelor of Computer Science\",\"Year 2\",\"spring\",\"CISC 260\",\"Machine Organization and Assembly Language\",\"3\",\"A minimum grade of C- in CISC 210.\",\"f2a5ab99-c30f-40ea-8d2b-f3a19d918426\",\"\"
+    \"Bachelor of Computer Science\",\"Year 2\",\"spring\",\"MATH 210\",\"Discrete Mathematics I\",\"3\",\"\",\"5ca2501c-6a70-4d3a-9a89-ceb41f90971e\",\"\"
+    \"Bachelor of Computer Science\",\"Year 2\",\"spring\",\"PHYS 208\",\"Fundamentals of Physics II\",\"3\",\"PHYS 203 or PHYS 207 and PHYS 227, MATH 241 or MATH 232.\",\"8c2e043d-328d-4d2f-835a-5597188e5cc1\",\"\"
+    \"Bachelor of Computer Science\",\"Year 2\",\"spring\",\"PHYS 228\",\"Fundamentials of Physics Laboratory II\",\"1\",\"\",\"0cb9e47b-ffb4-4ad1-b98f-4cdba9f8e49f\",\"\"
+    \"Bachelor of Computer Science\",\"Year 2\",\"fall\",\"CISC 275\",\"Introduction to Software Engineering\",\"3\",\"Minimum grade of C- in CISC 181 and CISC 220.\",\"f86a5c1d-c6d7-41c9-8e26-1a9d695f28eb\",\"\"
+    \"Bachelor of Computer Science\",\"Year 2\",\"fall\",\"CISC 355\",\"Computers, Ethics and Society\",\"3\",\"\",\"c9c5e0db-ed41-429c-9c80-70bfe3358ec1\",\"\"
+    \"Bachelor of Computer Science\",\"Year 2\",\"fall\",\"MATH 205\",\"Statistical Methods\",\"4\",\"MATH 210 or MATH 230.\",\"0bc66c87-b0eb-47aa-8280-b4ae3443f56a\",\"\"
+    \"Bachelor of Computer Science\",\"Year 2\",\"fall\",\"CHEM 103\",\"General Chemistry\",\"3\",\"\",\"bb7fe5ba-b36d-4439-9fac-8123c1d4eadf\",\"\"
+    \"Bachelor of Computer Science\",\"Year 2\",\"fall\",\"CHEM 133\",\"General Chemistry Laboratory\",\"1\",\"\",\"ca23d065-3cdf-43b2-9665-2fd13c5efb2b\",\"\""[39m
+              [33mtarget[39m=[32m"_self"[39m
+            [36m>[39m
+              [36m<button[39m
+                [33mclass[39m=[32m"buttonSpacing btn btn-primary"[39m
+                [33mtype[39m=[32m"button"[39m
+              [36m>[39m
+                [0mExport to CSV[0m
+              [36m</button>[39m
+            [36m</a>[39m
+            [36m<button>[39m
+              [0mNeed Help?[0m
+            [36m</button>[39m
+            [36m<div[39m
+              [33mclass[39m=[32m"csv-reader-input"[39m
+            [36m>[39m
+              [36m<input[39m
+                [33maccept[39m=[32m".csv, text/csv"[39m
+                [33mclass[39m=[32m"csv-input"[39m
+                [33mid[39m=[32m"react-csv-reader-input"[39m
+                [33mname[39m=[32m"react-csv-reader-input"[39m
+                [33mtype[39m=[32m"file"[39m
+              [36m/>[39m
+            [36m</div>[39m
+          [36m</div>[39m
+          [36m<div[39m
+            [33mclass[39m=[32m"container-fluid"[39m
+          [36m>[39m
+            [36m<div>[39m
+              [36m<div[39m
+                [33mclass[39m=[32m"accordion"[39m
+              [36m>[39m
+                [36m<div[39m
+                  [33mclass[39m=[32m"beigebackground accordion-item"[39m
+                [36m>[39m
+                  [36m<h2[39m
+                    [33mclass[39m=[32m"accordion-header"[39m
+                  [36m>[39m
+                    [36m<button[39m
+                      [33maria-expanded[39m=[32m"false"[39m
+                      [33mclass[39m=[32m"accordion-button collapsed"[39m
+                      [33mtype[39m=[32m"button"[39m
+                    [36m>[39m
+                      [0mBachelor of Computer Science[0m
+                      [36m<button[39m
+                        [33mclass[39m=[32m"pull-left btn btn-primary"[39m
+                        [33mtype[39m=[32m"button"[39m
+                      [36m>[39m
+                        [0mDelete[0m
+                      [36m</button>[39m
+                      [36m<button[39m
+                        [33mclass[39m=[32m"pull-left btn btn-primary"[39m
+                        [33mtype[39m=[32m"button"[39m
+                      [36m>[39m
+                        [0mEdit[0m
+                      [36m</button>[39m
+                    [36m</button>[3...
+
+      234 | test("Testing save plan as a given name", () => {
+      235 |     render(<App />);
+    > 236 |     const textBox = screen.getByPlaceholderText("Untittled");
+          |                            ^
+      237 |     userEvent.type(textBox, "Plan 1");
+      238 |     const buttons = screen.getAllByText("Save");
+      239 |     const specificButton = buttons[0];
+
+      at Object.getElementError (node_modules/@testing-library/react/node_modules/@testing-library/dom/dist/config.js:37:19)
+      at node_modules/@testing-library/react/node_modules/@testing-library/dom/dist/query-helpers.js:76:38
+      at node_modules/@testing-library/react/node_modules/@testing-library/dom/dist/query-helpers.js:52:17
+      at getByPlaceholderText (node_modules/@testing-library/react/node_modules/@testing-library/dom/dist/query-helpers.js:95:19)
+      at Object.<anonymous> (src/App.test.tsx:236:28)
+      at TestScheduler.scheduleTests (node_modules/@jest/core/build/TestScheduler.js:333:13)
+      at runJest (node_modules/@jest/core/build/runJest.js:404:19)
+      at _run10000 (node_modules/@jest/core/build/cli/index.js:320:7)
+      at runCLI (node_modules/@jest/core/build/cli/index.js:173:3)
 
 [0;33mOne of your dependencies, babel-preset-react-app, is importing the
 "@babel/plugin-proposal-private-property-in-object" package without
@@ -354,31 +2245,31 @@ ever be fixed. Add "@babel/plugin-proposal-private-property-in-object" to
 your devDependencies to work around this error. This will make this message
 go away.[0m
   
------------------------------|---------|----------|---------|---------|-----------------------------------------------------------------
-File                         | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s                                               
------------------------------|---------|----------|---------|---------|-----------------------------------------------------------------
-All files                    |   50.34 |    50.93 |   50.28 |   51.47 |                                                                 
- src                         |   50.34 |    50.93 |   50.28 |   51.47 |                                                                 
-  AddCourseModal.tsx         |       0 |        0 |       0 |       0 | 20-80                                                           
-  AddSemesterModal.tsx       |       0 |      100 |       0 |       0 | 18-44                                                           
-  App.tsx                    |   68.29 |    83.33 |   47.05 |   73.68 | 90-116,170                                                      
-  CSV.tsx                    |   30.23 |    27.77 |   46.15 |   34.21 | 67-142                                                          
-  ClearCourseModal.tsx       |       0 |        0 |       0 |       0 | 10-36                                                           
-  DBmanage.tsx               |      40 |    30.95 |   41.02 |   39.58 | 24-133,155,186-211,233,249-261,297,325                          
-  DegreeRequirementCheck.tsx |     100 |      100 |     100 |     100 |                                                                 
-  DeleteCourseModal.tsx      |       0 |      100 |       0 |       0 | 12-18                                                           
-  EditCoursePlan.tsx         |   41.33 |    51.42 |   38.88 |   41.33 | 42-52,70-97,152-166,260,297-367,427-428,434-443,449-461,494-505 
-  EditModal.tsx              |    37.5 |     12.5 |      25 |    37.5 | 31-41,46-51,60-69,84-108                                        
-  HelpModal.tsx              |      75 |       50 |     100 |      75 | 13                                                              
-  NewCoursePlan.tsx          |   88.57 |      100 |   90.47 |   87.87 | 68-75,92                                                        
-  viewCourseComponents.tsx   |    92.5 |    85.71 |   81.25 |   97.36 | 36                                                              
- src/interfaces              |       0 |        0 |       0 |       0 |                                                                 
-  course.ts                  |       0 |        0 |       0 |       0 |                                                                 
-  degree.ts                  |       0 |        0 |       0 |       0 |                                                                 
-  semester.ts                |       0 |        0 |       0 |       0 |                                                                 
------------------------------|---------|----------|---------|---------|-----------------------------------------------------------------
-Test Suites: 1 passed, 1 total
-Tests:       20 passed, 20 total
+-----------------------------|---------|----------|---------|---------|--------------------------
+File                         | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s        
+-----------------------------|---------|----------|---------|---------|--------------------------
+All files                    |   20.27 |    20.49 |   14.45 |   21.07 |                          
+ src                         |   20.27 |    20.49 |   14.45 |   21.07 |                          
+  AddCourseModal.tsx         |       0 |        0 |       0 |       0 | 20-80                    
+  AddSemesterModal.tsx       |       0 |      100 |       0 |       0 | 18-44                    
+  App.tsx                    |   53.65 |    66.66 |   23.52 |   57.89 | 90-116,125,148-182       
+  CSV.tsx                    |   30.23 |    27.77 |   46.15 |   34.21 | 67-142                   
+  ClearCourseModal.tsx       |       0 |        0 |       0 |       0 | 10-36                    
+  DBmanage.tsx               |    6.66 |        0 |    5.12 |    6.25 | 24-155,185-329           
+  DegreeRequirementCheck.tsx |       0 |        0 |       0 |       0 | 16-77                    
+  DeleteCourseModal.tsx      |       0 |      100 |       0 |       0 | 12-18                    
+  EditCoursePlan.tsx         |       0 |        0 |       0 |       0 | 41-505                   
+  EditModal.tsx              |    37.5 |     12.5 |      25 |    37.5 | 31-41,46-51,60-69,84-108 
+  HelpModal.tsx              |      75 |       50 |     100 |      75 | 13                       
+  NewCoursePlan.tsx          |       0 |        0 |       0 |       0 | 46-274                   
+  viewCourseComponents.tsx   |      75 |    64.28 |    62.5 |   78.94 | 36,77,83,91,97,217-230   
+ src/interfaces              |       0 |        0 |       0 |       0 |                          
+  course.ts                  |       0 |        0 |       0 |       0 |                          
+  degree.ts                  |       0 |        0 |       0 |       0 |                          
+  semester.ts                |       0 |        0 |       0 |       0 |                          
+-----------------------------|---------|----------|---------|---------|--------------------------
+Test Suites: 1 failed, 1 total
+Tests:       16 failed, 4 passed, 20 total
 Snapshots:   0 total
-Time:        114.235 s
+Time:        4.924 s
 Ran all test suites.
