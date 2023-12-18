@@ -62,12 +62,12 @@
   console.log
     looking for old semesterfall
 
-      at removeSemesterYear (src/DBmanage.tsx:138:13)
+      at removeSemesterYear (src/DBmanage.tsx:140:13)
 
   console.log
     looking for old yeat
 
-      at UpdateCoureplanYear (src/DBmanage.tsx:146:13)
+      at UpdateCoureplanYear (src/DBmanage.tsx:148:13)
 
   console.log
     debug
@@ -114,12 +114,12 @@
   console.log
     looking for old semesterwinter
 
-      at removeSemesterYear (src/DBmanage.tsx:138:13)
+      at removeSemesterYear (src/DBmanage.tsx:140:13)
 
   console.log
     looking for old yeat
 
-      at UpdateCoureplanYear (src/DBmanage.tsx:146:13)
+      at UpdateCoureplanYear (src/DBmanage.tsx:148:13)
 
   console.log
     debug
@@ -181,7 +181,7 @@
   console.log
     looking for old yeat
 
-      at UpdateCoureplanYear (src/DBmanage.tsx:146:13)
+      at UpdateCoureplanYear (src/DBmanage.tsx:148:13)
 
   console.log
     debug
@@ -280,12 +280,12 @@
   console.log
     looking for old semesterfall
 
-      at removeSemesterYear (src/DBmanage.tsx:138:13)
+      at removeSemesterYear (src/DBmanage.tsx:140:13)
 
   console.log
     looking for old yeat
 
-      at UpdateCoureplanYear (src/DBmanage.tsx:146:13)
+      at UpdateCoureplanYear (src/DBmanage.tsx:148:13)
 
   console.log
     debug
@@ -315,27 +315,27 @@
 
       at UpdateCourseplan (src/NewCoursePlan.tsx:79:17)
 
-PASS src/App.test.tsx (79.141 s)
+PASS src/App.test.tsx (78.843 s)
   ✓ renders the program title (135 ms)
-  ✓ renders need help button (35 ms)
-  ✓ renders names (35 ms)
-  ✓ renders export to csv (28 ms)
+  ✓ renders need help button (45 ms)
+  ✓ renders names (37 ms)
+  ✓ renders export to csv (34 ms)
   ✓ renders new course plans (33 ms)
-  ✓ Switch to/from course plan button (3573 ms)
-  ✓ Testing add course to queue 1 (4350 ms)
-  ✓ Testing add course to queue 2 (4187 ms)
-  ✓ Testing search bar (4974 ms)
-  ✓ Testing semester remove button (fall) (4308 ms)
-  ✓ Testing semester remove button (winter) (4410 ms)
-  ✓ Testing degree plan drop down (3213 ms)
-  ✓ Testing save degree plan and delete degree plan (6408 ms)
-  ✓ Testing requirements feature (4768 ms)
-  ✓ Testing clear semester (6473 ms)
-  ✓ Testing remove from queue (8204 ms)
-  ✓ Testing clear all semesters button (8900 ms)
-  ✓ Testing edit degree plan (4338 ms)
-  ✓ Testing save degree plan (4371 ms)
-  ✓ Testing save plan as a given name (4273 ms)
+  ✓ Switch to/from course plan button (3634 ms)
+  ✓ Testing add course to queue 1 (4286 ms)
+  ✓ Testing add course to queue 2 (4363 ms)
+  ✓ Testing search bar (4748 ms)
+  ✓ Testing semester remove button (fall) (4261 ms)
+  ✓ Testing semester remove button (winter) (4259 ms)
+  ✓ Testing degree plan drop down (3426 ms)
+  ✓ Testing save degree plan and delete degree plan (6231 ms)
+  ✓ Testing requirements feature (4678 ms)
+  ✓ Testing clear semester (6456 ms)
+  ✓ Testing remove from queue (8159 ms)
+  ✓ Testing clear all semesters button (8847 ms)
+  ✓ Testing edit degree plan (4526 ms)
+  ✓ Testing save degree plan (4086 ms)
+  ✓ Testing save plan as a given name (4274 ms)
 
 [0;33mOne of your dependencies, babel-preset-react-app, is importing the
 "@babel/plugin-proposal-private-property-in-object" package without
@@ -359,11 +359,11 @@ All files                    |   50.34 |    50.93 |   50.28 |   51.47 |
   App.tsx                    |   68.29 |    83.33 |   47.05 |   73.68 | 90-116,170                                                      
   CSV.tsx                    |   30.23 |    27.77 |   46.15 |   34.21 | 67-142                                                          
   ClearCourseModal.tsx       |       0 |        0 |       0 |       0 | 10-36                                                           
-  DBmanage.tsx               |      40 |    30.95 |   41.02 |   39.58 | 24-133,155,186-211,233,249-261,297,325                          
+  DBmanage.tsx               |      40 |    30.95 |   41.02 |   39.58 | 24-135,157,188-213,235,251-263,299,327                          
   DegreeRequirementCheck.tsx |     100 |      100 |     100 |     100 |                                                                 
   DeleteCourseModal.tsx      |       0 |      100 |       0 |       0 | 12-18                                                           
   EditCoursePlan.tsx         |   41.33 |    51.42 |   38.88 |   41.33 | 42-52,70-97,152-166,260,297-367,427-428,434-443,449-461,494-505 
-  EditModal.tsx              |    37.5 |     12.5 |      25 |    37.5 | 31-41,46-51,60-69,84-108                                        
+  EditModal.tsx              |    37.5 |     12.5 |      25 |    37.5 | 32-42,47-53,62-71,86-110                                        
   HelpModal.tsx              |      75 |       50 |     100 |      75 | 13                                                              
   NewCoursePlan.tsx          |   88.57 |      100 |   90.47 |   87.87 | 68-75,92                                                        
   viewCourseComponents.tsx   |    92.5 |    85.71 |   81.25 |   97.36 | 36                                                              
@@ -375,5 +375,5 @@ All files                    |   50.34 |    50.93 |   50.28 |   51.47 |
 Test Suites: 1 passed, 1 total
 Tests:       20 passed, 20 total
 Snapshots:   0 total
-Time:        81.281 s
+Time:        80.895 s
 Ran all test suites.
